@@ -1,0 +1,7 @@
+{
+"layout": "blog",
+  "date": "2024-01-31T07:51:56.966Z",
+  "title": "Test",
+  "thumbnail": "https://m.media-amazon.com/images/I/51FFCgHoGCL._AC_UF1000,1000_QL80_.jpg"
+}
+What will json frontmatter look like?
