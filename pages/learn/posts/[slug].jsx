@@ -37,7 +37,7 @@ export async function getStaticProps({ params }) {
 
   const matter = require("gray-matter");
   const fileContent = matter(
-    fs.readFileSync(`./content/${params.slug}.mdx`, "utf8")
+    fs.readFileSync(`./content/${params.slug}.md`, "utf8")
   );
   const frontmatter = fileContent.data;
   const mdxSource = await serialize(fileContent.content);
