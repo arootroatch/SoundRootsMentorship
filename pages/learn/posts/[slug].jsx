@@ -5,6 +5,7 @@ import Head from "next/head";
 
 
 export default function PostPage({ frontmatter, mdxSource }) {
+  console.log(frontmatter);
   return (
     <>
       <header>
@@ -37,14 +38,16 @@ export async function getStaticProps({ params }) {
 
   const matter = require("gray-matter");
   const fileContent = matter(
-    fs.readFileSync(`./content/${params.slug}.md`, "utf8")
+    fs.readFileSync(`./content/${params.slug}.mdx`, "utf8")
   );
-  const frontmatter = fileContent.data;
+  // need to JSON stringify because the YAML dates can't be parsed unless they are turned into strings
+  const frontmatter = JSON.stringify(fileContent.data);
   const mdxSource = await serialize(fileContent.content);
 
   return {
     props: {
-      frontmatter,
+      // Parse from string into JSON
+      frontmatter: JSON.parse(frontmatter),
       mdxSource,
     },
   };

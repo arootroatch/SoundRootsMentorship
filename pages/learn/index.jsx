@@ -4,6 +4,7 @@ import Link from "next/link";
 import Script from 'next/script';
 
 export default function Home({posts}) {
+  console.log(posts);
   return (
     <>
       <Head>
@@ -42,10 +43,11 @@ export function getStaticProps() {
   const posts = postFilePaths.map((filePath) => {
     const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
     const { content, data } = matter(source);
+    const dataObj = JSON.stringify(data);
 
     return {
       content,
-      data,
+      data: JSON.parse(dataObj),
       filePath,
     };
   });
