@@ -2,6 +2,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import Link from "next/link";
 import { MDXRemote} from "next-mdx-remote";
 import Head from "next/head";
+import Navbar from "@/components/Navbar";
 
 
 export default function PostPage({ frontmatter, mdxSource }) {
@@ -10,13 +11,14 @@ export default function PostPage({ frontmatter, mdxSource }) {
     <>
       <header>
         <Head>
-          <title>Test | {frontmatter.title}</title>
+          <title>{frontmatter.title}</title>
         </Head>
-        <nav>
+        <Navbar />
+        {/* <nav>
           <Link href="/learn" legacyBehavior>
             <a>👈 Go back home</a>
           </Link>
-        </nav>
+        </nav> */}
       </header>
       <div className="post-header">
         <h1>{frontmatter.title}</h1>
