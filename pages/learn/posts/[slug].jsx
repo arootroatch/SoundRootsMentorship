@@ -43,7 +43,7 @@ export async function getStaticProps({ params }) {
 
   const matter = require("gray-matter");
   const fileContent = matter(
-    fs.readFileSync(`./content/${params.slug}.mdx`, "utf8")
+    fs.readFileSync(`./content/${params.slug}.md`, "utf8")
   );
   // need to JSON stringify because the YAML dates can't be parsed unless they are turned into strings
   const frontmatter = JSON.stringify(fileContent.data);
