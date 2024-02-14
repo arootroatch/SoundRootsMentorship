@@ -3,33 +3,36 @@ import Link from "next/link";
 import { MDXRemote} from "next-mdx-remote";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
+import styles from '@/pages/learn/styles.module.css'
+import 'normalize.css';
+
 
 
 export default function PostPage({ frontmatter, mdxSource }) {
   console.log(frontmatter);
   return (
-    <>
-      <header>
-        <Head>
-          <title>{frontmatter.title}</title>
-        </Head>
+    <article>
+      <Head>
+        <title>{frontmatter.title}</title>
+      </Head>
+      <header className={styles.header}>
         <Navbar />
-        {/* <nav>
-          <Link href="/learn" legacyBehavior>
-            <a>👈 Go back home</a>
-          </Link>
-        </nav> */}
+        <Image className={styles.hero}
+          src={frontmatter.thumbnail}
+          fill
+        />
+        <div className={styles.title}>
+          <h1>{frontmatter.title}</h1>
+          {frontmatter.description && (
+            <p className="description">{frontmatter.description}</p>
+          )}
+        </div>
       </header>
-      <div className="post-header">
-        <h1>{frontmatter.title}</h1>
-        {frontmatter.description && (
-          <p className="description">{frontmatter.description}</p>
-        )}
-      </div>
-      <main>
+      <main className={styles.main}>
         <MDXRemote {...mdxSource}/>
       </main>
-    </>
+    </article>
   );
 }
 

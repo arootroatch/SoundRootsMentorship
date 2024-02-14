@@ -16,12 +16,14 @@ const handlee = Handlee({ weight: "400", subsets: ["latin"] });
 const agencyFont = localFont({ src: "fonts/OPTIAgency-Gothic.ttf.woff" });
 
 const Nav = styled.nav`
-  background-color: #03009d6c;
+  color: white;
+  background: radial-gradient(#0300bbdb, #02006bdb);
   width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
   padding: 1rem;
+  box-sizing: border-box;
   #nav-wrapper {
     display: flex;
     justify-content: space-between;
@@ -39,7 +41,7 @@ const Nav = styled.nav`
     font-size: 1.5rem;
     margin-left: 0.6rem;
   }
-  ul{
+  ul {
     margin-right: 1rem;
   }
   ul li {
@@ -48,14 +50,18 @@ const Nav = styled.nav`
     letter-spacing: 0.2rem;
     font-size: 0.9rem;
   }
-  .icon{
-    margin: .2rem;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .icon {
+    margin: 0.2rem;
   }
   .search {
-    margin-left: .5rem;
+    margin-left: 0.5rem;
   }
-  .separator{
-    margin-left: .5rem;
+  .separator {
+    margin-left: 0.5rem;
   }
 `;
 
@@ -85,8 +91,8 @@ export default function Navbar() {
           </ul>
           <FaSquareFacebook className='icon' />
           <FaInstagram className='icon' />
-          <span className="separator">|</span>
-          <IoIosSearch className="search" />
+          <span className='separator'>|</span>
+          <IoIosSearch className='search' />
         </div>
       </div>
     </Nav>

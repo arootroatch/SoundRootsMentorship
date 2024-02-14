@@ -1,0 +1,32 @@
+.header {
+  position: relative;
+  height: 400px;
+  width: 100vw;
+  overflow: hidden;
+  top: 0;
+}
+
+.hero {
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.title{
+  height: 400px;
+  width: 100vw;
+  background: linear-gradient(#0000006c, #00000071);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.main{
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 .5rem;
+}
