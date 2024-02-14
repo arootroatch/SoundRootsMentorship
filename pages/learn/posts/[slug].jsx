@@ -1,5 +1,4 @@
 import { serialize } from "next-mdx-remote/serialize";
-import Link from "next/link";
 import { MDXRemote} from "next-mdx-remote";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";

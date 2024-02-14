@@ -10,9 +10,7 @@
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -10;
-  position: absolute;
-  top: 0;
-  left: 0;
+  
 }
 
 .title{
