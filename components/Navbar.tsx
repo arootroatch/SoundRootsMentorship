@@ -22,7 +22,7 @@ const Nav = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
-  padding: 1rem;
+  padding: 0.5rem;
   box-sizing: border-box;
   #nav-wrapper {
     display: flex;
@@ -63,6 +63,43 @@ const Nav = styled.nav`
   .separator {
     margin-left: 0.5rem;
   }
+  .nestedParent {
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  .nestedParent:hover {
+    .nestedNav {
+      display: block;
+    }
+  }
+`;
+
+const NestedNav = styled.ul`
+  display: none;
+  background: radial-gradient(#0300bbdb, #0300aedb);
+  position: absolute;
+  top: 2.1rem;
+  transform: translateX(-40%);
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  :hover {
+    display: block;
+  }
+  .arrowUp {
+    position: absolute;
+    top: -0.9rem;
+    left: 40%;
+    border-left: solid 15px transparent;
+    border-right: solid 15px transparent;
+    border-bottom: solid 15px #0300aedb;
+    height: 0;
+    width: 0;
+  }
+  .nested {
+    display: block;
+    white-space: nowrap;
+    margin-top: 0.2rem;
+  }
 `;
 
 export default function Navbar() {
@@ -79,14 +116,25 @@ export default function Navbar() {
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
           <ul className={agencyFont.className}>
-            <li>
-              <Link href=''>Home</Link>
+            <li className='nestedParent'>
+              Home
+              <NestedNav className='nestedNav'>
+                <div className='arrowUp'></div>
+                <li className='nested'>
+                  <Link href='https://www.soundrootsproductions.com/'>
+                    Sound Roots Productions
+                  </Link>
+                </li>
+                <li className='nested'>
+                  <Link href='/'>Sound Roots Mentorship</Link>
+                </li>
+              </NestedNav>
             </li>
             <li>
-              <Link href=''>Learn</Link>
+              <Link href='/learn'>Learn</Link>
             </li>
             <li>
-              <Link href=''>Contact Us</Link>
+              <Link href=''>Contact</Link>
             </li>
           </ul>
           <FaSquareFacebook className='icon' />
