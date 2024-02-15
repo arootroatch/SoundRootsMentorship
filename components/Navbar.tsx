@@ -16,7 +16,7 @@ const handlee = Handlee({ weight: "400", subsets: ["latin"] });
 const agencyFont = localFont({ src: "fonts/OPTIAgency-Gothic.ttf.woff" });
 
 const Nav = styled.nav`
-  color: white;
+  color: #d5d5d5;
   background: radial-gradient(#0300bbdb, #02006bdb);
   width: 100vw;
   position: fixed;
@@ -43,12 +43,18 @@ const Nav = styled.nav`
   }
   ul {
     margin-right: 1rem;
+    display: flex;
+    align-items: center;
   }
-  ul li {
-    display: inline;
+  .navLink {
+    display: inline-block;
     margin-right: 1rem;
     letter-spacing: 0.2rem;
     font-size: 0.9rem;
+  }
+  .navLink:hover {
+    color: white;
+    transform: scale(102%);
   }
   a {
     color: inherit;
@@ -65,7 +71,11 @@ const Nav = styled.nav`
   }
   .nestedParent {
     position: relative;
+    top: 0.47rem;
     padding-bottom: 1rem;
+  }
+  .nestedNav {
+    display: none;
   }
   .nestedParent:hover {
     .nestedNav {
@@ -75,7 +85,7 @@ const Nav = styled.nav`
 `;
 
 const NestedNav = styled.ul`
-  display: none;
+  color: #d5d5d5;
   background: radial-gradient(#0300bbdb, #0300aedb);
   position: absolute;
   top: 2.1rem;
@@ -100,6 +110,10 @@ const NestedNav = styled.ul`
     white-space: nowrap;
     margin-top: 0.2rem;
   }
+  .nested:hover {
+    color: white;
+    transform: scale(102%);
+  }
 `;
 
 export default function Navbar() {
@@ -116,7 +130,7 @@ export default function Navbar() {
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
           <ul className={agencyFont.className}>
-            <li className='nestedParent'>
+            <li className='nestedParent navLink'>
               Home
               <NestedNav className='nestedNav'>
                 <div className='arrowUp'></div>
@@ -130,10 +144,10 @@ export default function Navbar() {
                 </li>
               </NestedNav>
             </li>
-            <li>
+            <li className='navLink'>
               <Link href='/learn'>Learn</Link>
             </li>
-            <li>
+            <li className='navLink'>
               <Link href=''>Contact</Link>
             </li>
           </ul>
