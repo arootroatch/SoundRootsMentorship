@@ -19,6 +19,7 @@ const Nav = styled.nav`
   color: #d5d5d5;
   background: radial-gradient(#0300bbdb, #02006bdb);
   width: 100vw;
+  height: 50px;
   position: fixed;
   top: 0;
   left: 0;
@@ -42,7 +43,7 @@ const Nav = styled.nav`
     margin-left: 0.6rem;
   }
   ul {
-    margin-right: 1rem;
+    margin: 0 1rem 0 0;
     display: flex;
     align-items: center;
   }
@@ -52,9 +53,15 @@ const Nav = styled.nav`
     letter-spacing: 0.2rem;
     font-size: 0.9rem;
   }
-  .navLink:hover {
+
+  .navLink:hover,
+  .navIcon:hover {
     color: white;
     transform: scale(102%);
+  }
+  .navIcon {
+    position: relative;
+    top: 0.1rem;
   }
   a {
     color: inherit;
@@ -109,10 +116,14 @@ const NestedNav = styled.ul`
     display: block;
     white-space: nowrap;
     margin-top: 0.2rem;
+    line-height: 1.3rem;
   }
-  .nested:hover {
+  .nested:hover,
+  .icon:hover,
+  .search:hover {
     color: white;
     transform: scale(102%);
+    cursor: pointer;
   }
 `;
 
@@ -151,8 +162,18 @@ export default function Navbar() {
               <Link href=''>Contact</Link>
             </li>
           </ul>
-          <FaSquareFacebook className='icon' />
-          <FaInstagram className='icon' />
+          <Link
+            href='https://www.facebook.com/soundrootsproductions'
+            className='navIcon'
+          >
+            <FaSquareFacebook className='icon' />
+          </Link>
+          <Link
+            href='https://www.instagram.com/soundrootsproductions/'
+            className='navIcon'
+          >
+            <FaInstagram className='icon' />
+          </Link>
           <span className='separator'>|</span>
           <IoIosSearch className='search' />
         </div>

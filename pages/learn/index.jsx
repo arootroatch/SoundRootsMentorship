@@ -5,6 +5,7 @@ import Script from 'next/script';
 import Navbar from "@/components/Navbar";
 import styles from "./styles.module.css"
 import Image from "next/image";
+import 'normalize.css';
 
 export default function Home({posts}) {
   console.log(posts);
