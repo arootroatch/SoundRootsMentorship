@@ -17,6 +17,7 @@ interface postProps {
     description: string;
     date: string;
     thumbnail: string;
+    category: string;
   };
   mdxSource: MDXRemoteSerializeResult;
 }

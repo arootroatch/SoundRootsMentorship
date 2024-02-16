@@ -19,6 +19,7 @@ interface postsProps {
         description: string;
         date: string;
         thumbnail: string;
+        category: string;
       };
       filePath: string;
     }
