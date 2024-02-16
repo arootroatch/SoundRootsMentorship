@@ -2,12 +2,10 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
 import styles from "@/pages/learn/styles.module.css";
 import "normalize.css";
 import { GetStaticProps } from "next/types";
 import "@/app/globals.css";
-import { agencyFont } from "@/lib/fonts";
 import Hero from "@/components/Hero";
 
 interface postProps {

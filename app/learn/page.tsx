@@ -2,9 +2,7 @@ import Head from "next/head";
 import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import styles from "./styles.module.css";
-import Image from "next/image";
 import Postcard from "@/components/Postcard";
-import { agencyFont } from "@/lib/fonts";
 import "normalize.css";
 import "@/app/globals.css";
 import Hero from "@/components/Hero";
@@ -91,26 +89,26 @@ export default function Home({ posts }: postsProps) {
   );
 }
 
-export function getStaticProps() {
-  const path = require("path");
-  const fs = require("fs");
-  const matter = require("gray-matter");
-  const POSTS_PATH = path.join(process.cwd(), "content");
-  const postFilePaths = fs
-    .readdirSync(POSTS_PATH)
-    // Only include md(x) files
-    .filter((path: string) => /\.mdx?$/.test(path));
-  const posts = postFilePaths.map((filePath: string) => {
-    const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
-    const { content, data } = matter(source);
-    const dataObj = JSON.stringify(data);
+// export function getStaticProps() {
+//   const path = require("path");
+//   const fs = require("fs");
+//   const matter = require("gray-matter");
+//   const POSTS_PATH = path.join(process.cwd(), "content");
+//   const postFilePaths = fs
+//     .readdirSync(POSTS_PATH)
+//     // Only include md(x) files
+//     .filter((path: string) => /\.mdx?$/.test(path));
+//   const posts = postFilePaths.map((filePath: string) => {
+//     const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
+//     const { content, data } = matter(source);
+//     const dataObj = JSON.stringify(data);
 
-    return {
-      content,
-      data: JSON.parse(dataObj),
-      filePath,
-    };
-  });
+//     return {
+//       content,
+//       data: JSON.parse(dataObj),
+//       filePath,
+//     };
+//   });
 
-  return { props: { posts } };
-}
+//   return { props: { posts } };
+// }
