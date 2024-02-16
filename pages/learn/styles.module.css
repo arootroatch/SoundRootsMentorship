@@ -1,18 +1,18 @@
-.header {
+/* .header {
   position: relative;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
   top: 0;
-}
+} */
 
-.hero {
+/* .hero {
   -o-object-fit: cover;
   object-fit: cover;
   z-index: -10;
-}
+} */
 
-.titleWrapper {
+/* .titleWrapper {
   height: 100%;
   width: 100vw;
   background: linear-gradient(#0000006c, #00000071);
@@ -38,7 +38,7 @@
   font-size: 1.2rem;
   font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif;
   margin-bottom: 2rem;
-}
+} */
 
 .main {
   max-width: 700px;

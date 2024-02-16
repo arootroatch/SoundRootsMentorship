@@ -8,6 +8,7 @@ import "normalize.css";
 import { GetStaticProps } from "next/types";
 import "@/app/globals.css";
 import { agencyFont } from "@/lib/fonts";
+import Hero from "@/components/Hero";
 
 interface postProps {
   frontmatter: {
@@ -37,23 +38,14 @@ export default function PostPage({ frontmatter, mdxSource }: postProps) {
       </Head>
       <header className={styles.header}>
         <Navbar />
-        <Image
-          className={styles.hero}
+        <Hero
           src={frontmatter.thumbnail}
           alt={frontmatter.thumbnail}
-          fill
+          h1={frontmatter.title}
+          desc={frontmatter.description}
+          date={formattedDate}
+          author={frontmatter.author}
         />
-        <div className={styles.titleWrapper}>
-          <div className={styles.title}>
-            <h1 className={agencyFont.className}>{frontmatter.title}</h1>
-            {frontmatter.description && (
-              <p className={styles.desc}>{frontmatter.description}</p>
-            )}
-            <p className={styles.desc}>
-              Written by: {frontmatter.author} | {formattedDate}
-            </p>
-          </div>
-        </div>
       </header>
       <main className={styles.main}>
         <MDXRemote {...mdxSource} />
