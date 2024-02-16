@@ -9,19 +9,20 @@ import { GetStaticProps } from "next/types";
 import "@/app/globals.css";
 import { agencyFont } from '@/lib/fonts';
 
-interface Props {
+interface postProps {
   frontmatter: {
-    title: string;
-    thumbnail: string;
-    description: string;
     layout: string;
+    title: string;
+    author: string;
+    description: string;
     date: string;
+    thumbnail: string;
   };
   mdxSource: MDXRemoteSerializeResult;
 }
 
 
-export default function PostPage({ frontmatter, mdxSource }: Props) {
+export default function PostPage({ frontmatter, mdxSource }: postProps) {
   console.log(frontmatter);
   return (
     <article>

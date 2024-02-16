@@ -13,10 +13,11 @@ interface postsProps {
       content: string;
       data: {
         layout: string;
-        data: string;
         title: string;
-        thumbnail: string;
+        author: string;
         description: string;
+        date: string;
+        thumbnail: string;
       };
       filePath: string;
     }
