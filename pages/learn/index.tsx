@@ -7,8 +7,23 @@ import styles from "./styles.module.css"
 import Image from "next/image";
 import 'normalize.css';
 
-export default function Home({posts}) {
-  console.log(posts);
+interface postsProps {
+  posts: [
+    {
+      content: string,
+      data: {
+        layout: string,
+        data: string,
+        title: string,
+        thumbnail: string
+      }
+      filePath: string
+    }
+  ]
+}
+
+export default function Home({posts}: postsProps) {
+  console.log("posts", posts);
   return (
     <>
       <Head>
@@ -17,6 +32,7 @@ export default function Home({posts}) {
       <header className={styles.header}>
         <Navbar />
         <Image className={styles.hero}
+          alt="Midas H3000"
           src='/img/H3000.jpeg'
           fill
         />
@@ -52,8 +68,8 @@ export function getStaticProps() {
   const postFilePaths = fs
     .readdirSync(POSTS_PATH)
     // Only include md(x) files
-    .filter((path) => /\.mdx?$/.test(path));
-  const posts = postFilePaths.map((filePath) => {
+    .filter((path: string) => /\.mdx?$/.test(path));
+  const posts = postFilePaths.map((filePath: string) => {
     const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
     const { content, data } = matter(source);
     const dataObj = JSON.stringify(data);
