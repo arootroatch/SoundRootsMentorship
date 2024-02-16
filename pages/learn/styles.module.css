@@ -1,6 +1,18 @@
+@font-face{
+  /* font-family: 'mixbox';
+  src: url('/components/fonts/Mixbox\ Stamp\ Italic\ Demo.otf'); */
+  
+  font-family: 'agencyFont';
+  src: url('/components/fonts/OPTIAgency-Gothic.ttf.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 .header {
   position: relative;
-  height: 400px;
+  height: 100vh;
   width: 100vw;
   overflow: hidden;
   top: 0;
@@ -14,13 +26,14 @@
 }
 
 .title{
-  height: 400px;
+  height: 100%;
   width: 100vw;
   background: linear-gradient(#0000006c, #00000071);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+  font-family: 'agencyFont';
 }
 
 .main{

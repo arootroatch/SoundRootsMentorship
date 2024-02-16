@@ -1,38 +1,40 @@
-
 import Head from "next/head";
 import Link from "next/link";
-import Script from 'next/script';
+import Script from "next/script";
 import Navbar from "@/components/Navbar";
-import styles from "./styles.module.css"
+import styles from "./styles.module.css";
 import Image from "next/image";
-import 'normalize.css';
+import "normalize.css";
+import "@/app/globals.css";
 
 interface postsProps {
   posts: [
     {
-      content: string,
+      content: string;
       data: {
-        layout: string,
-        data: string,
-        title: string,
-        thumbnail: string
-      }
-      filePath: string
+        layout: string;
+        data: string;
+        title: string;
+        thumbnail: string;
+        description: string;
+      };
+      filePath: string;
     }
-  ]
+  ];
 }
 
-export default function Home({posts}: postsProps) {
+export default function Home({ posts }: postsProps) {
   console.log("posts", posts);
   return (
     <>
       <Head>
-        <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
+        <Script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></Script>
       </Head>
       <header className={styles.header}>
         <Navbar />
-        <Image className={styles.hero}
-          alt="Midas H3000"
+        <Image
+          className={styles.hero}
+          alt='Midas H3000'
           src='/img/H3000.jpeg'
           fill
         />
@@ -61,9 +63,9 @@ export default function Home({posts}: postsProps) {
 }
 
 export function getStaticProps() {
-  const path = require('path');
-  const fs = require('fs');
-  const matter = require('gray-matter');
+  const path = require("path");
+  const fs = require("fs");
+  const matter = require("gray-matter");
   const POSTS_PATH = path.join(process.cwd(), "content");
   const postFilePaths = fs
     .readdirSync(POSTS_PATH)

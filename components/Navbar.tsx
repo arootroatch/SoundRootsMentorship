@@ -1,19 +1,11 @@
 "use client";
 import styled from "styled-components";
-import localFont from "next/font/local";
-import { Handlee } from "next/font/google";
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { IoIosSearch } from "react-icons/io";
+import { mixbox, handlee, agencyFont } from "@/lib/fonts";
 
-const mixbox = localFont({
-  src: "fonts/Mixbox Stamp Italic Demo.otf",
-});
-
-const handlee = Handlee({ weight: "400", subsets: ["latin"] });
-
-const agencyFont = localFont({ src: "fonts/OPTIAgency-Gothic.ttf.woff" });
 
 const Nav = styled.nav`
   color: #d5d5d5;
