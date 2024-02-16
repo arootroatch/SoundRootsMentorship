@@ -14,7 +14,7 @@ interface postcardProps {
 }
 
 const PostcardStyles = styled.div`
-  width: 300px;
+  width: 200px;
   height: 400px;
   margin: 1rem;
   display: inline-block;

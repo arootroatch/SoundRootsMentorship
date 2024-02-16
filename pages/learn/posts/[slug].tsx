@@ -64,27 +64,25 @@ export default function PostPage({ frontmatter, mdxSource }: postProps) {
 
 export const getStaticProps: GetStaticProps<{
   mdxSource: MDXRemoteSerializeResult;
-}> = async ({ params }) =>
-  // export async function getStaticProps({ params })
-  {
-    const fs = require("fs");
+}> = async ({ params }) => {
+  const fs = require("fs");
 
-    const matter = require("gray-matter");
-    const fileContent = matter(
-      fs.readFileSync(`./content/${params?.slug}.md`, "utf8")
-    );
-    // need to JSON stringify because the YAML dates can't be parsed unless they are turned into strings
-    const frontmatter = JSON.stringify(fileContent.data);
-    const mdxSource = await serialize(fileContent.content);
+  const matter = require("gray-matter");
+  const fileContent = matter(
+    fs.readFileSync(`./content/${params?.slug}.md`, "utf8")
+  );
+  // need to JSON stringify because the YAML dates can't be parsed unless they are turned into strings
+  const frontmatter = JSON.stringify(fileContent.data);
+  const mdxSource = await serialize(fileContent.content);
 
-    return {
-      props: {
-        // Parse from string into JSON
-        frontmatter: JSON.parse(frontmatter),
-        mdxSource,
-      },
-    };
+  return {
+    props: {
+      // Parse from string into JSON
+      frontmatter: JSON.parse(frontmatter),
+      mdxSource,
+    },
   };
+};
 
 export const getStaticPaths = async () => {
   const fs = require("fs");
