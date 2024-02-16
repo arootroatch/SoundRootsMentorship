@@ -7,7 +7,7 @@ import styles from "@/pages/learn/styles.module.css";
 import "normalize.css";
 import { GetStaticProps } from "next/types";
 import "@/app/globals.css";
-import { agencyFont } from '@/lib/fonts';
+import { agencyFont } from "@/lib/fonts";
 
 interface postProps {
   frontmatter: {
@@ -21,13 +21,14 @@ interface postProps {
   mdxSource: MDXRemoteSerializeResult;
 }
 
-
 export default function PostPage({ frontmatter, mdxSource }: postProps) {
   console.log(frontmatter);
+  const date = new Date(frontmatter.date);
+  const formattedDate = date.toLocaleDateString("en-US", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
   return (
     <article>
       <Head>
-        <title>{frontmatter.title}</title>
+        <title>{frontmatter.title} | Sound Roots Mentorship</title>
       </Head>
       <header className={styles.header}>
         <Navbar />
@@ -37,11 +38,16 @@ export default function PostPage({ frontmatter, mdxSource }: postProps) {
           alt={frontmatter.thumbnail}
           fill
         />
-        <div className={styles.title}>
-          <h1 className={agencyFont.className}>{frontmatter.title}</h1>
-          {frontmatter.description && (
-            <p className='description'>{frontmatter.description}</p>
-          )}
+        <div className={styles.titleWrapper}>
+          <div className={styles.title}>
+            <h1 className={agencyFont.className}>{frontmatter.title}</h1>
+            {frontmatter.description && (
+              <p className={styles.desc}>{frontmatter.description}</p>
+            )}
+            <p className={styles.desc}>
+              Written by: {frontmatter.author} | {formattedDate}
+            </p>
+          </div>
         </div>
       </header>
       <main className={styles.main}>
