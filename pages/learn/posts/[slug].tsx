@@ -22,9 +22,13 @@ interface postProps {
 }
 
 export default function PostPage({ frontmatter, mdxSource }: postProps) {
-  console.log(frontmatter);
   const date = new Date(frontmatter.date);
-  const formattedDate = date.toLocaleDateString("en-US", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+  const formattedDate = date.toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
   return (
     <article>
       <Head>

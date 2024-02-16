@@ -17,6 +17,7 @@ const Nav = styled.nav`
   left: 0;
   padding: 0.5rem;
   box-sizing: border-box;
+  z-index: 10;
   #nav-wrapper {
     display: flex;
     justify-content: space-between;
