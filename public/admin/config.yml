@@ -1,21 +1,45 @@
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
+logo_url: https://mentorship.soundrootsproductions.com/img/SR_SquareWhiteOnBlack.jpg
 media_folder: public/img
 public_folder: img
 publish_mode: editorial_workflow
 collections:
-- name: "blog" # Used in routes, e.g., /admin/collections/blog
-  label: "Blog" # Used in the UI
-  folder: "/content" # The path to the folder where the documents are stored
-  create: true # Allow users to create new documents in this collection
-  slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-  preview_path: "/learn/posts/{{slug}}"
-  fields: # The fields for each document, usually in front matter
-    - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-    - {label: "Title", name: "title", widget: "string"}
-    - {label: "Author", name: "author", widget: "string"}
-    - {label: "Description", name: "description", widget: "string"}
-    - {label: "Publish Date", name: "date", widget: "datetime"}
-    - {label: "Featured Image", name: "thumbnail", widget: "image"}
-    - {label: "Body", name: "body", widget: "markdown"}
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "/content" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    preview_path: "/learn/posts/{{slug}}"
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options:
+            [
+              "Amplifiers",
+              "Digital",
+              "Effects",
+              "Interconnect",
+              "Loudspeakers",
+              "Microphones",
+              "Mixers",
+              "Mixing",
+              "RF Systems",
+              "Science of Sound",
+              "Signal Flow",
+              "Signal Processing",
+              "Soft Skills",
+              "Soundcheck",
+              "Troubleshooting",
+            ],
+        }
