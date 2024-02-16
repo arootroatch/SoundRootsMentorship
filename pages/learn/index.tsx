@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import styles from "./styles.module.css";
@@ -27,7 +26,25 @@ interface postsProps {
 }
 
 export default function Home({ posts }: postsProps) {
-  console.log("posts", posts);
+
+  // sort posts into separate arrays based on category
+  const amplifiers = posts.filter((post)=>post.data.category==="Amplifiers");
+  const digital = posts.filter((post)=>post.data.category==="Digital");
+  const effects = posts.filter((post)=>post.data.category==="Effects");
+  const interconnect = posts.filter((post)=>post.data.category==="Interconnect");
+  const loudspeakers = posts.filter((post)=>post.data.category==="Loudspeakers");
+  const microphones = posts.filter((post)=>post.data.category==="Microphones");
+  const mixers = posts.filter((post)=>post.data.category==="Mixers");
+  const mixing = posts.filter((post)=>post.data.category==="Mixing");
+  const rfSystems = posts.filter((post)=>post.data.category==="RF Systems");
+  const science = posts.filter((post)=>post.data.category==="Science of Sound");
+  const signalFlow = posts.filter((post)=>post.data.category==="Signal Flow");
+  const signalProcessing = posts.filter((post)=>post.data.category==="Signal Processing");
+  const softSkills = posts.filter((post)=>post.data.category==="Soft Skills");
+  const soundcheck = posts.filter((post)=>post.data.category==="Soundcheck");
+  const troubleshooting = posts.filter((post)=>post.data.category==="Troubleshooting");
+  
+
   return (
     <>
       <Head>

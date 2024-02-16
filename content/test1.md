@@ -5,6 +5,7 @@ author: Alex Root-Roatch
 description: Lorem ipsum audio equalizers are compressing my brain gate and expanding my reverb delays
 date: 2024-01-31T07:51:56.966Z
 thumbnail: /img/GRAPHIC-EQ.jpeg
+category: Effects
 ---
 
 Seamlessly syndicate cutting-edge architectures rather than collaborative collaboration and idea-sharing. Proactively incubate visionary interfaces whereas premium benefits. Seamlessly negotiate ubiquitous leadership skills rather than parallel ideas. Dramatically visualize superior interfaces for best-of-breed alignments. Synergistically formulate performance based users through customized relationships. Interactively deliver cross-platform ROI via granular systems. Intrinsicly enhance effective initiatives vis-a-vis orthogonal outsourcing. Rapidiously monetize market-driven opportunities with multifunctional users. Collaboratively enhance visionary opportunities through revolutionary schemas. Progressively network just in time customer service without real-time scenarios.
