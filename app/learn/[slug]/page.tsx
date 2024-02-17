@@ -6,7 +6,7 @@ import Hero from "@/components/Hero";
 import getPost from "@/lib/getPost";
 import { compileMDX } from "next-mdx-remote/rsc";
 
-interface frontmatterProps {
+export interface frontmatterProps {
   layout: string;
   title: string;
   author: string;

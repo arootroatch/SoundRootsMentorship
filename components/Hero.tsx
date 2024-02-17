@@ -53,7 +53,10 @@ export default function Hero(props:HeroProps) {
         className="hero"
         alt={props.alt}
         src={props.src}
+        sizes="100vw"
         fill
+        priority
+        quality={50}
       />
       <div className="titleWrapper">
         <div className="title">

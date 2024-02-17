@@ -25,6 +25,7 @@ export default function getPosts() {
     .filter((path: string) => /\.mdx?$/.test(path));
 
   // create an array of data of all posts
+  // attempted to use compileMDX here instead of gray matter, but it requires await and i can't await inside of map
   const posts = postFilePaths.map((filePath: string) => {
     const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
     const { content, data } = matter(source);

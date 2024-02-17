@@ -55,7 +55,7 @@ export default async function Home() {
         <Script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></Script>
       </Head>
       <header>
-        <Hero alt='Midas H3000' src='/img/H3000.jpeg' h1='Home Page' />
+        <Hero alt='Midas XL4' src='/img/H3000.jpeg' h1='Home Page' />
       </header>
       <div className={styles.homeContent}>
         {posts.map((post) => (
