@@ -5,6 +5,7 @@ import "normalize.css";
 import Hero from "@/components/Hero";
 import getPost from "@/lib/getPost";
 import { compileMDX } from "next-mdx-remote/rsc";
+// import { ProgressBar } from "@nadfri/react-scroll-progress-bar";
 
 interface frontmatterProps {
   layout: string;
@@ -35,6 +36,7 @@ export default async function PostPage({params}: {params: {slug: string}}){
         <title>{frontmatter.title} | Sound Roots Mentorship</title>
       </Head>
       <header className={styles.header}>
+        {/* <ProgressBar /> */}
         <Hero
           src={frontmatter.thumbnail}
           alt={frontmatter.thumbnail}
