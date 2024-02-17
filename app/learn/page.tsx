@@ -6,26 +6,13 @@ import Postcard from "@/components/Postcard";
 import "normalize.css";
 import "@/app/globals.css";
 import Hero from "@/components/Hero";
+import getPosts from "@/lib/getPosts";
 
-interface postsProps {
-  posts: [
-    {
-      content: string;
-      data: {
-        layout: string;
-        title: string;
-        author: string;
-        description: string;
-        date: string;
-        thumbnail: string;
-        category: string;
-      };
-      filePath: string;
-    }
-  ];
-}
 
-export default function Home({ posts }: postsProps) {
+export default async function Home() {
+
+  const posts  = await getPosts();
+
   // sort posts into separate arrays based on category
   const amplifiers = posts.filter(
     (post) => post.data.category === "Amplifiers"
@@ -63,6 +50,7 @@ export default function Home({ posts }: postsProps) {
     (post) => post.data.category === "Troubleshooting"
   );
 
+
   return (
     <>
       <Head>
@@ -89,26 +77,3 @@ export default function Home({ posts }: postsProps) {
   );
 }
 
-// export function getStaticProps() {
-//   const path = require("path");
-//   const fs = require("fs");
-//   const matter = require("gray-matter");
-//   const POSTS_PATH = path.join(process.cwd(), "content");
-//   const postFilePaths = fs
-//     .readdirSync(POSTS_PATH)
-//     // Only include md(x) files
-//     .filter((path: string) => /\.mdx?$/.test(path));
-//   const posts = postFilePaths.map((filePath: string) => {
-//     const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
-//     const { content, data } = matter(source);
-//     const dataObj = JSON.stringify(data);
-
-//     return {
-//       content,
-//       data: JSON.parse(dataObj),
-//       filePath,
-//     };
-//   });
-
-//   return { props: { posts } };
-// }

@@ -15,6 +15,7 @@ interface HeroProps{
 }
 
 const HeroStyles = styled.div`
+  position: relative;
   .hero {
     -o-object-fit: cover;
     object-fit: cover;
