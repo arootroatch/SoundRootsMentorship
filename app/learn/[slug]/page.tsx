@@ -2,26 +2,30 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
-import styles from "@/pages/learn/styles.module.css";
+import styles from "@/app/learn/styles.module.css";
 import "normalize.css";
 import { GetStaticProps } from "next/types";
 import "@/app/globals.css";
 import Hero from "@/components/Hero";
+import getPost from "@/lib/getPost";
+import { compileMDX } from "next-mdx-remote/rsc";
 
-interface postProps {
-  frontmatter: {
-    layout: string;
-    title: string;
-    author: string;
-    description: string;
-    date: string;
-    thumbnail: string;
-    category: string;
-  };
-  mdxSource: MDXRemoteSerializeResult;
+interface frontmatterProps {
+  layout: string;
+  title: string;
+  author: string;
+  description: string;
+  date: string;
+  thumbnail: string;
+  category: string;
 }
 
-export default async function PostPage({ frontmatter, mdxSource }: postProps) {
+export default async function PostPage({params}: {params: {slug: string}}){
+  const markdown = await getPost(params.slug);
+  const {content, frontmatter} = await compileMDX<frontmatterProps>({
+    source: markdown,
+    options: {parseFrontmatter: true}
+  })
   const date = new Date(frontmatter.date);
   const formattedDate = date.toLocaleDateString("en-US", {
     weekday: "long",
@@ -35,7 +39,6 @@ export default async function PostPage({ frontmatter, mdxSource }: postProps) {
         <title>{frontmatter.title} | Sound Roots Mentorship</title>
       </Head>
       <header className={styles.header}>
-        <Navbar />
         <Hero
           src={frontmatter.thumbnail}
           alt={frontmatter.thumbnail}
@@ -46,48 +49,9 @@ export default async function PostPage({ frontmatter, mdxSource }: postProps) {
         />
       </header>
       <main className={styles.main}>
-        <MDXRemote {...mdxSource} />
+        {content}
       </main>
     </article>
   );
 }
 
-export const getStaticProps: GetStaticProps<{
-  mdxSource: MDXRemoteSerializeResult;
-}> = async ({ params }) => {
-  const fs = require("fs");
-
-  const matter = require("gray-matter");
-  const fileContent = matter(
-    fs.readFileSync(`./content/${params?.slug}.md`, "utf8")
-  );
-  // need to JSON stringify because the YAML dates can't be parsed unless they are turned into strings
-  const frontmatter = JSON.stringify(fileContent.data);
-  const mdxSource = await serialize(fileContent.content);
-
-  return {
-    props: {
-      // Parse from string into JSON
-      frontmatter: JSON.parse(frontmatter),
-      mdxSource,
-    },
-  };
-};
-
-export const getStaticPaths = async () => {
-  const fs = require("fs");
-  const postFilePaths = fs
-    .readdirSync("./content")
-    // Only include md(x) files
-    .filter((path: string) => /\.mdx?$/.test(path));
-
-  const paths = postFilePaths.map((file: string) => {
-    const filename = file.slice(0, file.indexOf("."));
-    return { params: { slug: filename } };
-  });
-
-  return {
-    paths,
-    fallback: false,
-  };
-};
