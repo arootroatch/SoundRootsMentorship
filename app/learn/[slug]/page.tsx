@@ -2,7 +2,6 @@
 import Head from "next/head";
 import styles from "@/app/learn/styles.module.css";
 import "normalize.css";
-import "@/app/globals.css";
 import Hero from "@/components/Hero";
 import getPost from "@/lib/getPost";
 import { compileMDX } from "next-mdx-remote/rsc";

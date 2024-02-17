@@ -3,7 +3,6 @@ import Script from "next/script";
 import styles from "./styles.module.css";
 import Postcard from "@/components/Postcard";
 import "normalize.css";
-import "@/app/globals.css";
 import Hero from "@/components/Hero";
 import getPosts from "@/lib/getPosts";
 
