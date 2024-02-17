@@ -1,10 +1,7 @@
-import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+
 import Head from "next/head";
-import Navbar from "@/components/Navbar";
 import styles from "@/app/learn/styles.module.css";
 import "normalize.css";
-import { GetStaticProps } from "next/types";
 import "@/app/globals.css";
 import Hero from "@/components/Hero";
 import getPost from "@/lib/getPost";
