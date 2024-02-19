@@ -132,7 +132,7 @@ export default async function Home() {
       <div className={styles.homeContent}>
         {categorized.map((category)=>(
             <PostScroller 
-              key={category[0].data.category}
+              key={category[0].data.title}
               title={category[0].data.category}
               category={category}
             />
