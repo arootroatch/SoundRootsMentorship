@@ -1,20 +1,19 @@
 import { PostsProps } from "@/lib/getPosts";
 import Postcard from "./Postcard";
+import styles from '@/components/postScroller.module.css'
 
-interface PostScrollerProps{
+interface PostScrollerProps {
   title: string;
-  category: [
-    PostsProps
-  ]
+  category: PostsProps[];
 }
 
-export default function PostScroller({title, category}:PostScrollerProps) {
+export default function PostScroller({ title, category }: PostScrollerProps) {
   return (
     <div>
       <div>
-        <h2>{title}</h2>
+        <h2 className={styles.title}>{title}</h2>
       </div>
-      <div>
+      <div className={styles.categoryWrapper}>
         {category.map((post) => (
           <Postcard
             key={post.filePath}

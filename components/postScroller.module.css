@@ -1,0 +1,8 @@
+.title {
+  text-align: center;
+}
+.categoryWrapper{
+  white-space: nowrap;
+  overflow-x:scroll;
+  overflow-y: hidden;
+}

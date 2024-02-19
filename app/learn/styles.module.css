@@ -40,8 +40,8 @@
 }
 
 .homeContent {
-  display: flex;
-  flex-wrap: wrap ;
+  /* display: flex;
+  flex-wrap: wrap ; */
   margin: 0 auto;
   padding: 1rem;
   max-width: 1500px;
