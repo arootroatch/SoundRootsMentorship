@@ -2,7 +2,7 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 
-interface postsProps {
+export interface PostsProps {
   content: string;
   data: {
     layout: string;
@@ -35,7 +35,7 @@ export default function getPosts() {
       content,
       data: JSON.parse(dataObj),
       filePath,
-    } as postsProps;
+    } as PostsProps;
   });
 
   return posts;

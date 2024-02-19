@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { agencyFont } from "@/lib/fonts";
 import Link from "next/link";
 
-interface postcardProps {
+interface PostcardProps {
   key: string;
   title: string;
   image: string;
@@ -42,7 +42,7 @@ const PostcardStyles = styled.div`
   }
 `;
 
-export default function Postcard(props: postcardProps) {
+export default function Postcard(props: PostcardProps) {
   const date = new Date(props.date);
   const formattedDate = date.toLocaleDateString("en-US", {
     year: "numeric",

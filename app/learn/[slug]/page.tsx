@@ -7,7 +7,7 @@ import getPost from "@/lib/getPost";
 import { compileMDX } from "next-mdx-remote/rsc";
 import MyProgressBar from "@/components/ProgressBar";
 
-interface frontmatterProps {
+interface FrontmatterProps {
   layout: string;
   title: string;
   author: string;
@@ -19,7 +19,7 @@ interface frontmatterProps {
 
 export default async function PostPage({params}: {params: {slug: string}}){
   const markdown = await getPost(params.slug);
-  const {content, frontmatter} = await compileMDX<frontmatterProps>({
+  const {content, frontmatter} = await compileMDX<FrontmatterProps>({
     source: markdown,
     options: {parseFrontmatter: true}
   })

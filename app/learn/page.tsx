@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Script from "next/script";
 import styles from "./styles.module.css";
-import Postcard from "@/components/Postcard";
+import PostScroller from "@/components/PostScroller";
 import "normalize.css";
 import Hero from "@/components/Hero";
 import getPosts from "@/lib/getPosts";
@@ -58,17 +58,7 @@ export default async function Home() {
         <Hero alt='Midas XL4' src='/img/H3000.jpeg' h1='Home Page' />
       </header>
       <div className={styles.homeContent}>
-        {posts.map((post) => (
-          <Postcard
-            key={post.filePath}
-            title={post.data.title}
-            image={post.data.thumbnail}
-            description={post.data.description}
-            date={post.data.date}
-            as={`learn/${post.filePath.replace(/\.mdx?$/, "")}`}
-            href={`learn/[slug]`}
-          />
-        ))}
+
       </div>
     </>
   );
