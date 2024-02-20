@@ -1,6 +1,4 @@
-"use client"
-
-import styled from "styled-components";
+import styles from '@/components/hero.module.css';
 import Image from "next/image";
 import { agencyFont } from "@/lib/fonts";
 
@@ -14,43 +12,12 @@ interface HeroProps{
   author?: string;
 }
 
-const HeroStyles = styled.div`
-  position: relative;
-  .hero {
-    -o-object-fit: cover;
-    object-fit: cover;
-    z-index: -10;
-  }
-  .titleWrapper {
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(#0000006c, #00000071);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    letter-spacing: 1rem;
-    font-size: 2rem;
-  }
-  .title {
-    max-width: 600px;
-    text-align: center;
-    h1 {
-      margin-bottom: 2rem;
-    }
-  }
-  .desc {
-    letter-spacing: 0.1rem;
-    font-size: 1.2rem;
-    font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif;
-    margin-bottom: 2rem;
-  }
-`;
+
 export default function Hero(props:HeroProps) {
   return (
-    <HeroStyles>
+    <div className={styles.wrapper}>
       <Image
-        className="hero"
+        className={styles.hero}
         alt={props.alt}
         src={props.src}
         sizes="100vw"
@@ -58,17 +25,17 @@ export default function Hero(props:HeroProps) {
         priority
         quality={50}
       />
-      <div className="titleWrapper">
-        <div className="title">
+      <div className={styles.titleWrapper}>
+        <div className={styles.title}>
           <h1 className={agencyFont.className}>{props.h1}</h1>
           {props.desc && (
-            <p className="desc">{props.desc}</p>
+            <p className={styles.desc}>{props.desc}</p>
           )}
-          {props.date && (<p className="desc">
+          {props.date && (<p className={styles.desc}>
             Written by: {props.author} | {props.date ? props.date : null}
           </p>)}
         </div>
       </div>
-    </HeroStyles>
+    </div>
   );
 }
