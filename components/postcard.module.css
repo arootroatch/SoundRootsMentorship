@@ -26,5 +26,5 @@
 .date,
 .description {
   font-size: 0.9rem;
-  white-space: wrap;
+  white-space: normal;
 }
