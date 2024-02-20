@@ -1,4 +1,3 @@
-
 import Head from "next/head";
 import styles from "@/app/learn/styles.module.css";
 import "normalize.css";
@@ -17,12 +16,16 @@ interface FrontmatterProps {
   category: string;
 }
 
-export default async function PostPage({params}: {params: {slug: string}}){
+export default async function PostPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const markdown = await getPost(params.slug);
-  const {content, frontmatter} = await compileMDX<FrontmatterProps>({
+  const { content, frontmatter } = await compileMDX<FrontmatterProps>({
     source: markdown,
-    options: {parseFrontmatter: true}
-  })
+    options: { parseFrontmatter: true },
+  });
   const date = new Date(frontmatter.date);
   const formattedDate = date.toLocaleDateString("en-US", {
     weekday: "long",
@@ -35,7 +38,7 @@ export default async function PostPage({params}: {params: {slug: string}}){
       <Head>
         <title>{frontmatter.title} | Sound Roots Mentorship</title>
       </Head>
-      <header className={styles.header}>
+      <header>
         <MyProgressBar />
         <Hero
           src={frontmatter.thumbnail}
@@ -46,10 +49,7 @@ export default async function PostPage({params}: {params: {slug: string}}){
           author={frontmatter.author}
         />
       </header>
-      <main className={styles.main}>
-        {content}
-      </main>
+      <main className={styles.main}>{content}</main>
     </article>
   );
 }
-
