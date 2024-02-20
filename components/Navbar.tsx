@@ -52,7 +52,7 @@ export default function Navbar() {
             href='https://www.instagram.com/soundrootsproductions/'
             className='navIcon'
           >
-            <FaInstagram className={styles.icon} />
+            <FaInstagram className={styles.instagram} />
           </Link>
           <span className={styles.separator}>|</span>
           <IoIosSearch className={styles.search} />

@@ -55,6 +55,12 @@
 .icon {
   margin: 0.2rem;
 }
+
+.instagram{
+  margin: 0.2rem;
+  margin-top: .33rem;
+}
+
 .search {
   margin-left: 0.5rem;
 }
@@ -105,7 +111,8 @@
 }
 .nested:hover,
 .icon:hover,
-.search:hover {
+.search:hover,
+.instagram:hover {
   color: white;
   transform: scale(102%);
   cursor: pointer;
