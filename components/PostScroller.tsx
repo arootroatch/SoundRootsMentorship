@@ -1,6 +1,7 @@
 import { PostsProps } from "@/lib/getPosts";
 import Postcard from "./Postcard";
 import styles from '@/components/postScroller.module.css'
+import { agencyFont } from "@/lib/fonts";
 
 interface PostScrollerProps {
   title: string;
@@ -9,9 +10,9 @@ interface PostScrollerProps {
 
 export default function PostScroller({ title, category }: PostScrollerProps) {
   return (
-    <div>
+    <div className={styles.wrapper}>
       <div>
-        <h2 className={styles.title}>{title}</h2>
+        <h2 className={`${styles.title} ${agencyFont.className}`}>{title}</h2>
       </div>
       <div className={styles.categoryWrapper}>
         {category.map((post) => (
