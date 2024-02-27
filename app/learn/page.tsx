@@ -9,7 +9,13 @@ import { PostsProps } from "@/lib/getPosts";
 
 export default async function Home() {
   const posts = await getPosts();
-  let categorized = sortPosts(posts);
+  const categorized = sortPostsByCategory(posts);
+  const recent = posts
+    .toSorted(
+      (a, b) =>
+        new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+    )
+    .slice(0, 5);
 
   return (
     <>
@@ -20,6 +26,7 @@ export default async function Home() {
         <Hero alt='Midas XL4' src='/img/H3000.jpeg' h1='Home Page' />
       </header>
       <div className={styles.homeContent}>
+        <PostScroller title='Recent' category={recent} />
         {categorized.map((category) => (
           <PostScroller
             key={category[0].data.title}
@@ -32,7 +39,7 @@ export default async function Home() {
   );
 }
 
-function sortPosts(posts: PostsProps[]) {
+function sortPostsByCategory(posts: PostsProps[]) {
   let categorized = [];
   const amplifiers = posts.filter(
     (post) => post.data.category === "Amplifiers"

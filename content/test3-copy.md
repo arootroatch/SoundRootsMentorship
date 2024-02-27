@@ -3,7 +3,7 @@ layout: blog
 title: Test3
 author: Alex Root-Roatch
 description: Lorem ipsum audio equalizers are compressing my brain gate and expanding my reverb delays
-date: 2024-01-31T07:51:56.966Z
+date: 2024-02-20T07:20:56.966Z
 thumbnail: /img/GRAPHIC-EQ.jpeg
 category: Effects
 ---
