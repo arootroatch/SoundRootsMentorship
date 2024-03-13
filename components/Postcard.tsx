@@ -3,17 +3,7 @@ import Image from "next/image";
 import styles from "@/components/postcard.module.css";
 import { agencyFont } from "@/lib/fonts";
 import Link from "next/link";
-
-interface PostcardProps {
-  key: string;
-  title: string;
-  image: string;
-  description: string;
-  date: string;
-  as: string;
-  href: string;
-}
-
+import { PostcardProps } from "@/lib/interfaces";
 
 export default function Postcard(props: PostcardProps) {
   const date = new Date(props.date);

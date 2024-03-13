@@ -1,12 +1,8 @@
-import { PostsProps } from "@/lib/getPosts";
 import Postcard from "./Postcard";
 import styles from '@/components/postScroller.module.css'
 import { agencyFont } from "@/lib/fonts";
+import { PostScrollerProps } from "@/lib/interfaces";
 
-interface PostScrollerProps {
-  title: string;
-  category: PostsProps[];
-}
 
 export default function PostScroller({ title, category }: PostScrollerProps) {
   return (

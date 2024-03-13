@@ -5,7 +5,7 @@ import PostScroller from "@/components/PostScroller";
 import "normalize.css";
 import Hero from "@/components/Hero";
 import getPosts from "@/lib/getPosts";
-import { PostsProps } from "@/lib/getPosts";
+import { PostsProps } from "@/lib/interfaces";
 
 export default async function Home() {
   const posts = await getPosts();

@@ -1,15 +1,9 @@
 import styles from "@/components/hero.module.css";
 import Image from "next/image";
 import { agencyFont } from "@/lib/fonts";
+import { HeroProps } from "@/lib/interfaces";
 
-interface HeroProps {
-  alt: string;
-  src: string;
-  h1: string;
-  desc?: string;
-  date?: string;
-  author?: string;
-}
+
 
 export default function Hero(props: HeroProps) {
   return (

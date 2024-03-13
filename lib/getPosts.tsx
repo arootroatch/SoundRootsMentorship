@@ -1,20 +1,7 @@
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
-
-export interface PostsProps {
-  content: string;
-  data: {
-    layout: string;
-    title: string;
-    author: string;
-    description: string;
-    date: string;
-    thumbnail: string;
-    category: string;
-  };
-  filePath: string;
-}
+import { PostsProps } from "./interfaces";
 
 export default function getPosts() {
   // get all posts in content folder
