@@ -5,16 +5,8 @@ import Hero from "@/components/Hero";
 import getPost from "@/lib/getPost";
 import { compileMDX } from "next-mdx-remote/rsc";
 import MyProgressBar from "@/components/ProgressBar";
+import { FrontmatterProps } from "@/lib/interfaces";
 
-interface FrontmatterProps {
-  layout: string;
-  title: string;
-  author: string;
-  description: string;
-  date: string;
-  thumbnail: string;
-  category: string;
-}
 
 export default async function PostPage({
   params,
