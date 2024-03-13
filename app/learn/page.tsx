@@ -6,16 +6,12 @@ import "normalize.css";
 import Hero from "@/components/Hero";
 import getPosts from "@/lib/getPosts";
 import sortPostsByCategory from "@/lib/sortPostsByCategory";
+import getMostRecentPosts from "@/lib/getMostRecentPosts";
 
 export default async function Home() {
   const posts = await getPosts();
   const categorized = sortPostsByCategory(posts);
-  const recent = posts
-    .toSorted(
-      (a, b) =>
-        new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
-    )
-    .slice(0, 5);
+  const recent = getMostRecentPosts(posts, 5);
 
   return (
     <>
