@@ -1,0 +1,57 @@
+.nestedParent {
+  display: inline-block;
+  margin-right: 1rem;
+  letter-spacing: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.nestedWrapper {
+  width: 100vw;
+  background: radial-gradient(#0300bbdb, #0300aedb);
+  position: absolute;
+  left: 0;
+  top: 50px;
+  transform: translateY(-50%);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.2s;
+}
+
+.nestedNav {
+  color: #d5d5d5;
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  position: relative;
+  left: 50%;
+}
+
+.open {
+  transform: translateY(0%);
+  opacity: 1;
+  z-index: 10;
+}
+
+.arrowUp {
+  position: absolute;
+  top: -0.9rem;
+  left: 50%;
+  border-left: solid 15px transparent;
+  border-right: solid 15px transparent;
+  border-bottom: solid 15px #0300c9;
+  height: 0;
+  width: 0;
+}
+.nestedLi {
+  display: block;
+  white-space: nowrap;
+  margin: 0.8rem;
+  line-height: 1.3rem;
+}
+
+.nestedHeading:hover,
+.nestedLi:hover {
+  color: white;
+  transform: scale(102%);
+  cursor: pointer;
+}

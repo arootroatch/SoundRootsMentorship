@@ -28,7 +28,22 @@
   position: relative;
   top: 0.2rem;
 }
-.nav ul {
+.linkWrapper,
+.iconWrapper,
+.rightWrapper {
+  display: flex;
+  align-items: center;
+}
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+.close {
+  display: none;
+}
+
+.nav>ul {
   margin: 0 1rem 0 0;
   display: flex;
   align-items: center;
@@ -40,11 +55,6 @@
   font-size: 0.9rem;
 }
 
-.navLink:hover,
-.navIcon:hover {
-  color: white;
-  transform: scale(102%);
-}
 .navIcon {
   position: relative;
   top: 0.1rem;
@@ -59,7 +69,7 @@
 
 .instagram {
   margin: 0.2rem;
-  margin-top: 0.33rem;
+  margin-top: 0.35rem;
 }
 
 .search {
@@ -68,52 +78,56 @@
 .separator {
   margin-left: 0.5rem;
 }
-.nestedParent {
-  position: relative;
-  top: 0.47rem;
-  padding-bottom: 1rem;
-  .nestedNav {
-    display: none;
-    color: #d5d5d5;
-    background: radial-gradient(#0300bbdb, #0300aedb);
-    position: absolute;
-    top: 2.1rem;
-    transform: translateX(-40%);
-    padding: 0.5rem;
-    border-radius: 0.2rem;
-  }
+
+.icon:hover,
+.search:hover,
+.instagram:hover,
+.navLink:hover,
+.navIcon:hover {
+  color: white;
+  transform: scale(102%);
+  cursor: pointer;
 }
 
-.nestedParent:hover {
-  .nestedNav {
+@media screen and (max-width: 768px) {
+  .linkWrapper {
+    /* display: none; */
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    background: radial-gradient(#0300bbdb, #02006bdb);
+    width: 100vw;
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+  .linkWrapper > ul {
+    display: block;
+  }
+  .navLink {
+    display: block;
+    margin: 1rem;
+    font-size: 1.2rem;
+  }
+  .hamburger {
     display: block;
   }
 }
 
-.nestedNav:hover {
-  display: block;
+@media screen and (max-width: 499px) {
+  .soundRoots {
+    font-size: 0.6rem;
+  }
+  .mentorship {
+    font-size: 1.1rem;
+  }
 }
-.arrowUp {
-  position: absolute;
-  top: -0.9rem;
-  left: 40%;
-  border-left: solid 15px transparent;
-  border-right: solid 15px transparent;
-  border-bottom: solid 15px #0300aedb;
-  height: 0;
-  width: 0;
-}
-.nested {
-  display: block;
-  white-space: nowrap;
-  margin-top: 0.2rem;
-  line-height: 1.3rem;
-}
-.nested:hover,
-.icon:hover,
-.search:hover,
-.instagram:hover {
-  color: white;
-  transform: scale(102%);
-  cursor: pointer;
+
+@media screen and (max-width: 400px) {
+  .leftWrapper {
+    display: none;
+  }
+  .navWrapper {
+    justify-content: right;
+  }
 }
