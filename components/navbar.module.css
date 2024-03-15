@@ -7,7 +7,6 @@
   top: 0;
   left: 0;
   padding: 0.5rem;
-  box-sizing: border-box;
   z-index: 10;
 }
 .navWrapper {
@@ -21,11 +20,13 @@
   letter-spacing: 0.1rem;
   font-size: 0.8rem;
   position: relative;
-  top: 0.04rem;
+  top: 0.25rem;
 }
 .mentorship {
   font-size: 1.5rem;
   margin-left: 0.6rem;
+  position: relative;
+  top: 0.2rem;
 }
 .nav ul {
   margin: 0 1rem 0 0;
@@ -56,9 +57,9 @@
   margin: 0.2rem;
 }
 
-.instagram{
+.instagram {
   margin: 0.2rem;
-  margin-top: .33rem;
+  margin-top: 0.33rem;
 }
 
 .search {
@@ -80,7 +81,6 @@
     transform: translateX(-40%);
     padding: 0.5rem;
     border-radius: 0.2rem;
-    
   }
 }
 
