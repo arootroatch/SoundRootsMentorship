@@ -2,7 +2,6 @@ import Head from "next/head";
 import Script from "next/script";
 import styles from "./styles.module.css";
 import PostScroller from "@/components/PostScroller";
-// import "normalize.css";
 import Hero from "@/components/Hero";
 import getPosts from "@/lib/getPosts";
 import sortPostsByCategory from "@/lib/sortPostsByCategory";
