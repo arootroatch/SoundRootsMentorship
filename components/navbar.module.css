@@ -55,6 +55,10 @@
   font-size: 0.9rem;
 }
 
+.iconWrapper {
+  font-size: 1.3rem;
+}
+
 .navIcon {
   position: relative;
   top: 0.1rem;
@@ -155,7 +159,6 @@
     background: radial-gradient(#0300bbdb, #02006bdb);
     width: 100vw;
     text-align: center;
-    /* padding-bottom: 0.5rem; */
     height: 0;
     overflow: hidden;
     transition: height 0.4s;
@@ -188,7 +191,7 @@
   .nestedWrapper {
     width: 100vw;
     position: relative;
-    left:-16px; 
+    left: -16px;
     top: 7px;
     transform: translateY(0%);
     overflow: hidden;
@@ -211,7 +214,6 @@
   .nestedLi {
     margin: 0.5rem;
     position: relative;
-    /* left: -70px; */
   }
 }
 
@@ -229,6 +231,6 @@
     display: none;
   }
   .soundRoots {
-    top:0.1rem;
+    top: 0.1rem;
   }
 }

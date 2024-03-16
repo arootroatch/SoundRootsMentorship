@@ -18,7 +18,10 @@ export default function Navbar() {
   }
   function toggleNestedNav() {
     setOpenNestedNav(!openNestedNav);
-    console.log(openNestedNav);
+  }
+  function closeNav() {
+    setOpen ? setOpen(false): null;
+    openNestedNav ? setOpenNestedNav(false) : null;
   }
 
   return (
@@ -33,7 +36,11 @@ export default function Navbar() {
           </span>
         </div>
         <div className={styles.rightWrapper}>
-          <div className={`${styles.linkWrapper} ${open && styles.open} ${openNestedNav && styles.heightAuto}`}>
+          <div
+            className={`${styles.linkWrapper} ${open && styles.open} ${
+              openNestedNav && styles.heightAuto
+            }`}
+          >
             <ul className={agencyFont.className}>
               <li className={`${styles.nestedParent} `}>
                 <Link
@@ -51,21 +58,30 @@ export default function Navbar() {
                   <ul className={styles.nestedNav}>
                     <div className={styles.arrowUp}></div>
                     <li className={styles.nestedLi}>
-                      <Link href='https://www.soundrootsproductions.com/'>
+                      <Link
+                        href='https://www.soundrootsproductions.com/'
+                        onClick={closeNav}
+                      >
                         Sound Roots Productions
                       </Link>
                     </li>
                     <li className={styles.nestedLi}>
-                      <Link href='/'>Sound Roots Mentorship</Link>
+                      <Link href='/' onClick={closeNav}>
+                        Sound Roots Mentorship
+                      </Link>
                     </li>
                   </ul>
                 </div>
               </li>
               <li className={styles.navLink}>
-                <Link href='/learn'>Learn</Link>
+                <Link href='/learn' onClick={closeNav}>
+                  Learn
+                </Link>
               </li>
               <li className={styles.navLink}>
-                <Link href=''>Contact</Link>
+                <Link href='' onClick={closeNav}>
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
