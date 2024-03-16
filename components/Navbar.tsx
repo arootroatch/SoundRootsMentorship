@@ -1,3 +1,4 @@
+"use client";
 import styles from "./navbar.module.css";
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
@@ -6,9 +7,20 @@ import { IoIosSearch } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { mixbox, handlee, agencyFont } from "@/lib/fonts";
-import NestedNav from "./NestedNav";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const [openNestedNav, setOpenNestedNav] = useState(false);
+  function handleClick() {
+    setOpen(!open);
+    openNestedNav ? setOpenNestedNav(false) : null;
+  }
+  function toggleNestedNav() {
+    setOpenNestedNav(!openNestedNav);
+    console.log(openNestedNav);
+  }
+
   return (
     <nav className={styles.nav}>
       <div className={styles.navWrapper}>
@@ -21,9 +33,34 @@ export default function Navbar() {
           </span>
         </div>
         <div className={styles.rightWrapper}>
-          <div className={styles.linkWrapper}>
+          <div className={`${styles.linkWrapper} ${open && styles.open} ${openNestedNav && styles.heightAuto}`}>
             <ul className={agencyFont.className}>
-              <NestedNav />
+              <li className={`${styles.nestedParent} `}>
+                <Link
+                  className={styles.nestedHeading}
+                  href=''
+                  onClick={toggleNestedNav}
+                >
+                  Home
+                </Link>
+                <div
+                  className={`${styles.nestedWrapper} ${
+                    openNestedNav && styles.openNestedNav
+                  }`}
+                >
+                  <ul className={styles.nestedNav}>
+                    <div className={styles.arrowUp}></div>
+                    <li className={styles.nestedLi}>
+                      <Link href='https://www.soundrootsproductions.com/'>
+                        Sound Roots Productions
+                      </Link>
+                    </li>
+                    <li className={styles.nestedLi}>
+                      <Link href='/'>Sound Roots Mentorship</Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
               <li className={styles.navLink}>
                 <Link href='/learn'>Learn</Link>
               </li>
@@ -48,7 +85,9 @@ export default function Navbar() {
             <span className={styles.separator}>|</span>
             <IoCloseOutline className={styles.close} />
             <IoIosSearch className={styles.search} />
-            <RxHamburgerMenu className={styles.hamburger} />
+            <Link href='' onClick={handleClick}>
+              <RxHamburgerMenu className={styles.hamburger} />
+            </Link>
           </div>
         </div>
       </div>
