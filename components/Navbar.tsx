@@ -20,7 +20,7 @@ export default function Navbar() {
     setOpenNestedNav(!openNestedNav);
   }
   function closeNav() {
-    setOpen ? setOpen(false): null;
+    setOpen ? setOpen(false) : null;
     openNestedNav ? setOpenNestedNav(false) : null;
   }
 
@@ -38,10 +38,14 @@ export default function Navbar() {
         <div className={styles.rightWrapper}>
           <div
             className={`${styles.linkWrapper} ${open && styles.open} ${
-              openNestedNav && styles.heightAuto
+              openNestedNav && styles.heightFull
             }`}
           >
-            <ul className={agencyFont.className}>
+            <ul
+              className={`${agencyFont.className} ${
+                openNestedNav && styles.openNestedNav
+              }`}
+            >
               <li className={`${styles.nestedParent} `}>
                 <Link
                   className={styles.nestedHeading}
@@ -50,28 +54,23 @@ export default function Navbar() {
                 >
                   Home
                 </Link>
-                <div
-                  className={`${styles.nestedWrapper} ${
-                    openNestedNav && styles.openNestedNav
-                  }`}
-                >
-                  <ul className={styles.nestedNav}>
-                    <div className={styles.arrowUp}></div>
-                    <li className={styles.nestedLi}>
-                      <Link
-                        href='https://www.soundrootsproductions.com/'
-                        onClick={closeNav}
-                      >
-                        Sound Roots Productions
-                      </Link>
-                    </li>
-                    <li className={styles.nestedLi}>
-                      <Link href='/' onClick={closeNav}>
-                        Sound Roots Mentorship
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
+                <div className={styles.arrowUp}></div>
+                <div className={styles.nestedBackground}></div>
+                <ul className={styles.nestedNav}>
+                  <li className={styles.nestedLi}>
+                    <Link
+                      href='https://www.soundrootsproductions.com/'
+                      onClick={closeNav}
+                    >
+                      Sound Roots Productions
+                    </Link>
+                  </li>
+                  <li className={styles.nestedLi}>
+                    <Link href='/' onClick={closeNav}>
+                      Sound Roots Mentorship
+                    </Link>
+                  </li>
+                </ul>
               </li>
               <li className={styles.navLink}>
                 <Link href='/learn' onClick={closeNav}>

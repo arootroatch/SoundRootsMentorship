@@ -103,45 +103,57 @@
   position: relative;
 }
 
-.nestedWrapper {
-  width: 120vw;
-  background: radial-gradient(#0300bbdb, #0300aedb);
-  position: absolute;
-  right: -350px;
-  top: 35px;
-  transform: translateY(-50%);
+.nestedBackground {
+  width: 100vw;
+  background: radial-gradient(#0300bbdb, #030182db);
+  position: fixed;
+  left: 0;
+  top: 50px;
+  height: 0;
   opacity: 0;
-  z-index: -1;
-  transition: transform 0.2s;
+  transition: height 0.2s;
   display: flex;
   justify-content: flex-end;
-  height: 45px;
 }
 
 .nestedNav {
   color: #d5d5d5;
   display: flex;
   justify-content: space-between;
-  max-width: 400px;
+  width: 400px;
   position: absolute;
-  right: 184px;
+  left: -197px;
+  top: 30px;
+  opacity: 0;
+  transform: translateY(-25px);
+  transition: 0.2s;
+  z-index: -1;
 }
 
 .openNestedNav {
-  transform: translateY(0%);
-  opacity: 1;
-  z-index: 10;
+  .nestedBackground {
+    height: 45px;
+    opacity: 1;
+  }
+  .nestedNav {
+    transform: translateY(0px);
+    opacity: 1;
+    z-index: 1;
+  }
+  .arrowUp {
+    display: block;
+  }
 }
 
 .arrowUp {
   position: absolute;
-  top: -0.9rem;
-  left: 50%;
+  left: 2px;
   border-left: solid 15px transparent;
   border-right: solid 15px transparent;
-  border-bottom: solid 15px #0300c9;
+  border-bottom: solid 15px #f3f3f3c6;
   height: 0;
   width: 0;
+  display: none;
 }
 .nestedLi {
   display: block;
@@ -159,15 +171,15 @@
     background: radial-gradient(#0300bbdb, #02006bdb);
     width: 100vw;
     text-align: center;
-    height: 0;
+    /* height: 0; */
     overflow: hidden;
     transition: height 0.4s;
   }
   .open {
     height: 130px;
   }
-  .heightAuto {
-    height: auto;
+  .heightFull {
+    height: 210px;
   }
   .separator {
     display: none;
@@ -188,28 +200,30 @@
     margin: 1rem;
     font-size: 1.2rem;
   }
-  .nestedWrapper {
-    width: 100vw;
-    position: relative;
-    left: -16px;
-    top: 7px;
-    transform: translateY(0%);
-    overflow: hidden;
-    height: 0;
-    transition: height 0.2s;
-    opacity: 1;
-    z-index: 10;
-    justify-content: center;
+  .nestedBackground {
+    display: none;
   }
   .nestedNav {
+    position: relative;
     flex-direction: column;
-    right: auto;
+    left: -15px;
+    top: auto;
+    height: 0;
+    width: 100vw;
+    background: radial-gradient(#0300bbdb, #02006bdb);
+    transform: translateY(0px);
+    transition: height 0.4s;
+    overflow: hidden;
   }
   .openNestedNav {
     height: 70px;
-  }
-  .arrowUp {
-    display: none;
+    .arrowUp {
+      display: none;
+    }
+    .nestedNav {
+      height: 80px;
+      padding: 0.5rem 0;
+    }
   }
   .nestedLi {
     margin: 0.5rem;
