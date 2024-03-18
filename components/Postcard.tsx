@@ -1,11 +1,10 @@
-
 import Image from "next/image";
 import styles from "@/components/postcard.module.css";
 import { agencyFont } from "@/lib/fonts";
 import Link from "next/link";
-import { PostcardProps } from "@/lib/interfaces";
+import { Postcard } from "@/lib/interfaces";
 
-export default function Postcard(props: PostcardProps) {
+export default function Postcard(props: Postcard) {
   const date = new Date(props.date);
   const formattedDate = date.toLocaleDateString("en-US", {
     year: "numeric",
@@ -16,13 +15,16 @@ export default function Postcard(props: PostcardProps) {
     <div className={styles.postcard}>
       <Link as={props.as} href={props.href}>
         <div className={styles.image}>
-          <Image alt={props.image} src={props.image} fill className={styles.image} />
+          <Image
+            alt={props.image}
+            src={props.image}
+            fill
+            className={styles.image}
+          />
         </div>
         <div className={styles.info}>
           <p className={styles.date}>{formattedDate}</p>
-          <h3 className={`${agencyFont.className}`}>
-            {props.title}
-          </h3>
+          <h3 className={`${agencyFont.className}`}>{props.title}</h3>
           <p className={styles.description}>{props.description}</p>
         </div>
       </Link>

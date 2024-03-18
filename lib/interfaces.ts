@@ -1,4 +1,4 @@
-export interface HeroProps {
+export interface Hero {
   alt: string;
   src: string;
   h1: string;
@@ -6,7 +6,7 @@ export interface HeroProps {
   date?: string;
   author?: string;
 }
-export interface FrontmatterProps {
+export interface Frontmatter {
   layout: string;
   title: string;
   author: string;
@@ -16,13 +16,13 @@ export interface FrontmatterProps {
   category: string;
 }
 
-export interface PostsProps {
+export interface Posts {
   content: string;
-  data: FrontmatterProps;
+  data: Frontmatter;
   filePath: string;
 }
 
-export interface PostcardProps {
+export interface Postcard {
   key: string;
   title: string;
   image: string;
@@ -32,7 +32,7 @@ export interface PostcardProps {
   href: string;
 }
 
-export interface PostScrollerProps {
+export interface PostScroller {
   title: string;
-  category: PostsProps[];
+  category: Posts[];
 }

@@ -4,8 +4,7 @@ import Hero from "@/components/Hero";
 import getPost from "@/lib/getPost";
 import { compileMDX } from "next-mdx-remote/rsc";
 import MyProgressBar from "@/components/ProgressBar";
-import { FrontmatterProps } from "@/lib/interfaces";
-
+import { Frontmatter } from "@/lib/interfaces";
 
 export default async function PostPage({
   params,
@@ -13,7 +12,7 @@ export default async function PostPage({
   params: { slug: string };
 }) {
   const markdown = await getPost(params.slug);
-  const { content, frontmatter } = await compileMDX<FrontmatterProps>({
+  const { content, frontmatter } = await compileMDX<Frontmatter>({
     source: markdown,
     options: { parseFrontmatter: true },
   });

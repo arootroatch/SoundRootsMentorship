@@ -1,4 +1,4 @@
-import { PostsProps } from "./interfaces";
+import { Posts } from "./interfaces";
 
 const categories = [
   "Amplifiers",
@@ -16,13 +16,13 @@ const categories = [
   "Soft Skills",
   "Soundcheck",
   "Troubleshooting",
-]
+];
 
-export default function sortPostsByCategory(posts: PostsProps[]) {
-  let categorized: PostsProps[][] = [];
+export default function sortPostsByCategory(posts: Posts[]) {
+  let categorized: Posts[][] = [];
   categories.forEach((category) => {
     categorized.push(posts.filter((post) => post.data.category === category));
-  })
+  });
   categorized = categorized.filter((category) => category.length > 0);
   return categorized;
 }

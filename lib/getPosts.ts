@@ -1,7 +1,7 @@
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
-import { PostsProps } from "./interfaces";
+import { Posts } from "./interfaces";
 
 export default function getPosts() {
   // get all posts in content folder
@@ -22,7 +22,7 @@ export default function getPosts() {
       content,
       data: JSON.parse(dataObj),
       filePath,
-    } as PostsProps;
+    } as Posts;
   });
 
   return posts;

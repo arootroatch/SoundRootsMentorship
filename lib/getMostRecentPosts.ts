@@ -1,6 +1,6 @@
-import { PostsProps } from "./interfaces";
+import { Posts } from "./interfaces";
 
-export default function getMostRecentPosts(posts: PostsProps[], amount: number) {
+export default function getMostRecentPosts(posts: Posts[], amount: number) {
   return posts
     .toSorted(
       (a, b) =>
