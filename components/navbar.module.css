@@ -80,7 +80,6 @@
   margin-left: 0.5rem;
 }
 .user {
-  margin-left: 1rem;
   min-width: 50px;
 }
 .separator {
@@ -180,10 +179,10 @@
     transition: height 0.4s;
   }
   .open {
-    height: 130px;
+    height: 160px;
   }
   .heightFull {
-    height: 210px;
+    height: 240px;
   }
   .separator {
     display: none;

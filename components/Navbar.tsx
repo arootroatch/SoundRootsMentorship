@@ -89,6 +89,14 @@ export default function Navbar() {
                   Contact
                 </Link>
               </li>
+              <li className={`${styles.navLink} ${styles.user}`}>
+                <Link
+                  href=''
+                  onClick={user ? logout : login}
+                >
+                  {authReady && (user ? `Logout` : `Login`)}
+                </Link>
+              </li>
             </ul>
           </div>
           <div className={styles.iconWrapper}>
@@ -107,13 +115,6 @@ export default function Navbar() {
             <span className={styles.separator}>|</span>
             <IoCloseOutline className={styles.close} />
             <IoIosSearch className={styles.search} />
-            <Link
-              href=''
-              className={`${agencyFont.className} ${styles.navLink} ${styles.user}`}
-              onClick={user ? logout : login}
-            >
-              {authReady && (user ? `Logout` : `Login`)}
-            </Link>
             <Link href='' onClick={handleClick}>
               <RxHamburgerMenu className={styles.hamburger} />
             </Link>
