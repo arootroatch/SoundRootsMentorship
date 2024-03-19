@@ -30,6 +30,10 @@ export default function Navbar() {
     setOpen ? setOpen(false) : null;
     openNestedNav ? setOpenNestedNav(false) : null;
   }
+  function authAndCloseNav(func: () => void) {
+    func();
+    closeNav();
+  }
 
   return (
     <nav className={styles.nav}>
@@ -92,7 +96,7 @@ export default function Navbar() {
               <li className={`${styles.navLink} ${styles.user}`}>
                 <Link
                   href=''
-                  onClick={user ? logout : login}
+                  onClick={user ? ()=>authAndCloseNav(logout) : ()=>authAndCloseNav(login)}
                 >
                   {authReady && (user ? `Logout` : `Login`)}
                 </Link>
