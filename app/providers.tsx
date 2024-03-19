@@ -8,26 +8,27 @@ export const AuthContext: React.Context<{
   user: Object | null;
   login: () => void;
   logout: () => void;
+  authReady: boolean;
 }> = createContext({
   user: null,
   login: () => {},
   logout: () => {},
+  authReady: false,
 });
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState<Object | null>(null);
+  const [authReady, setAuthReady] = useState(false);
 
   useEffect(() => {
     netlifyIdentity.init();
-
-    netlifyIdentity.on("init", (user) => {
-      setUser(user);
-      // setAuthReady(true);
-
-    });
+    const currentUser = netlifyIdentity.currentUser();
+    setUser(currentUser);
+    setAuthReady(true);
 
     netlifyIdentity.on("login", (user) => {
       setUser(user);
+      console.log('login', user);
       netlifyIdentity.close();
     });
 
@@ -49,6 +50,7 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
     login,
     logout,
     user,
+    authReady,
   };
 
   return (

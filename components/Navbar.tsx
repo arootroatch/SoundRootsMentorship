@@ -15,9 +15,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [openNestedNav, setOpenNestedNav] = useState(false);
 
-  const { user, login, logout } = useContext(AuthContext);
+  const { user, login, logout, authReady } = useContext(AuthContext);
 
-  
+
+
   function handleClick() {
     setOpen(!open);
     openNestedNav ? setOpenNestedNav(false) : null;
@@ -111,7 +112,7 @@ export default function Navbar() {
               className={`${agencyFont.className} ${styles.navLink} ${styles.user}`}
               onClick={user ? logout : login}
             >
-              {user ? `Logout` : `Login`}
+              {authReady && (user ? `Logout` : `Login`)}
             </Link>
             <Link href='' onClick={handleClick}>
               <RxHamburgerMenu className={styles.hamburger} />

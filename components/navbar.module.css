@@ -81,6 +81,7 @@
 }
 .user {
   margin-left: 1rem;
+  min-width: 50px;
 }
 .separator {
   margin-left: 0.5rem;
@@ -174,7 +175,7 @@
     background: radial-gradient(#0300bbdb, #02006bdb);
     width: 100vw;
     text-align: center;
-    /* height: 0; */
+    height: 0;
     overflow: hidden;
     transition: height 0.4s;
   }
