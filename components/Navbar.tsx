@@ -100,7 +100,7 @@ export default function Navbar() {
                       : () => authAndCloseNav(login)
                   }
                 >
-                  {authReady && (user ? `Logout` : `Login`)}
+                  {authReady ? (user ? `Logout` : `Login`) : "Log"}
                 </Link>
               </li>
             </ul>
@@ -129,4 +129,4 @@ export default function Navbar() {
       </div>
     </nav>
   );
-};
+}
