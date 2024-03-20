@@ -18,7 +18,12 @@ export default async function Home() {
         <Script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></Script>
       </Head>
       <header>
-        <Hero alt='Midas XL4' src='/img/H3000.jpeg' h1='' desc=""/>
+        <Hero
+          alt='Analog tape machine'
+          src='/img/road-cases.jpeg'
+          h1='Welcome to the warehouse!'
+          desc='Browse all of our posts, sorted by category.'
+        />
       </header>
       <div className={styles.homeContent}>
         <PostScroller title='Recent' category={recent} />
@@ -33,4 +38,3 @@ export default async function Home() {
     </>
   );
 }
-

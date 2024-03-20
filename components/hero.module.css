@@ -9,14 +9,16 @@
 }
 .titleWrapper {
   width: 100vw;
-  background: linear-gradient(#0000006c, #00000071);
+  background: linear-gradient(#00000064, #0000009f);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   letter-spacing: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 5rem;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 }
 
 .title {

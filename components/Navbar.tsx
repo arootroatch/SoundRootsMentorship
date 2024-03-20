@@ -17,8 +17,6 @@ export default function Navbar() {
 
   const { user, login, logout, authReady } = useContext(AuthContext);
 
-
-
   function handleClick() {
     setOpen(!open);
     openNestedNav ? setOpenNestedNav(false) : null;
@@ -96,7 +94,11 @@ export default function Navbar() {
               <li className={`${styles.navLink} ${styles.user}`}>
                 <Link
                   href=''
-                  onClick={user ? ()=>authAndCloseNav(logout) : ()=>authAndCloseNav(login)}
+                  onClick={
+                    user
+                      ? () => authAndCloseNav(logout)
+                      : () => authAndCloseNav(login)
+                  }
                 >
                   {authReady && (user ? `Logout` : `Login`)}
                 </Link>
@@ -127,4 +129,4 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+};
