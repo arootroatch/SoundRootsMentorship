@@ -1,0 +1,73 @@
+.intro {
+  max-width: var(--max-width);
+  padding: 2rem;
+}
+.introWrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.lightBlue {
+  position: absolute;
+  background-color: #00a2ff26;
+  border-radius: 50%;
+  -webkit-filter: blur(80px);
+  filter: blur(60px);
+  width: 50rem;
+  height: 35rem;
+  z-index: -10;
+  top: 6rem;
+  left: 4rem;
+}
+
+.darkBlue {
+  position: absolute;
+  background-color: #5436fd28;
+  left: 38rem;
+  width: 50rem;
+  height: 35rem;
+  z-index: -11;
+  top: 14rem;
+  -webkit-filter: blur(80px);
+  filter: blur(50px);
+  border-radius: 50%;
+}
+.m32 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-filter: opacity(0.5);
+  filter: opacity(0.5);
+  z-index: -1;
+  margin-top: 5rem;
+  margin-left: 1rem;
+}
+
+.h1 {
+  letter-spacing: 0.2rem;
+  font-size: 3.5rem;
+  background: -webkit-linear-gradient(45deg, #34b4ff, #5436fd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+}
+
+.p {
+  letter-spacing: 0.05rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  position: relative;
+  max-width: 800px;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  padding: 1rem;
+  text-align: center;
+  text-shadow: 4px 4px 0.5rem #0055a9;
+  margin-top: 2.5rem;
+}

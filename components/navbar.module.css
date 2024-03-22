@@ -1,6 +1,6 @@
 .nav {
-  color: #d5d5d5;
-  background: radial-gradient(#0300bbdb, #02006bdb);
+  color: #dedcdc;
+  background: radial-gradient(#003ac0a8, #0300a8a4);
   width: 100vw;
   height: 50px;
   position: fixed;
@@ -108,7 +108,7 @@
 
 .nestedBackground {
   width: 100vw;
-  background: radial-gradient(#0300bbdb, #030182db);
+  background: radial-gradient(#003ac0a8, #0300a8a4);
   position: fixed;
   left: 0;
   top: 50px;

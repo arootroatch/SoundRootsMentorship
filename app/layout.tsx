@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Saira_Semi_Condensed } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import "normalize.css";
 import Providers from "./providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const Saira = Saira_Semi_Condensed({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Sound Roots Mentorship",
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={Saira.className}>
         <Providers>
           <Navbar />
          {children}   
