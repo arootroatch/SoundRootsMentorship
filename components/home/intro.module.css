@@ -1,6 +1,7 @@
 .intro {
   max-width: var(--max-width);
   padding: 2rem;
+  position: relative;
 }
 .introWrapper {
   align-items: center;
@@ -19,18 +20,18 @@
   width: 50rem;
   height: 35rem;
   z-index: -10;
-  top: 6rem;
-  left: 4rem;
+  top: 0rem;
+  left: -9rem;
 }
 
 .darkBlue {
   position: absolute;
   background-color: #5436fd30;
-  left: 38rem;
+  left: 25rem;
   width: 50rem;
   height: 35rem;
   z-index: -11;
-  top: 14rem;
+  top: 8rem;
   -webkit-filter: blur(80px);
   filter: blur(80px);
   border-radius: 50%;
