@@ -11,10 +11,10 @@
 
 .lightBlue {
   position: absolute;
-  background-color: #00a2ff26;
+  background-color: #00a2ff30;
   border-radius: 50%;
   -webkit-filter: blur(80px);
-  filter: blur(60px);
+  filter: blur(80px);
   width: 50rem;
   height: 35rem;
   z-index: -10;
@@ -24,14 +24,14 @@
 
 .darkBlue {
   position: absolute;
-  background-color: #5436fd28;
+  background-color: #5436fd30;
   left: 38rem;
   width: 50rem;
   height: 35rem;
   z-index: -11;
   top: 14rem;
   -webkit-filter: blur(80px);
-  filter: blur(50px);
+  filter: blur(80px);
   border-radius: 50%;
 }
 .m32 {
@@ -47,7 +47,7 @@
 }
 
 .h1 {
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.25rem;
   font-size: 3.5rem;
   background: -webkit-linear-gradient(45deg, #34b4ff, #5436fd);
   -webkit-background-clip: text;
