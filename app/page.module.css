@@ -7,7 +7,7 @@
   min-height: 100vh;
 }
 
-.description {
+/* .description {
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
@@ -107,7 +107,7 @@
 
 .logo {
   position: relative;
-}
+} */
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -185,7 +185,8 @@
       rgba(var(--callout-rgb), 0.5)
     );
     background-clip: padding-box;
-    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px);
   }
 
   .description div {
@@ -212,11 +213,22 @@
 
 @media (prefers-color-scheme: dark) {
   .vercelLogo {
-    filter: invert(1);
+    -webkit-filter: invert(1);
+            filter: invert(1);
   }
 
   .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+    -webkit-filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+            filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
 

@@ -14,10 +14,12 @@ export default function Intro() {
       <div className={styles.introWrapper}>
         <Image
           src='/img/m32.png'
-          width={850}
+          width={870}
           height={600}
           alt='Midas M32'
           className={styles.m32}
+          quality={10}
+          priority
         ></Image>
         <p className={styles.p}>
           Get real-world, hands-on, one-on-one live audio training, designed
