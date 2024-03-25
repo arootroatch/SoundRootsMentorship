@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import "normalize.css";
 import Providers from "./providers";
 
-const Saira = Saira_Semi_Condensed({ weight: "400", subsets: ["latin"] });
+// const Saira = Saira_Semi_Condensed({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Sound Roots Mentorship",
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={Saira.className}>
+      <body>
         <Providers>
           <Navbar />
          {children}   

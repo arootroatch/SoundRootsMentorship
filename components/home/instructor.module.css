@@ -1,0 +1,13 @@
+.section {
+  background-color: #3d3aff25; 
+  background-size: 100%;
+  width: 100vw;
+  padding: 3rem;
+}
+
+.ulWrapper {
+  display: flex;
+  justify-content: space-around;
+  max-width: 600px;
+  margin: 0 auto;
+}

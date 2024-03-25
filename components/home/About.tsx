@@ -22,7 +22,7 @@ export default function About() {
       <p className={styles.p}>
         So why is this happening? A few reasons:
         <ul>
-          <li className={styles.li}>
+          <li className='li'>
             Most audio programs, especially at four-year universities, primarily
             focus on the recording studio environment, not the live environment,
             despite the fact that most of the jobs are in live event production.
@@ -30,13 +30,13 @@ export default function About() {
             universities sell what the students want, not what the industry
             needs.
           </li>
-          <li className={styles.li}>
+          <li className='li'>
             Would you take guitar lessons where you aren't able to play the
             guitar during your lesson? Of course not! But most college audio
             classes teach it like that &mdash; in a classroom taking a written
             exam instead of testing the student's actual skills.
           </li>
-          <li className={styles.li}>
+          <li className='li'>
             The college educational model takes a one-size-fits-all approach.
             Every student is expected to learn equally well and in the same
             amount of time while being taught with a watered-down approach that
