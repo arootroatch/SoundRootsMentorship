@@ -1,6 +1,6 @@
 .nav {
   color: #dedcdc;
-  background: radial-gradient(#003ac0a8, #0300a8a4);
+  background: radial-gradient(#003ac0c1, #0300a8c1);
   width: 100vw;
   height: 50px;
   position: fixed;
@@ -8,6 +8,8 @@
   left: 0;
   padding: 0.5rem;
   z-index: 10;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
 }
 .navWrapper {
   display: flex;
@@ -108,7 +110,9 @@
 
 .nestedBackground {
   width: 100vw;
-  background: radial-gradient(#003ac0a8, #0300a8a4);
+  background: radial-gradient(#003ac0c1, #0300a8c1);
+    -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   position: fixed;
   left: 0;
   top: 50px;
