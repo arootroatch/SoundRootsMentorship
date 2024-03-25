@@ -5,7 +5,7 @@ import { agencyFont } from "@/lib/fonts";
 
 export default function Intro() {
   return (
-    <div className={styles.intro}>
+    <section className={styles.intro}>
       <div className={styles.lightBlue}></div>
       <div className={styles.darkBlue}></div>
       <h1 className={`${agencyFont.className} ${styles.h1}`}>
@@ -30,6 +30,6 @@ export default function Intro() {
           lessons, but the mixing console is your instrument.
         </p>
       </div>
-    </div>
+    </section>
   );
 }

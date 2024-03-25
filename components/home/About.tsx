@@ -4,7 +4,7 @@ import styles from "./about.module.css";
 
 export default function About() {
   return (
-    <div className={styles.about}>
+    <section className={styles.about}>
       <h2 className={`${agencyFont.className} ${styles.h2}`}>
         A new way to teach live audio
       </h2>
@@ -70,6 +70,6 @@ export default function About() {
         fundamentals you need, but we'll cover those topics in context so they
         actually make sense.
       </p>
-    </div>
+    </section>
   );
 }
