@@ -47,6 +47,7 @@ export default function About() {
       <h3 className={`${agencyFont.className} ${styles.h3}`}>
         The Sound Roots Alternative
       </h3>
+      <h4 className={agencyFont.className}>Your curriculum, your pace</h4>
       <p className={styles.p}>
         I will meet you right where you are. I won't make you sit through
         lessons on topics you already know. I won't rush you through topics you
@@ -59,6 +60,15 @@ export default function About() {
         you want out of the program. I'll ask you about your audio background,
         if any, and what your live audio goals are. We'll create a curriculum
         together that focuses on what you need to achieve your goals.
+      </p>
+      <h4 className={agencyFont.className}>Real gear in real venues</h4>
+      <p className={styles.p}>
+        You won't be sitting in a classroom while I ramble at you, watching the
+        clock and fighting sleep. We're going to be in real venues and
+        production companies, seeing and handling real-world equipment in
+        context. I'll still make sure you understand the theory and the
+        fundamentals you need, but we'll cover those topics in context so they
+        actually make sense.
       </p>
     </div>
   );

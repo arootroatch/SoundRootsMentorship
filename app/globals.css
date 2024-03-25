@@ -115,6 +115,12 @@ h3 {
   margin: 2rem 0;
 }
 
+h4 {
+  letter-spacing: 0.25rem;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
