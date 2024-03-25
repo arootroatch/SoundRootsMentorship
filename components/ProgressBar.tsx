@@ -2,5 +2,5 @@
 import { ProgressBar } from "@nadfri/react-scroll-progress-bar";
 
 export default function MyProgressBar() {
-  return <ProgressBar color1='#0d0b9e' color2='#ffffff8b' />;
+  return <ProgressBar color1='#0d00ff0' color2='#7197ff' height="6px"/>;
 }
