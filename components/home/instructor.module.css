@@ -1,8 +1,9 @@
 .section {
-  background-color: #3d3aff25; 
+  /* background-color: #080d42; */
   background-size: 100%;
   width: 100vw;
   padding: 3rem;
+  background: radial-gradient(#120151bf 40%, #000000db);
 }
 
 .ulWrapper {

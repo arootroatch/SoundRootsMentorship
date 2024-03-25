@@ -111,8 +111,6 @@
 .nestedBackground {
   width: 100vw;
   background: radial-gradient(#003ac0c1, #0300a8c1);
-    -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
   position: fixed;
   left: 0;
   top: 50px;
@@ -121,6 +119,8 @@
   transition: height 0.2s;
   display: flex;
   justify-content: flex-end;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
 }
 
 .nestedNav {
