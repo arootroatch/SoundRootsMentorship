@@ -24,22 +24,24 @@ export default async function PostPage({
     day: "numeric",
   });
   return (
-    <article>
+    <div>
       <Head>
         <title>{frontmatter.title} | Sound Roots Mentorship</title>
       </Head>
-      <header>
-        <MyProgressBar />
-        <Hero
-          src={frontmatter.thumbnail}
-          alt={frontmatter.thumbnail}
-          h1={frontmatter.title}
-          desc={frontmatter.description}
-          date={formattedDate}
-          author={frontmatter.author}
-        />
-      </header>
-      <main className={styles.main}>{content}</main>
-    </article>
+      <article>
+        <header>
+          <MyProgressBar />
+          <Hero
+            src={frontmatter.thumbnail}
+            alt={frontmatter.thumbnail}
+            h1={frontmatter.title}
+            desc={frontmatter.description}
+            date={formattedDate}
+            author={frontmatter.author}
+          />
+        </header>
+        <div className={styles.main}>{content}</div>
+      </article>
+    </div>
   );
 }
