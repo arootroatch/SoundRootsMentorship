@@ -19,31 +19,28 @@ export default function About() {
         needed for their success, often wondering why they paid so much money
         for their education.
       </p>
-      <p className={styles.p}>
-        So why is this happening? A few reasons:
-        <ul>
-          <li className='li'>
-            Most audio programs, especially at four-year universities, primarily
-            focus on the recording studio environment, not the live environment,
-            despite the fact that most of the jobs are in live event production.
-            Students are enamored with the idea of being in the studio, so the
-            universities sell what the students want, not what the industry
-            needs.
-          </li>
-          <li className='li'>
-            Would you take guitar lessons where you aren't able to play the
-            guitar during your lesson? Of course not! But most college audio
-            classes teach it like that &mdash; in a classroom taking a written
-            exam instead of testing the student's actual skills.
-          </li>
-          <li className='li'>
-            The college educational model takes a one-size-fits-all approach.
-            Every student is expected to learn equally well and in the same
-            amount of time while being taught with a watered-down approach that
-            doesn't take individual differences into account.
-          </li>
-        </ul>
-      </p>
+      <p className={styles.p}>So why is this happening? A few reasons:</p>
+      <ul>
+        <li className='li'>
+          Most audio programs, especially at four-year universities, primarily
+          focus on the recording studio environment, not the live environment,
+          despite the fact that most of the jobs are in live event production.
+          Students are enamored with the idea of being in the studio, so the
+          universities sell what the students want, not what the industry needs.
+        </li>
+        <li className='li'>
+          Would you take guitar lessons where you aren't able to play the guitar
+          during your lesson? Of course not! But most college audio classes
+          teach it like that &mdash; in a classroom taking a written exam
+          instead of testing the student's actual skills.
+        </li>
+        <li className='li'>
+          The college educational model takes a one-size-fits-all approach.
+          Every student is expected to learn equally well and in the same amount
+          of time while being taught with a watered-down approach that doesn't
+          take individual differences into account.
+        </li>
+      </ul>
       <h3 className={`${agencyFont.className} ${styles.h3}`}>
         The Sound Roots Alternative
       </h3>

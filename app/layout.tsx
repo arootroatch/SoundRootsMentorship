@@ -32,7 +32,6 @@ export default function RootLayout({
           <textarea name='experience'></textarea>
           <textarea name='goals'></textarea>
         </form>
-        ;
         <Providers>
           <Navbar />
           {children}
