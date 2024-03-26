@@ -20,18 +20,6 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body>
-        <form
-          name='mentorship-contact-form'
-          data-netlify-recaptcha='true'
-          netlify-honeypot='bot-field'
-          data-netlify='true'
-          hidden
-        >
-          <input type='text' name='name' />
-          <input type='email' name='email' />
-          <textarea name='experience'></textarea>
-          <textarea name='goals'></textarea>
-        </form>
         <Providers>
           <Navbar />
           {children}
