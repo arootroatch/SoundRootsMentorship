@@ -16,32 +16,32 @@ export default function Instructor() {
         called VER (now PRG), where I assembled and prepped the audio systems
         for large tours like:
       </p>
-      <div className={styles.ulWrapper}>
+      <div className='ulWrapper'>
         <ul className={styles.ul}>
-          <li className='li'>Twenty One Pilots</li>
-          <li className='li'>OneRepublic</li>
-          <li className='li'>Judah and the Lion</li>
+          <li >Twenty One Pilots</li>
+          <li >OneRepublic</li>
+          <li >Judah and the Lion</li>
         </ul>
         <ul>
-          <li className='li'>Journey</li>
-          <li className='li'>Dierks Bentley</li>
-          <li className='li'>...and many more!</li>
+          <li >Journey</li>
+          <li >Dierks Bentley</li>
+          <li >...and many more!</li>
         </ul>
       </div>
       <p>
         I've been blessed to personally have run sound for many great artists,
         including:
       </p>
-      <div className={styles.ulWrapper}>
+      <div className='ulWrapper'>
         <ul>
-          <li className='li'>Ashley McBryde</li>
-          <li className='li'>Kacey Musgraves</li>
-          <li className='li'>The Brummies</li>
+          <li>Ashley McBryde</li>
+          <li >Kacey Musgraves</li>
+          <li >The Brummies</li>
         </ul>
         <ul>
-          <li className='li'>LA Guns</li>
-          <li className='li'>Tom Keifer</li>
-          <li className='li'>Lucie Silvas</li>
+          <li >LA Guns</li>
+          <li >Tom Keifer</li>
+          <li >Lucie Silvas</li>
         </ul>
       </div>
       <p>

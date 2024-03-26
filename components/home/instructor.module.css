@@ -6,9 +6,4 @@
   background: radial-gradient(#080054bf 40%, #000000db);
 }
 
-.ulWrapper {
-  display: flex;
-  justify-content: space-around;
-  max-width: 600px;
-  margin: 0 auto;
-}
+

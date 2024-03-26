@@ -23,6 +23,7 @@
   font-size: 0.8rem;
   position: relative;
   top: 0.23rem;
+
 }
 .mentorship {
   font-size: 1.5rem;
@@ -52,7 +53,7 @@
 }
 .navLink {
   display: inline-block;
-  margin-right: 1rem;
+  margin: 0 1rem 0 0;
   letter-spacing: 0.2rem;
   font-size: 1rem;
 }
@@ -102,10 +103,10 @@
 
 .nestedParent {
   display: inline-block;
-  margin-right: 1rem;
   letter-spacing: 0.2rem;
   font-size: 1rem;
   position: relative;
+  margin: 0 1rem 0 0;
 }
 
 .nestedBackground {
@@ -135,6 +136,7 @@
   transform: translateY(-25px);
   transition: 0.2s;
   z-index: -1;
+  
 }
 
 .openNestedNav {

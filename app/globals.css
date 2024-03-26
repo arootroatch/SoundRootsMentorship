@@ -37,6 +37,7 @@ body {
     rgb(var(--background-start-rgb));
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
+  letter-spacing: 0.05rem;
 }
 
 a {
@@ -68,19 +69,30 @@ h4 {
 
 p {
   max-width: 800px;
-  letter-spacing: 0.05rem;
   line-height: 1.5rem;
   margin-top: 1rem;
   margin: 0 auto;
 }
 
-.li {
+li {
   margin: 1rem 0 1rem 2rem;
 }
 
 section {
   margin-top: 4rem;
 }
+
+.ulWrapper {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ulWrapper ul{
+  max-width: 300px;
+  width: 50%;
+}
+
 
 @media (prefers-color-scheme: dark) {
   html {
