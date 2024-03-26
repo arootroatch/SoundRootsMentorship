@@ -12,12 +12,13 @@ export default function Contact() {
     const myForm = event.target;
     const formData = new FormData(myForm);
 
-    fetch("/", {
+    fetch("/hiddenForm.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       // @ts-ignore
       body: new URLSearchParams(formData).toString(),
     })
+    .then(() => alert('Thank you for your submission!'))
       .catch((error) => alert(error));
   };
   return (
