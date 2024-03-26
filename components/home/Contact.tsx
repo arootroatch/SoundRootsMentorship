@@ -1,8 +1,26 @@
+"use client";
+
 import React from "react";
 import { agencyFont } from "@/lib/fonts";
 import styles from "./contact.module.css";
 
 export default function Contact() {
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      // @ts-ignore
+      body: new URLSearchParams(formData).toString(),
+    })
+      // .then(() => navigate("/thank-you/"))
+      .catch((error) => alert(error));
+  };
+
   return (
     <section>
       <h2 className={agencyFont.className}>
@@ -15,7 +33,9 @@ export default function Contact() {
         netlify-honeypot='bot-field'
         method='post'
         className={`${styles.form} ${agencyFont.className}`}
+        onSubmit={handleSubmit}
       >
+        <input type="hidden" name="form-name" value="mentorship-contact-form" />
         <div >
           <label id='name-label' htmlFor='name'>
             Name
