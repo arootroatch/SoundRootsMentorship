@@ -5,14 +5,28 @@ import { agencyFont } from "@/lib/fonts";
 import styles from "./contact.module.css";
 
 export default function Contact() {
+  // @ts-ignore
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      // @ts-ignore
+      body: new URLSearchParams(formData).toString(),
+    })
+      .catch((error) => alert(error));
+  };
   return (
     <section>
       <h2 className={agencyFont.className}>
         Start your live audio career today
       </h2>
       <form
-        action='/hiddenForm.html'
+        onSubmit={handleSubmit}
         name='mentorship-contact-form'
         data-netlify-recaptcha='true'
         data-netlify='true'
