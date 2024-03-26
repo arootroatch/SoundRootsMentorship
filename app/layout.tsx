@@ -18,11 +18,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body>
+        <form
+          name='mentorship-contact-form'
+          data-netlify-recaptcha='true'
+          netlify-honeypot='bot-field'
+          data-netlify='true'
+          hidden
+        >
+          <input type='text' name='name' />
+          <input type='email' name='email' />
+          <textarea name='experience'></textarea>
+          <textarea name='goals'></textarea>
+        </form>
+        ;
         <Providers>
           <Navbar />
-         {children}   
+          {children}
         </Providers>
       </body>
     </html>
