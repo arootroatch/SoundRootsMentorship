@@ -68,9 +68,9 @@ export default function Contact() {
             required
           ></textarea>
         </div>
-        <div
+        {/* <div
           data-netlify-recaptcha='true'
-        ></div>
+        ></div> */}
         <div >
           <button id='submit' type='submit' className={styles.btn}>
             Submit
