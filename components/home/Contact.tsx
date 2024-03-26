@@ -12,7 +12,7 @@ export default function Contact() {
         Start your live audio career today
       </h2>
       <form
-        action='/'
+        // action='/'
         name='mentorship-contact-form'
         data-netlify-recaptcha='true'
         data-netlify='true'
