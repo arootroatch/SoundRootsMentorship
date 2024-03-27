@@ -36,7 +36,6 @@ const handler = async (event) => {
       }
     })
   }).then((res) => {
-    console.log('email response', res.status)
     if(res.status === 200){
       emailSucess = true;
     }
@@ -46,14 +45,15 @@ const handler = async (event) => {
     const database = (await clientPromise).db('Mentorship');
     const collection = database.collection('contact-form');
 
-    collection.insertOne(data).then((res) => {
-      console.log('dbResponse', res);
+    collection.insertOne(data).then(() => {
       dbSuccess = true;
     })
   } catch (error) {
     dbError = error;
   }
 
+  console.log('"dbSucess"', dbSuccess)
+  console.log('"emailSucess"',emailSucess)
   if (dbSuccess && emailSucess) {
     return {
       statusCode: 200,
