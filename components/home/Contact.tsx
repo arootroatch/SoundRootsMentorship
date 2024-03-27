@@ -53,13 +53,14 @@ export default function Contact() {
         className={`${styles.form} ${agencyFont.className}`}
       >
         <div>
-          <label id='name-label' htmlFor='name'>
+          <label id='name-label' htmlFor='name' >
             Name
           </label>
           <input
             type='text'
             id='name'
             name='name'
+            maxLength={50}
             className={styles.formControl}
             placeholder='Please enter your name'
             required
@@ -73,6 +74,7 @@ export default function Contact() {
             type='email'
             id='email'
             name='email'
+            maxLength={50}
             className={styles.formControl}
             placeholder='Please enter your email address'
             required
@@ -89,6 +91,7 @@ export default function Contact() {
             name='experience'
             placeholder='I make dope beats in Logic 😎'
             required
+            maxLength={500}
           ></textarea>
         </div>
         <div>
@@ -97,6 +100,7 @@ export default function Contact() {
             name='goals'
             placeholder='I want to learn about different mixing consoles. What do all those buttons do anyway?! 🎤🎙️'
             required
+            maxLength={500}
           ></textarea>
         </div>
         <div>
