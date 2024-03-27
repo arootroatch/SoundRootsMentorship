@@ -13,6 +13,12 @@ export default function Contact() {
 
     const myForm = event.target;
     const formData = new FormData(myForm);
+    console.log(!formData.get("bot-field"));
+
+    if (formData.get("bot-field")) {
+      alert('You appear to be a bot. Please unplug from the matrix and try again.')
+      return;
+    }
 
     await fetch("/.netlify/functions/postToDbAndEmail", {
       method: "POST",
@@ -46,7 +52,6 @@ export default function Contact() {
         method='post'
         className={`${styles.form} ${agencyFont.className}`}
       >
-        <input type='hidden' name='form-name' value='mentorship-contact-form' />
         <div>
           <label id='name-label' htmlFor='name'>
             Name
@@ -73,7 +78,7 @@ export default function Contact() {
             required
           />
         </div>
-        <div style={{ display: "none" }}>
+        <div >
           <label htmlFor='bot-field'>
             I'm a robot: <input name='bot-field' />
           </label>
@@ -94,9 +99,6 @@ export default function Contact() {
             required
           ></textarea>
         </div>
-        {/* <div
-          data-netlify-recaptcha='true'
-        ></div> */}
         <div>
           <button id='submit' type='submit' className={styles.btn}>
             {pending ? `Loading...` : `Submit` }
