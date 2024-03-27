@@ -3,8 +3,10 @@
 import React from "react";
 import { agencyFont } from "@/lib/fonts";
 import styles from "./contact.module.css";
+import { useFormStatus } from "react-dom";
 
 export default function Contact() {
+  const { pending } = useFormStatus();
   // @ts-ignore
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -97,7 +99,7 @@ export default function Contact() {
         ></div> */}
         <div>
           <button id='submit' type='submit' className={styles.btn}>
-            Submit
+            {pending ? `Loading...` : `Submit` }
           </button>
         </div>
       </form>
