@@ -78,7 +78,7 @@ export default function Contact() {
             required
           />
         </div>
-        <div >
+        <div style={{ display: "none" }}>
           <label htmlFor='bot-field'>
             I'm a robot: <input name='bot-field' />
           </label>
