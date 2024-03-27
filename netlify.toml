@@ -1,5 +1,3 @@
 [dev]
-  command = "npm run dev"
+  command = "next dev"
   targetPort = 3000
-  framework = "#custom"
-  publish = "build"
