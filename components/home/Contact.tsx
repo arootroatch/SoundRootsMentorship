@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React from "react";
 import { agencyFont } from "@/lib/fonts";
@@ -6,20 +6,29 @@ import styles from "./contact.module.css";
 
 export default function Contact() {
   // @ts-ignore
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     const myForm = event.target;
     const formData = new FormData(myForm);
 
-    fetch("/hiddenForm.html", {
+    await fetch("/.netlify/functions/postToGSheetAndEmail", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      // @ts-ignore
-      body: new URLSearchParams(formData).toString(),
-    })
-    .then(() => alert('Thank you for your submission!'))
-      .catch((error) => alert(error));
+      mode: "cors",
+      body: JSON.stringify({
+        name: formData.get("name"),
+        email: formData.get("email"),
+        experience: formData.get("experience"),
+        goals: formData.get("goals"),
+        date: new Date().toISOString(),
+      }),
+    }).then((res) => {
+      if (res.status === 200) {
+        alert("Thank you for your submission!");
+      } else {
+        alert("Something went wrong. Please try again later.");
+      }
+    });
   };
   return (
     <section>
@@ -35,8 +44,8 @@ export default function Contact() {
         method='post'
         className={`${styles.form} ${agencyFont.className}`}
       >
-        <input type="hidden" name="form-name" value="mentorship-contact-form" />
-        <div >
+        <input type='hidden' name='form-name' value='mentorship-contact-form' />
+        <div>
           <label id='name-label' htmlFor='name'>
             Name
           </label>
@@ -49,7 +58,7 @@ export default function Contact() {
             required
           />
         </div>
-        <div >
+        <div>
           <label id='email-label' htmlFor='email'>
             Email
           </label>
@@ -67,7 +76,7 @@ export default function Contact() {
             I'm a robot: <input name='bot-field' />
           </label>
         </div>
-        <div >
+        <div>
           <p>Briefly describe your audio experience</p>
           <textarea
             name='experience'
@@ -75,7 +84,7 @@ export default function Contact() {
             required
           ></textarea>
         </div>
-        <div >
+        <div>
           <p>What are you looking forward to learning?</p>
           <textarea
             name='goals'
@@ -86,7 +95,7 @@ export default function Contact() {
         {/* <div
           data-netlify-recaptcha='true'
         ></div> */}
-        <div >
+        <div>
           <button id='submit' type='submit' className={styles.btn}>
             Submit
           </button>
