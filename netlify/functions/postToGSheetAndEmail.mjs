@@ -1,6 +1,15 @@
 import fetch from "node-fetch";
+import { MongoClient } from "mongodb";
+
+const client = new MongoClient(process.env.MONGODB_URI);
+
+const clientPromise = client.connect();
 
 const handler = async (event) => {
+  let emailSucess = false;
+  let dbSuccess = false;
+  let dbError;
+  let emailError;
 
   if (event.body === null) {
     return {
@@ -27,10 +36,37 @@ const handler = async (event) => {
         goals: data.goals,
       }
     })
+  }).then((res, error) => {
+    if (res.status === 200) {
+      emailSucess = true;
+    } else {
+      emailError = error;
+    }
   })
 
-  return {
-    statusCode: 200,
+  try {
+    const database = (await clientPromise).db('Mentorship');
+    const collection = database.collection('contact-form');
+
+    collection.insertOne(data).then((res) => {
+      dbSuccess = true;
+    })
+  } catch (error) {
+    dbError = error;
+  }
+
+  if (emailSucess && dbSuccess) {
+    return {
+      statusCode: 200,
+    }
+  } else {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        emailError,
+        dbError
+      })
+    }
   }
 };
 
