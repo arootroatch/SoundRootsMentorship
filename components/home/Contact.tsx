@@ -3,20 +3,22 @@
 import React from "react";
 import { agencyFont } from "@/lib/fonts";
 import styles from "./contact.module.css";
-import { useFormStatus } from "react-dom";
+import { useState } from "react";
 
 export default function Contact() {
-  const { pending } = useFormStatus();
+  const [pending, setPending] = useState(false);
   // @ts-ignore
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setPending(true);
 
     const myForm = event.target;
     const formData = new FormData(myForm);
-    console.log(!formData.get("bot-field"));
 
     if (formData.get("bot-field")) {
-      alert('You appear to be a bot. Please unplug from the matrix and try again.')
+      alert(
+        "You appear to be a bot. Please unplug from the matrix and try again."
+      );
       return;
     }
 
@@ -31,6 +33,7 @@ export default function Contact() {
         date: new Date().toISOString(),
       }),
     }).then((res) => {
+      setPending(false);
       if (res.status === 200) {
         alert("Thank you for your submission!");
       } else {
@@ -53,7 +56,7 @@ export default function Contact() {
         className={`${styles.form} ${agencyFont.className}`}
       >
         <div>
-          <label id='name-label' htmlFor='name' >
+          <label id='name-label' htmlFor='name'>
             Name
           </label>
           <input
@@ -105,7 +108,7 @@ export default function Contact() {
         </div>
         <div>
           <button id='submit' type='submit' className={styles.btn}>
-            {pending ? `Loading...` : `Submit` }
+            {pending ? `Loading...` : `Submit`}
           </button>
         </div>
       </form>
