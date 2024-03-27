@@ -12,7 +12,7 @@ export default function Contact() {
     const myForm = event.target;
     const formData = new FormData(myForm);
 
-    await fetch("/.netlify/functions/postToGSheetAndEmail", {
+    await fetch("/.netlify/functions/postToDbAndEmail", {
       method: "POST",
       mode: "cors",
       body: JSON.stringify({
