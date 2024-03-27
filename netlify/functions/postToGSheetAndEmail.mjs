@@ -45,15 +45,13 @@ const handler = async (event) => {
     const database = (await clientPromise).db('Mentorship');
     const collection = database.collection('contact-form');
 
-    collection.insertOne(data).then(() => {
-      dbSuccess = true;
-    })
+    collection.insertOne(data)
+    dbSuccess = true;
+    
   } catch (error) {
     dbError = error;
   }
 
-  console.log('"dbSucess"', dbSuccess)
-  console.log('"emailSucess"',emailSucess)
   if (dbSuccess && emailSucess) {
     return {
       statusCode: 200,
