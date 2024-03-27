@@ -35,9 +35,11 @@ const handler = async (event) => {
         goals: data.goals,
       }
     })
-  }).then((res, error) => {
-    console.log('response', res);
-    console.log('error', error)
+  }).then((res) => {
+    console.log('email response', res.status)
+    if(res.status === 200){
+      emailSucess = true;
+    }
   })
 
   try {
@@ -52,7 +54,7 @@ const handler = async (event) => {
     dbError = error;
   }
 
-  if (dbSuccess) {
+  if (dbSuccess && emailSucess) {
     return {
       statusCode: 200,
     }
