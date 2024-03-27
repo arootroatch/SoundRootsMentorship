@@ -18,7 +18,6 @@ const handler = async (event) => {
     };
   }
   const data = JSON.parse(event.body);
-  console.log(data)
 
   await fetch(`${process.env.URL}/.netlify/functions/emails/contact-form`, {
     headers: {
@@ -37,11 +36,8 @@ const handler = async (event) => {
       }
     })
   }).then((res, error) => {
-    if (res.status === 200) {
-      emailSucess = true;
-    } else {
-      emailError = error;
-    }
+    console.log('response', res);
+    console.log('error', error)
   })
 
   try {
@@ -49,13 +45,14 @@ const handler = async (event) => {
     const collection = database.collection('contact-form');
 
     collection.insertOne(data).then((res) => {
+      console.log('dbResponse', res);
       dbSuccess = true;
     })
   } catch (error) {
     dbError = error;
   }
 
-  if (emailSucess && dbSuccess) {
+  if (dbSuccess) {
     return {
       statusCode: 200,
     }
