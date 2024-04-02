@@ -40,7 +40,10 @@ export default async function PostPage({
             author={frontmatter.author}
           />
         </header>
-        <div className={styles.main}>{content}</div>
+        <div className={styles.container}>
+         <div className={styles.main}>{content}</div>
+         <div className={styles.sidebar}></div>
+        </div>
       </article>
     </div>
   );
