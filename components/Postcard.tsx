@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "@/components/postcard.module.css";
-import { agencyFont } from "@/lib/fonts";
 import Link from "next/link";
 import { Postcard } from "@/lib/interfaces";
 
@@ -24,7 +23,7 @@ export default function Postcard(props: Postcard) {
         </div>
         <div className={styles.info}>
           <p className={styles.date}>{formattedDate}</p>
-          <h3 className={`${agencyFont.className}`}>{props.title}</h3>
+          <h3 >{props.title}</h3>
           <p className={styles.description}>{props.description}</p>
         </div>
       </Link>

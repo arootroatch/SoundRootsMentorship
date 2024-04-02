@@ -1,14 +1,13 @@
 import React from "react";
-import { agencyFont } from "@/lib/fonts";
 import styles from "./about.module.css";
 
 export default function About() {
   return (
     <section className={styles.about}>
-      <h2 className={`${agencyFont.className} ${styles.h2}`}>
+      <h2 className={` ${styles.h2}`}>
         A new way to teach live audio
       </h2>
-      <h3 className={`${agencyFont.className} ${styles.h3}`}>
+      <h3 className={` ${styles.h3}`}>
         The problem with audio education today
       </h3>
       <p className={styles.p}>
@@ -41,10 +40,10 @@ export default function About() {
           take individual differences into account.
         </li>
       </ul>
-      <h3 className={`${agencyFont.className} ${styles.h3}`}>
+      <h3 className={` ${styles.h3}`}>
         The Sound Roots Alternative
       </h3>
-      <h4 className={agencyFont.className}>Your curriculum, your pace</h4>
+      <h4 >Your curriculum, your pace</h4>
       <p className={styles.p}>
         I will meet you right where you are. I won't make you sit through
         lessons on topics you already know. I won't rush you through topics you
@@ -58,7 +57,7 @@ export default function About() {
         if any, and what your live audio goals are. We'll create a curriculum
         together that focuses on what you need to achieve your goals.
       </p>
-      <h4 className={agencyFont.className}>Real gear in real venues</h4>
+      <h4 >Real gear in real venues</h4>
       <p className={styles.p}>
         You won't be sitting in a classroom while I ramble at you, watching the
         clock and fighting sleep. We're going to be in real venues and

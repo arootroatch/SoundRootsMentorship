@@ -1,11 +1,10 @@
 import React from "react";
-import { agencyFont } from "@/lib/fonts";
 import styles from "./instructor.module.css";
 
 export default function Instructor() {
   return (
     <section className={styles.section}>
-      <h2 className={agencyFont.className}>Meet your instructor</h2>
+      <h2 >Meet your instructor</h2>
       <p>
         I'm Alex Root-Roatch. I'm the owner of Sound Roots Productions, a
         production company that provides a full-service production to staff to

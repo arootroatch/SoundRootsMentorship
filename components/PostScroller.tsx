@@ -1,13 +1,12 @@
 import Postcard from "./Postcard";
 import styles from "@/components/postScroller.module.css";
-import { agencyFont } from "@/lib/fonts";
 import { PostScroller } from "@/lib/interfaces";
 
 export default function PostScroller({ title, category }: PostScroller) {
   return (
     <div className={styles.wrapper}>
       <div>
-        <h2 className={`${styles.title} ${agencyFont.className}`}>{title}</h2>
+        <h2 className={`${styles.title}`}>{title}</h2>
       </div>
       <div className={styles.categoryWrapper}>
         {category.map((post) => (

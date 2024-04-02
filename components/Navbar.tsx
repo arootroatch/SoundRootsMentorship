@@ -7,7 +7,7 @@ import { FaSquareFacebook } from "react-icons/fa6";
 import { IoIosSearch } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { mixbox, handlee, agencyFont } from "@/lib/fonts";
+import { mixbox, handlee } from "@/lib/fonts";
 import { useState, useContext, useEffect } from "react";
 import { AuthContext } from "@/app/providers";
 
@@ -51,7 +51,7 @@ export default function Navbar() {
             }`}
           >
             <ul
-              className={`${agencyFont.className} ${
+              className={`${
                 openNestedNav && styles.openNestedNav
               }`}
             >

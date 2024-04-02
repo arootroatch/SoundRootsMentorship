@@ -1,10 +1,9 @@
 import React from "react";
-import { agencyFont } from "@/lib/fonts";
 
 export default function Topics() {
   return (
     <section>
-      <h2 className={agencyFont.className}>What you can learn</h2>
+      <h2 >What you can learn</h2>
       <p>We'll cover a wide variety of topics, including:</p>
       <div className='ulWrapper'>
         <ul>

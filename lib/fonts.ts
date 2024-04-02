@@ -7,6 +7,6 @@ const mixbox = localFont({
 
 const handlee = Handlee({ weight: "400", subsets: ["latin"] });
 
-const agencyFont = localFont({ src: "fonts/OPTIAgency-Gothic.ttf.woff" });
+// const agencyFont = localFont({ src: "fonts/OPTIAgency-Gothic.ttf.woff" });
 
-export { mixbox, handlee, agencyFont};
+export { mixbox, handlee};

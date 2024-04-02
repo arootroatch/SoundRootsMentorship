@@ -4,7 +4,9 @@
   letter-spacing: 0.2rem;
   font-size: 1.4rem;
   line-height: 1.5rem;
+  font-family: 'OPTIAgency-Gothic';
 }
+
 
 .formControl {
   /* display: block; */

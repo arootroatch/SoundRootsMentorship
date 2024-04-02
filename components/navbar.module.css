@@ -58,6 +58,10 @@
   font-size: 1rem;
 }
 
+.navLink, .nestedParent, .nestedLi{
+  font-family: 'OPTIAgency-Gothic';
+}
+
 .iconWrapper {
   font-size: 1.3rem;
 }

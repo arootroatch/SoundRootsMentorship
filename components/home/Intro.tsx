@@ -1,14 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./intro.module.css";
-import { agencyFont } from "@/lib/fonts";
 
 export default function Intro() {
   return (
     <section className={styles.intro}>
       <div className={styles.lightBlue}></div>
       <div className={styles.darkBlue}></div>
-      <h1 className={`${agencyFont.className} ${styles.h1}`}>
+      <h1 className={` ${styles.h1}`}>
         Your own personal live audio mentor
       </h1>
       <div className={styles.introWrapper}>

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { agencyFont } from "@/lib/fonts";
+// import { agencyFont } from "@/lib/fonts";
 import styles from "./contact.module.css";
 import { useState } from "react";
 
@@ -43,7 +43,7 @@ export default function Contact() {
   };
   return (
     <section>
-      <h2 className={agencyFont.className}>
+      <h2 >
         Start your live audio career today
       </h2>
       <form
@@ -53,7 +53,7 @@ export default function Contact() {
         data-netlify='true'
         netlify-honeypot='bot-field'
         method='post'
-        className={`${styles.form} ${agencyFont.className}`}
+        className={`${styles.form} `}
       >
         <div>
           <label id='name-label' htmlFor='name'>
