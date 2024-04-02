@@ -23,6 +23,10 @@
     font-style: normal;
 }
 
+.twitter-share-button {
+  background-color: none;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

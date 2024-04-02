@@ -5,6 +5,8 @@ import getPost from "@/lib/getPost";
 import { compileMDX } from "next-mdx-remote/rsc";
 import MyProgressBar from "@/components/ProgressBar";
 import { Frontmatter } from "@/lib/interfaces";
+import ShareLinks from "@/components/ShareLinks";
+
 
 export default async function PostPage({
   params,
@@ -23,6 +25,10 @@ export default async function PostPage({
     month: "long",
     day: "numeric",
   });
+
+  const slug = params.slug;
+  const pageURL = `https://mentorship.soundrootsproductions.com/learn/${slug}`;
+
   return (
     <div>
       <Head>
@@ -41,8 +47,10 @@ export default async function PostPage({
           />
         </header>
         <div className={styles.container}>
-         <div className={styles.main}>{content}</div>
-         <div className={styles.sidebar}></div>
+          <div className={styles.main}>{content}</div>
+          <div className={styles.sidebar}>
+            <ShareLinks pageURL={pageURL} />
+          </div>
         </div>
       </article>
     </div>
