@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Script from "next/script";
-import styles from "./styles.module.css";
+import styles from "./learn.module.css";
 import PostScroller from "@/components/PostScroller";
 import Hero from "@/components/Hero";
 import getPosts from "@/lib/getPosts";
