@@ -14,17 +14,14 @@
 }
 
 @font-face {
-    font-family: 'OPTIAgency-Gothic';
-    src:url('/css-fonts/OPTIAgency-Gothic.ttf.woff') format('woff'),
-        url('/css-fonts/OPTIAgency-Gothic.ttf.svg#OPTIAgency-Gothic') format('svg'),
-        url('/css-fonts/OPTIAgency-Gothic.ttf.eot'),
-        url('/css-fonts/OPTIAgency-Gothic.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-}
-
-.twitter-share-button {
-  background-color: none;
+  font-family: "OPTIAgency-Gothic";
+  src: url("/css-fonts/OPTIAgency-Gothic.ttf.woff") format("woff"),
+    url("/css-fonts/OPTIAgency-Gothic.ttf.svg#OPTIAgency-Gothic") format("svg"),
+    url("/css-fonts/OPTIAgency-Gothic.ttf.eot"),
+    url("/css-fonts/OPTIAgency-Gothic.ttf.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -60,8 +57,13 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6{
-  font-family: 'OPTIAgency-Gothic';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "OPTIAgency-Gothic";
 }
 
 h2 {
@@ -107,11 +109,10 @@ section {
   margin: 0 auto;
 }
 
-.ulWrapper ul{
+.ulWrapper ul {
   max-width: 300px;
   width: 50%;
 }
-
 
 @media (prefers-color-scheme: light) {
   html {

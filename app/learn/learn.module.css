@@ -1,4 +1,3 @@
-
 .main {
   max-width: 700px;
   margin: 1rem auto 0 auto;
@@ -7,8 +6,8 @@
   text-align: justify;
 }
 
-.main > h2, 
-.main > h3, 
+.main > h2,
+.main > h3,
 .main > h4,
 .main > h5,
 .main > h6 {
@@ -26,6 +25,26 @@
 
 .sidebar {
   padding-top: 3.5rem;
+  /* position: sticky; */
+  /* top: 50px; */
+  /* height: fit-content; */
+}
+
+.sidebar h4 {
+  font-size: 1.3rem;
+  margin: 3rem 0 1rem 0;
+}
+
+.sidebar a {
+  display: block;
+  font-family: "OPTIAgency-Gothic";
+  letter-spacing: 0.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar a:hover {
+  cursor: pointer;
+  color: #006bc8;
 }
 
 .homeContent {
