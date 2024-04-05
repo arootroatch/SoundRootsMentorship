@@ -2,3 +2,12 @@
   display: flex;
   justify-content: space-between;
 }
+
+.share > button {
+  transition: transform 0.2s;
+}
+
+.share > button:hover {
+  cursor: pointer;
+  transform: scale(110%);
+}
