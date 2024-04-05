@@ -83,9 +83,7 @@
   margin-top: 0.35rem;
 }
 
-.search {
-  margin-left: 0.5rem;
-}
+
 .user {
   min-width: 50px;
 }
@@ -93,7 +91,6 @@
   margin-left: 0.5rem;
 }
 .icon:hover,
-.search:hover,
 .instagram:hover,
 .navLink:hover,
 .navIcon:hover,

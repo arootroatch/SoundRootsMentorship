@@ -39,5 +39,4 @@ export interface PostScroller {
 
 export interface SearchBarParams {
   posts: Posts[];
-  searchOpen: boolean;
 }

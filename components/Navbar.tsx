@@ -3,11 +3,10 @@ import styles from "./navbar.module.css";
 import Link from "next/link"; 
 import { FaInstagram } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
-import { IoIosSearch } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { mixbox, handlee } from "@/lib/fonts";
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext } from "react";
 import { AuthContext } from "@/app/providers";
 import SearchBar from "./SearchBar";
 import { Posts } from "@/lib/interfaces";
@@ -15,7 +14,7 @@ import { Posts } from "@/lib/interfaces";
 export default function Navbar({posts}: {posts: Posts[]}) {
   const [open, setOpen] = useState(false);
   const [openNestedNav, setOpenNestedNav] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
+  
 
   const { user, login, logout, authReady } = useContext(AuthContext);
 
@@ -29,10 +28,6 @@ export default function Navbar({posts}: {posts: Posts[]}) {
   function closeNav() {
     setOpen ? setOpen(false) : null;
     openNestedNav ? setOpenNestedNav(false) : null;
-  }
-
-  function toggleSearch() {
-    setSearchOpen(!searchOpen);
   }
 
   function authAndCloseNav(func: () => void) {
@@ -127,8 +122,8 @@ export default function Navbar({posts}: {posts: Posts[]}) {
             </Link>
             <span className={styles.separator}>|</span>
             <IoCloseOutline className={styles.close} />
-            <IoIosSearch className={styles.search} onClick={toggleSearch}/>
-            <SearchBar posts={posts} searchOpen={searchOpen}/>
+            
+            <SearchBar posts={posts}/>
             <Link href='' onClick={handleClick}>
               <RxHamburgerMenu className={styles.hamburger} />
             </Link>

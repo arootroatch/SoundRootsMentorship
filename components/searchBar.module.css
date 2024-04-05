@@ -1,3 +1,14 @@
+.search {
+  margin-left: 0.5rem;
+  margin-top: 5px;
+}
+
+.search:hover {
+  color: white;
+  transform: scale(102%);
+  cursor: pointer;
+}
+
 .searchBar {
   position: absolute;
   top: 50px;
