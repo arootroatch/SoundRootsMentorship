@@ -1,0 +1,68 @@
+.searchBar {
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  font-family: "OPTIAgency-Gothic";
+  letter-spacing: 0.1rem;
+  width: 100vw;
+  background: radial-gradient(#3501e1ee, #240066e9 80%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.2s;
+}
+
+.openSearch {
+  padding: 0.8rem;
+  height: 60px;
+}
+
+.openSearchAndList {
+  height: auto;
+}
+
+.inputWrapper {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.input {
+  padding: 0.2rem 0.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.405);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.1rem;
+}
+
+.list {
+  height: 0;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  transition: height 0.2s;
+}
+
+.openList {
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.listItem {
+  font-size: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.404);
+}
+
+.category {
+  font-family: var(--body-font);
+  letter-spacing: default;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}

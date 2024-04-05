@@ -2,9 +2,10 @@
 import React from "react";
 import { useCombobox } from "downshift";
 import { Posts } from "@/lib/interfaces";
+import styles from "./searchBar.module.css";
+import { SearchBarParams } from "@/lib/interfaces";
 
-
-export default function SearchBar({ posts }: { posts: Posts[] }) {
+export default function SearchBar({ posts, searchOpen }: SearchBarParams) {
   const [inputItems, setInputItems] = React.useState(posts);
 
   const {
@@ -26,30 +27,39 @@ export default function SearchBar({ posts }: { posts: Posts[] }) {
     },
   });
   return (
-    <div>
-      <label {...getLabelProps()}>Choose an element:</label>
-      <div>
-        <input {...getInputProps()} />
-        <button
+    <div className={`${styles.searchBar} ${searchOpen && styles.openSearch} ${isOpen && styles.openSearchAndList}`}>
+      {/* <label {...getLabelProps()}>Choose an element:</label> */}
+      <div className={styles.inputWrapper}>
+        <input
+          {...getInputProps()}
+          placeholder='Search for an article'
+          className={styles.input}
+        />
+        {/* <button
           type='button'
           {...getToggleButtonProps()}
           aria-label='toggle menu'
         >
           &#8595;
-        </button>
+        </button> */}
       </div>
-      <ul {...getMenuProps()}>
-        {isOpen &&
+      <ul {...getMenuProps()} className={`${styles.list} ${isOpen && styles.openList}`}>
+        {
           inputItems.map((item, index) => (
             <li
               style={
-                highlightedIndex === index ? { backgroundColor: "#bde4ff" } : {}
+                highlightedIndex === index
+                  ? { backgroundColor: "#bde3ff3f" }
+                  : {}
               }
               key={`${item}${index}`}
               {...getItemProps({ item, index })}
+              className={styles.listItem}
             >
-              <span>{item.data.title}</span>
-              <span>{item.data.category}</span>
+              <a href={`/learn/${item.filePath.replace(/\.mdx?$/, "")}`}>
+                <div>{item.data.title}</div>
+                <div className={styles.category}>{item.data.category}</div>
+              </a>
             </li>
           ))}
       </ul>

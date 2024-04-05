@@ -36,3 +36,8 @@ export interface PostScroller {
   title: string;
   category: Posts[];
 }
+
+export interface SearchBarParams {
+  posts: Posts[];
+  searchOpen: boolean;
+}

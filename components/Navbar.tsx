@@ -15,6 +15,7 @@ import { Posts } from "@/lib/interfaces";
 export default function Navbar({posts}: {posts: Posts[]}) {
   const [open, setOpen] = useState(false);
   const [openNestedNav, setOpenNestedNav] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   const { user, login, logout, authReady } = useContext(AuthContext);
 
@@ -29,6 +30,11 @@ export default function Navbar({posts}: {posts: Posts[]}) {
     setOpen ? setOpen(false) : null;
     openNestedNav ? setOpenNestedNav(false) : null;
   }
+
+  function toggleSearch() {
+    setSearchOpen(!searchOpen);
+  }
+
   function authAndCloseNav(func: () => void) {
     func();
     closeNav();
@@ -121,8 +127,8 @@ export default function Navbar({posts}: {posts: Posts[]}) {
             </Link>
             <span className={styles.separator}>|</span>
             <IoCloseOutline className={styles.close} />
-            <IoIosSearch className={styles.search} />
-            <SearchBar posts={posts} />
+            <IoIosSearch className={styles.search} onClick={toggleSearch}/>
+            <SearchBar posts={posts} searchOpen={searchOpen}/>
             <Link href='' onClick={handleClick}>
               <RxHamburgerMenu className={styles.hamburger} />
             </Link>
