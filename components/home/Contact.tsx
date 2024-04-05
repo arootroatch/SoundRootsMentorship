@@ -22,26 +22,17 @@ export default function Contact() {
       return;
     }
 
-
-    await fetch("/.netlify/functions/postToDbAndEmail", {
-      method: "POST",
-      mode: "cors",
-      body: JSON.stringify({
-        name: formData.get("name"),
-        email: formData.get("email"),
-        experience: formData.get("experience"),
-        goals: formData.get("goals"),
-        date: new Date().toISOString(),
-      }),
-    }).then((res) => {
+    await postToDbAndEmail(formData)
+    .then((res) => {
       setPending(false);
-      if (res.status === 200) {
+      if (res.statusCode === 200) {
         alert("Thank you for your submission!");
       } else {
-        alert("Something went wrong. Please try again later.");
+        alert(res.body || "Something went wrong");
       }
     });
   };
+  
   return (
     <section>
       <h2 >

@@ -2,26 +2,35 @@
 import fetch from "node-fetch";
 import { MongoClient } from "mongodb";
 
+//@ts-ignore
 const client = new MongoClient(process.env.MONGODB_URI);
 
 const clientPromise = client.connect();
 
-export default async function postToDbAndEmail(event) {
+export default async function postToDbAndEmail(formData: FormData) {
   let emailSucess = false;
   let dbSuccess = false;
   let dbError;
   let emailError;
 
-  if (event.body === null) {
+  const data = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    experience: formData.get("experience"),
+    goals: formData.get("goals"),
+    date: new Date().toISOString(),
+  }
+
+  if (!data.date||!data.name||!data.email||!data.experience||!data.goals) {
     return {
       statusCode: 400,
-      body: JSON.stringify("Payload required"),
+      body: JSON.stringify("Empty field detected. Please fill out all fields."),
     };
   }
-  const data = JSON.parse(event.body);
 
   await fetch(`${process.env.URL}/.netlify/functions/emails/contact-form`, {
     headers: {
+      //@ts-ignore
       "netlify-emails-secret": process.env.NETLIFY_EMAILS_SECRET,
     },
     method: "POST",
