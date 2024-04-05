@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-// import { agencyFont } from "@/lib/fonts";
 import styles from "./contact.module.css";
+import postToDbAndEmail from "@/actions/postToDbAndEmail";
 import { useState } from "react";
 
 export default function Contact() {
@@ -21,6 +21,7 @@ export default function Contact() {
       );
       return;
     }
+
 
     await fetch("/.netlify/functions/postToDbAndEmail", {
       method: "POST",

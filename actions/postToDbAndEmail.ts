@@ -1,3 +1,4 @@
+"use server";
 import fetch from "node-fetch";
 import { MongoClient } from "mongodb";
 
@@ -5,7 +6,7 @@ const client = new MongoClient(process.env.MONGODB_URI);
 
 const clientPromise = client.connect();
 
-const handler = async (event) => {
+export default async function postToDbAndEmail(event) {
   let emailSucess = false;
   let dbSuccess = false;
   let dbError;
@@ -67,4 +68,3 @@ const handler = async (event) => {
   }
 };
 
-export { handler };
