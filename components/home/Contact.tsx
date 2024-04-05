@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import styles from "./contact.module.css";
 import postToDbAndEmail from "@/actions/postToDbAndEmail";
@@ -32,7 +31,7 @@ export default function Contact() {
       }
     });
   };
-  
+
   return (
     <section>
       <h2 >
