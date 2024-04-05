@@ -1,7 +1,6 @@
 "use client";
 import styles from "./navbar.module.css";
-import Link from "next/link";
-import * as NetlifyIdentityWidget from "netlify-identity-widget";
+import Link from "next/link"; 
 import { FaInstagram } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { IoIosSearch } from "react-icons/io";
@@ -10,8 +9,10 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { mixbox, handlee } from "@/lib/fonts";
 import { useState, useContext, useEffect } from "react";
 import { AuthContext } from "@/app/providers";
+import SearchBar from "./SearchBar";
+import { Posts } from "@/lib/interfaces";
 
-export default function Navbar() {
+export default function Navbar({posts}: {posts: Posts[]}) {
   const [open, setOpen] = useState(false);
   const [openNestedNav, setOpenNestedNav] = useState(false);
 
@@ -121,6 +122,7 @@ export default function Navbar() {
             <span className={styles.separator}>|</span>
             <IoCloseOutline className={styles.close} />
             <IoIosSearch className={styles.search} />
+            <SearchBar posts={posts} />
             <Link href='' onClick={handleClick}>
               <RxHamburgerMenu className={styles.hamburger} />
             </Link>

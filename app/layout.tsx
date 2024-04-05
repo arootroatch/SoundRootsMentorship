@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import "normalize.css";
 import Providers from "./providers";
+import getPosts from "@/lib/getPosts";
 
 // const Saira = Saira_Semi_Condensed({ weight: "400", subsets: ["latin"] });
 
@@ -12,16 +13,17 @@ export const metadata: Metadata = {
   description: "Affordable live audio education",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const posts = await getPosts();
   return (
     <html lang='en'>
       <body>
         <Providers>
-          <Navbar />
+          <Navbar posts={posts} />
           {children}
         </Providers>
       </body>
