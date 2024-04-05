@@ -1,7 +1,6 @@
 // 'use client'
 import React from "react";
 import { useCombobox } from "downshift";
-import { Posts } from "@/lib/interfaces";
 import styles from "./searchBar.module.css";
 import { SearchBarParams } from "@/lib/interfaces";
 import Fuse from "fuse.js";
@@ -14,8 +13,6 @@ export default function SearchBar({ posts, searchOpen }: SearchBarParams) {
 
   const {
     isOpen,
-    getToggleButtonProps,
-    getLabelProps,
     getMenuProps,
     getInputProps,
     highlightedIndex,
@@ -34,20 +31,12 @@ export default function SearchBar({ posts, searchOpen }: SearchBarParams) {
         isOpen && styles.openSearchAndList
       }`}
     >
-      {/* <label {...getLabelProps()}>Choose an element:</label> */}
       <div className={styles.inputWrapper}>
         <input
           {...getInputProps()}
           placeholder='Search for an article'
           className={styles.input}
         />
-        {/* <button
-          type='button'
-          {...getToggleButtonProps()}
-          aria-label='toggle menu'
-        >
-          &#8595;
-        </button> */}
       </div>
       <ul
         {...getMenuProps()}
