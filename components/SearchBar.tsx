@@ -19,12 +19,19 @@ export default function SearchBar({ posts }: SearchBarParams) {
     setSearchOpen(!searchOpen);
   }
 
+  function clearInputAndCloseMenu() {
+    selectItem(null);
+    closeMenu();
+  }
+
   const {
     isOpen,
     getMenuProps,
     getInputProps,
     highlightedIndex,
     getItemProps,
+    selectItem,
+    closeMenu
   } = useCombobox({
     items: inputItems,
     onInputValueChange: ({ inputValue }) => {
@@ -62,8 +69,9 @@ export default function SearchBar({ posts }: SearchBarParams) {
               key={`${item}${index}`}
               {...getItemProps({ item, index })}
               className={styles.listItem}
+              onClick={clearInputAndCloseMenu}
             >
-              <Link href={`/learn/${item.filePath.replace(/\.mdx?$/, "")}`}>
+              <Link onClick={toggleSearch} href={`/learn/${item.filePath.replace(/\.mdx?$/, "")}`}>
                 <div>{item.data.title}</div>
                 <div className={styles.category}>{item.data.category}</div>
               </Link>
