@@ -7,13 +7,11 @@ export default function Intro() {
     <section className={styles.intro}>
       <div className={styles.lightBlue}></div>
       <div className={styles.darkBlue}></div>
-      <h1 className={` ${styles.h1}`}>
-        Your own personal live audio mentor
-      </h1>
+      <h1 className={` ${styles.h1}`}>Your own personal live audio mentor</h1>
       <div className={styles.introWrapper}>
         <Image
           src='/img/m32.png'
-          width={870}
+          width={900}
           height={600}
           alt='Midas M32'
           className={styles.m32}

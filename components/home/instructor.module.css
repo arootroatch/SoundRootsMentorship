@@ -1,9 +1,5 @@
 .section {
-  /* background-color: #080d42; */
-  background-size: 100%;
   width: 100vw;
   padding: 3rem;
   background: radial-gradient(#080054bf 40%, #000000db);
 }
-
-
