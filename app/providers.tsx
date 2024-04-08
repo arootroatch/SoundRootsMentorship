@@ -2,6 +2,7 @@
 import React, { useEffect, useState, createContext } from "react";
 import netlifyIdentity from "netlify-identity-widget";
 import { Next13ProgressBar } from "next13-progressbar";
+import { ThemeProvider } from "next-themes";
 
 // @ts-ignore
 export const AuthContext: React.Context<{
@@ -28,7 +29,7 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
 
     netlifyIdentity.on("login", (user) => {
       setUser(user);
-      console.log('login', user);
+      console.log("login", user);
       netlifyIdentity.close();
     });
 
@@ -55,16 +56,17 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <AuthContext.Provider value={context}>
-      {children}
-      <Next13ProgressBar
-        height='4px'
-        color='#d8deff'
-        options={{ showSpinner: true }}
-        showOnShallow
-      />
+      <ThemeProvider attribute='class'>
+        {children}
+        <Next13ProgressBar
+          height='4px'
+          color='#d8deff'
+          options={{ showSpinner: true }}
+          showOnShallow
+        />
+      </ThemeProvider>
     </AuthContext.Provider>
   );
 };
 
 export default Providers;
-

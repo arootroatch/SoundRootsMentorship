@@ -6,6 +6,7 @@ import Providers from "./providers";
 import getPosts from "@/lib/getPosts";
 
 
+
 export const metadata: Metadata = {
   title: "Sound Roots Mentorship",
   description: "Affordable live audio education",

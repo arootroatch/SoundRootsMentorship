@@ -10,6 +10,7 @@ import { useState, useContext } from "react";
 import { AuthContext } from "@/app/providers";
 import SearchBar from "./SearchBar";
 import { Posts } from "@/lib/interfaces";
+import ThemeButton from "./ThemeButton";
 
 export default function Navbar({ posts }: { posts: Posts[] }) {
   const [open, setOpen] = useState(false);
@@ -112,8 +113,8 @@ export default function Navbar({ posts }: { posts: Posts[] }) {
             </Link>
             <span className={styles.separator}>|</span>
             <IoCloseOutline className={styles.close} />
-
             <SearchBar posts={posts} />
+            <ThemeButton />
             <Link href='' onClick={handleClick}>
               <RxHamburgerMenu className={styles.hamburger} />
             </Link>
