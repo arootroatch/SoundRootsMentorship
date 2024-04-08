@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { Saira_Semi_Condensed } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import "normalize.css";
 import Providers from "./providers";
 import getPosts from "@/lib/getPosts";
 
-// const Saira = Saira_Semi_Condensed({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Sound Roots Mentorship",

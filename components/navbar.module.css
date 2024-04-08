@@ -176,7 +176,7 @@
     position: absolute;
     left: 0;
     top: 50px;
-    background: radial-gradient(#0300bbdb, #02006bdb);
+    background: var(--nav-background);
     width: 100vw;
     text-align: center;
     height: 0;
@@ -218,7 +218,7 @@
     top: auto;
     height: 0;
     width: 100vw;
-    background: radial-gradient(#0300bbdb, #02006bdb);
+    background: var(--nav-background);
     transform: translateY(0px);
     transition: height 0.4s;
     overflow: hidden;

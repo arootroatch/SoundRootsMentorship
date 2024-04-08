@@ -85,17 +85,15 @@ export default function Navbar({ posts }: { posts: Posts[] }) {
                   Contact
                 </Link>
               </li>
-              <li className={`${styles.navLink} ${styles.user}`}>
-                <Link
-                  href=''
-                  onClick={
-                    user
-                      ? () => authAndCloseNav(logout)
-                      : () => authAndCloseNav(login)
-                  }
-                >
-                  {authReady ? (user ? `Logout` : `Login`) : "Log"}
-                </Link>
+              <li
+                className={`${styles.navLink} ${styles.user}`}
+                onClick={
+                  user
+                    ? () => authAndCloseNav(logout)
+                    : () => authAndCloseNav(login)
+                }
+              >
+                {authReady ? (user ? `Logout` : `Login`) : "Log"}
               </li>
             </ul>
           </div>

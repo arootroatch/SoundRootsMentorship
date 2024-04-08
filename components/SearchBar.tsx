@@ -1,4 +1,4 @@
-// 'use client'
+
 import React, { useState } from "react";
 import { useCombobox } from "downshift";
 import styles from "./searchBar.module.css";

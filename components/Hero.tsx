@@ -1,6 +1,5 @@
 import styles from "@/components/hero.module.css";
 import Image from "next/image";
-// import { agencyFont } from "@/lib/fonts";
 import { Hero } from "@/lib/interfaces";
 
 export default function Hero(props: Hero) {
