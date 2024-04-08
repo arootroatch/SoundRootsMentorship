@@ -1,6 +1,6 @@
 .nav {
   color: #dedcdc;
-  background: radial-gradient(#3501e1c1, #240066c6 80%);
+  background: var(--nav-background);
   width: 100vw;
   height: 50px;
   position: fixed;
@@ -23,7 +23,6 @@
   font-size: 0.8rem;
   position: relative;
   top: 0.23rem;
-
 }
 .mentorship {
   font-size: 1.5rem;
@@ -58,8 +57,10 @@
   font-size: 1rem;
 }
 
-.navLink, .nestedParent, .nestedLi{
-  font-family: 'OPTIAgency-Gothic';
+.navLink,
+.nestedParent,
+.nestedLi {
+  font-family: "OPTIAgency-Gothic";
 }
 
 .iconWrapper {
@@ -82,7 +83,6 @@
   margin: 0.2rem;
   margin-top: 0.35rem;
 }
-
 
 .user {
   min-width: 50px;
@@ -112,7 +112,7 @@
 
 .nestedBackground {
   width: 100vw;
-  background: radial-gradient(#3501e1c1, #240066c6 80%);
+  background: var(--nav-background);
   position: fixed;
   left: 0;
   top: 50px;
@@ -121,8 +121,6 @@
   transition: height 0.2s;
   display: flex;
   justify-content: flex-end;
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
 }
 
 .nestedNav {
@@ -137,7 +135,6 @@
   transform: translateY(-25px);
   transition: 0.2s;
   z-index: -1;
-  
 }
 
 .openNestedNav {
@@ -157,10 +154,11 @@
 
 .arrowUp {
   position: absolute;
-  left: 2px;
-  border-left: solid 15px transparent;
-  border-right: solid 15px transparent;
-  border-bottom: solid 15px #f3f3f3c6;
+  left: 4px;
+  top: 23px;
+  border-left: solid 13px transparent;
+  border-right: solid 13px transparent;
+  border-bottom: solid 13px #f3f3f34f;
   height: 0;
   width: 0;
   display: none;

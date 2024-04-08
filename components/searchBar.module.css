@@ -16,7 +16,7 @@
   font-family: "OPTIAgency-Gothic";
   letter-spacing: 0.1rem;
   width: 100vw;
-  background: radial-gradient(#3501e1ee, #240066e9 80%);
+  background: var(--nav-background);
   display: flex;
   justify-content: center;
   flex-direction: column;

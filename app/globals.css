@@ -5,6 +5,7 @@
   --background-end-rgb: 0, 0, 0;
   --body-font: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
+  --nav-background: radial-gradient(#3501e1ee, #240066e9 80%);;
 }
 
 @media (prefers-color-scheme: light) {

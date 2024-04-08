@@ -9,7 +9,7 @@
 }
 .titleWrapper {
   width: 100vw;
-  background: linear-gradient(#00000064, #0000009f);
+  background: linear-gradient(#00000064, #000000ec);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,8 +17,6 @@
   letter-spacing: 1rem;
   font-size: 1.5rem;
   padding: 5rem;
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
 }
 
 .title {
