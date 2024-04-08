@@ -1,6 +1,6 @@
 "use client";
 import styles from "./navbar.module.css";
-import Link from "next/link"; 
+import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { IoCloseOutline } from "react-icons/io5";
@@ -11,10 +11,9 @@ import { AuthContext } from "@/app/providers";
 import SearchBar from "./SearchBar";
 import { Posts } from "@/lib/interfaces";
 
-export default function Navbar({posts}: {posts: Posts[]}) {
+export default function Navbar({ posts }: { posts: Posts[] }) {
   const [open, setOpen] = useState(false);
   const [openNestedNav, setOpenNestedNav] = useState(false);
-  
 
   const { user, login, logout, authReady } = useContext(AuthContext);
 
@@ -52,19 +51,12 @@ export default function Navbar({posts}: {posts: Posts[]}) {
               openNestedNav && styles.heightFull
             }`}
           >
-            <ul
-              className={`${
-                openNestedNav && styles.openNestedNav
-              }`}
-            >
-              <li className={`${styles.nestedParent} `}>
-                <Link
-                  className={styles.nestedHeading}
-                  href=''
-                  onClick={toggleNestedNav}
-                >
-                  Home
-                </Link>
+            <ul className={`${openNestedNav && styles.openNestedNav}`}>
+              <li
+                className={`${styles.nestedParent}`}
+                onClick={toggleNestedNav}
+              >
+                <span className={styles.nestedHeading}>Home</span>
                 <div className={styles.arrowUp}></div>
                 <div className={styles.nestedBackground}></div>
                 <ul className={styles.nestedNav}>
@@ -122,8 +114,8 @@ export default function Navbar({posts}: {posts: Posts[]}) {
             </Link>
             <span className={styles.separator}>|</span>
             <IoCloseOutline className={styles.close} />
-            
-            <SearchBar posts={posts}/>
+
+            <SearchBar posts={posts} />
             <Link href='' onClick={handleClick}>
               <RxHamburgerMenu className={styles.hamburger} />
             </Link>
