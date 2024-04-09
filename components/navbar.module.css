@@ -89,6 +89,7 @@
 }
 .separator {
   margin-left: 0.5rem;
+  margin-top: -0.3rem;
 }
 .icon:hover,
 .instagram:hover,
@@ -189,9 +190,7 @@
   .heightFull {
     height: 240px;
   }
-  .separator {
-    display: none;
-  }
+
   .linkWrapper > ul {
     display: block;
   }
@@ -248,7 +247,7 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
   .mentorship {
     display: none;
   }
@@ -256,3 +255,4 @@
     top: 0.1rem;
   }
 }
+
