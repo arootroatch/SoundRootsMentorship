@@ -33,7 +33,7 @@ export default function Contact() {
   };
 
   return (
-    <section>
+    <section className={styles.contact}>
       <h2 >
         Start your live audio career today
       </h2>
@@ -98,7 +98,7 @@ export default function Contact() {
           ></textarea>
         </div>
         <div>
-          <button id='submit' type='submit' className={styles.btn}>
+          <button id='submit' type='submit' className='btn'>
             {pending ? `Loading...` : `Submit`}
           </button>
         </div>

@@ -1,9 +1,8 @@
 import React from "react";
-import styles from "./instructor.module.css";
 
 export default function Instructor() {
   return (
-    <section className={styles.section}>
+    <section>
       <h2 >Meet your instructor</h2>
       <p>
         I'm Alex Root-Roatch. I'm the owner of Sound Roots Productions, a
@@ -16,7 +15,7 @@ export default function Instructor() {
         for large tours like:
       </p>
       <div className='ulWrapper'>
-        <ul className={styles.ul}>
+        <ul>
           <li >Twenty One Pilots</li>
           <li >OneRepublic</li>
           <li >Judah and the Lion</li>

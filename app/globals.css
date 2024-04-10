@@ -1,11 +1,12 @@
 :root {
   --max-width: 1100px;
   --body-font: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-  sans-serif;
-  --nav-background: radial-gradient(#3501e1ee, #240066e9 80%);;
+    sans-serif;
+  --nav-background: radial-gradient(#3501e1ee, #240066e9 80%);
   --foreground-rgb: 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --section-background: #002fff36;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -113,7 +114,12 @@ li {
 }
 
 section {
-  margin-top: 4rem;
+  padding: 7rem 0;
+  width: 100vw;
+}
+
+section:nth-of-type(2n) {
+  background-color: var(--section-background);
 }
 
 .ulWrapper {
@@ -126,4 +132,33 @@ section {
   max-width: 300px;
   width: 50%;
 }
+.dark .btn {
+  letter-spacing: 5px;
+  background-color: black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: center;
+  box-shadow: 0px 0px 5px 3px #0300b1;
+  font-size: 100%;
+  color: rgb(199, 199, 199);
+  cursor: pointer;
+  transition: 0.2s;
+}
 
+.light .btn {
+  letter-spacing: 5px;
+  background-color: rgb(0, 58, 219);
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: center;
+  box-shadow: 0px 0px 3px 3px #0300b1;
+  font-size: 100%;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 3px 5px #2824ff;
+  color: white;
+}

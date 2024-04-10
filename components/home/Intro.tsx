@@ -5,10 +5,10 @@ import styles from "./intro.module.css";
 export default function Intro() {
   return (
     <section className={styles.intro}>
-      <div className={styles.lightBlue}></div>
-      <div className={styles.darkBlue}></div>
-      <h1 className={` ${styles.h1}`}>Your own personal live audio mentor</h1>
       <div className={styles.introWrapper}>
+      <h1 className={` ${styles.h1}`}>Your own personal live audio mentor</h1>
+        <div className={styles.lightBlue}></div>
+        <div className={styles.darkBlue}></div>
         <Image
           src='/img/m32.png'
           width={900}

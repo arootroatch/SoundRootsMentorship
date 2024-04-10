@@ -7,3 +7,8 @@
   min-height: 100vh;
 }
 
+.soundWaveBorder {
+  position: absolute;
+  top: 95px;
+  opacity: 0.5;
+}

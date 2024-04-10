@@ -1,9 +1,18 @@
 import React from "react";
 import styles from "./about.module.css";
+import Image from "next/image";
 
 export default function About() {
   return (
     <section className={`${styles.about}`}>
+      <Image
+        className={styles.soundWaveBorder}
+        alt='sound-wave-border'
+        src='/img/sound-wave-border.png'
+        width={1100}
+        height={75}
+        quality={50}
+      />
       <div className={styles.container}>
         <h2 className={` ${styles.h2}`}>A new way to teach live audio</h2>
         <h3 className={` ${styles.h3}`}>
