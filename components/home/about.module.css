@@ -4,13 +4,14 @@
   left: 50%;
   transform: translateX(-50%);
   opacity: 0.85;
+  filter: hue-rotate(320deg);
 }
 
 .about {
   position: relative;
   border-width: 7px 0 0 0;
   border-style: solid;
-  border-image: linear-gradient(to right,  #34b4ff, #7a05f0 50%, #d7019a) 1;
+  border-image: linear-gradient(to right,  #00a496, #0538f0 50%, #ad00d8) 1;
 }
 
 .container {
