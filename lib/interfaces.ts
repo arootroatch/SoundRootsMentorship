@@ -22,7 +22,7 @@ export interface Posts {
   filePath: string;
 }
 
-export interface Postcard {
+export interface PostcardProps {
   key: string;
   title: string;
   image: string;

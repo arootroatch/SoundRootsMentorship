@@ -1,9 +1,9 @@
 import Image from "next/image";
 import styles from "@/components/postcard.module.css";
 import Link from "next/link";
-import { Postcard } from "@/lib/interfaces";
+import { PostcardProps } from "@/lib/interfaces";
 
-export default function Postcard(props: Postcard) {
+export default function Postcard(props: PostcardProps) {
   const date = new Date(props.date);
   const formattedDate = date.toLocaleDateString("en-US", {
     year: "numeric",
