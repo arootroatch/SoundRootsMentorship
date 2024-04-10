@@ -1,4 +1,4 @@
-export interface Hero {
+export interface HeroProps {
   alt: string;
   src: string;
   h1: string;

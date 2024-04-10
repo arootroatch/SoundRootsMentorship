@@ -1,8 +1,8 @@
 import styles from "@/components/hero.module.css";
 import Image from "next/image";
-import { Hero } from "@/lib/interfaces";
+import { HeroProps } from "@/lib/interfaces";
 
-export default function Hero(props: Hero) {
+export default function Hero(props: HeroProps) {
   return (
     <div className={styles.wrapper}>
       <Image
