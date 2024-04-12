@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import "normalize.css";
 import Providers from "./providers";
 import getPosts from "@/lib/getPosts";
+import Footer from "@/components/Footer";
 
 
 
@@ -24,6 +25,7 @@ export default async function RootLayout({
         <Providers>
           <Navbar posts={posts} />
           {children}
+          <Footer/>
         </Providers>
       </body>
     </html>
