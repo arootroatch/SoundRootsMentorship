@@ -32,7 +32,7 @@ export interface PostcardProps {
   href: string;
 }
 
-export interface PostScroller {
+export interface PostScrollerProps {
   title: string;
   category: Posts[];
 }

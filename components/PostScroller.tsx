@@ -1,8 +1,8 @@
 import Postcard from "./Postcard";
 import styles from "@/components/postScroller.module.css";
-import { PostScroller } from "@/lib/interfaces";
+import { PostScrollerProps } from "@/lib/interfaces";
 
-export default function PostScroller({ title, category }: PostScroller) {
+export default function PostScroller({ title, category }: PostScrollerProps) {
   return (
     <div className={styles.wrapper}>
       <div>

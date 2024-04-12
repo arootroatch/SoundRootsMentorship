@@ -6,6 +6,7 @@ import { compileMDX } from "next-mdx-remote/rsc";
 import MyProgressBar from "@/components/ProgressBar";
 import { Frontmatter } from "@/lib/interfaces";
 import PostSidebar from "@/components/PostSidebar";
+import PostScroller from "@/components/PostScroller";
 
 
 export default async function PostPage({
@@ -52,6 +53,7 @@ export default async function PostPage({
          <PostSidebar pageURL={pageURL}/>
         </div>
       </article>
+      {/* <PostScroller /> */}
     </div>
   );
 }
