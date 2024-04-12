@@ -7,6 +7,8 @@ import MyProgressBar from "@/components/ProgressBar";
 import { Frontmatter } from "@/lib/interfaces";
 import PostSidebar from "@/components/PostSidebar";
 import PostScroller from "@/components/PostScroller";
+import getPosts from "@/lib/getPosts";
+import getMostRecentPosts from "@/lib/getMostRecentPosts";
 
 
 export default async function PostPage({
@@ -27,6 +29,10 @@ export default async function PostPage({
     day: "numeric",
   });
 
+  const posts = await getPosts();
+  const recent = getMostRecentPosts(posts, 5);
+
+
 
   const slug = params.slug;
   const pageURL = `https://mentorship.soundrootsproductions.com/learn/${slug}`;
@@ -36,7 +42,7 @@ export default async function PostPage({
       <Head>
         <title>{frontmatter.title} | Sound Roots Mentorship</title>
       </Head>
-      <article>
+      <article className={styles.article}>
         <header>
           <MyProgressBar />
           <Hero
@@ -53,7 +59,7 @@ export default async function PostPage({
          <PostSidebar pageURL={pageURL}/>
         </div>
       </article>
-      {/* <PostScroller /> */}
+      <PostScroller title='Explore more articles' category={recent} />
     </div>
   );
 }
