@@ -21,6 +21,8 @@ export default async function PostPage({
     source: markdown,
     options: { parseFrontmatter: true },
   });
+
+
   const date = new Date(frontmatter.date);
   const formattedDate = date.toLocaleDateString("en-US", {
     weekday: "long",
@@ -31,8 +33,6 @@ export default async function PostPage({
 
   const posts = await getPosts();
   const recent = getMostRecentPosts(posts, 5);
-
-
 
   const slug = params.slug;
   const pageURL = `https://mentorship.soundrootsproductions.com/learn/${slug}`;

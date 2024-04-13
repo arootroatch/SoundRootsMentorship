@@ -5,11 +5,20 @@ import ShareLinks from "./ShareLinks";
 import addIdToH2Elements from "@/lib/addIdToH2Elements";
 import addH2LinksToSidebar from "@/lib/addH2LinksToSidebar";
 
-export default function PostSidebar({ pageURL }: { pageURL: string }) {
+export default function PostSidebar({
+  pageURL,
+}: {
+  pageURL: string;
+}) {
+
   useEffect(() => {
-    const h2Elements = Array.from(document.getElementsByTagName("h2")).slice(0, -1);
+    const h2Elements = Array.from(document.getElementsByTagName("h2")).slice(
+      0,
+      -1
+    );
     const sidebar = document.getElementById("sidebar");
     addIdToH2Elements(h2Elements);
+
     addH2LinksToSidebar(h2Elements, sidebar);
   }, []);
   return (

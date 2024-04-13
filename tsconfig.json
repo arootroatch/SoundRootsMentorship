@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/learn/page.tsx", "app/learn/[slug]/page.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/learn/page.tsx", "app/learn/[slug]/page.tsx", "lib/getHeadings.js"],
   "exclude": ["node_modules"]
 }
