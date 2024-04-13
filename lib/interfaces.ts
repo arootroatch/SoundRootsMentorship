@@ -12,6 +12,7 @@ export interface Frontmatter {
   author: string;
   description: string;
   date: string;
+  updated: string;
   thumbnail: string;
   category: string;
 }
