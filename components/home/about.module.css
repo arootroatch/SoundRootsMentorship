@@ -3,7 +3,7 @@
   top: -39px;
   left: 50%;
   transform: translateX(-50%);
-  opacity: 0.85;
+  opacity: 0.7;
   filter: hue-rotate(320deg);
 }
 
@@ -11,7 +11,7 @@
   position: relative;
   border-width: 7px 0 0 0;
   border-style: solid;
-  border-image: linear-gradient(to right,  #00a496, #0538f0 50%, #ad00d8) 1;
+  border-image: linear-gradient(to right,  #00a49677, #0538f07e 50%, #ad00d87e) 1;
 }
 
 .container {
