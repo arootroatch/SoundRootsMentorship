@@ -19,7 +19,7 @@
   margin-bottom: 8rem;
 }
 
-.main > h2 {
+.main h2 {
   scroll-margin-top: 4rem;
 }
 
@@ -33,9 +33,11 @@
 
 .sidebar {
   padding-top: 4.2rem;
-  /* position: sticky; */
-  /* top: 50px; */
-  /* height: fit-content; */
+}
+
+.sidebarWrapper {
+  position: sticky;
+  top: 70px;
 }
 
 .sidebar h4 {

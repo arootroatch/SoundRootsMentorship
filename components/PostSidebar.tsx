@@ -16,15 +16,17 @@ export default function PostSidebar({
       0,
       -1
     );
-    const sidebar = document.getElementById("sidebar");
+    const sidebar = document.getElementById("sidebarWrapper");
     addIdToH2Elements(h2Elements);
 
     addH2LinksToSidebar(h2Elements, sidebar);
   }, []);
   return (
     <div className={styles.sidebar} id='sidebar'>
-      <ShareLinks pageURL={pageURL} />
-      <h4>In this article: </h4>
+      <div id="sidebarWrapper" className={styles.sidebarWrapper}>
+        <ShareLinks pageURL={pageURL} />
+        <h4>In this article: </h4>
+      </div>
     </div>
   );
 }
