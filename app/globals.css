@@ -92,6 +92,7 @@ section {
   top: -64px;
   left: 50%;
   transform: translateX(-50%);
+  /* flex-shrink: 0; */
 }
 
 h1,

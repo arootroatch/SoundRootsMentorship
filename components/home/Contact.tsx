@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./contact.module.css";
 import postToDbAndEmail from "@/actions/postToDbAndEmail";
 import { useState } from "react";
+import DividerNL4 from "../DividerNL4";
 
 export default function Contact() {
   const [pending, setPending] = useState(false);
@@ -34,6 +35,7 @@ export default function Contact() {
 
   return (
     <section className={styles.contact}>
+      <DividerNL4 />
       <h2 >
         Start your live audio career today
       </h2>
