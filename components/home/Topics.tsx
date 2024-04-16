@@ -1,8 +1,10 @@
 import React from "react";
+import DividerTRS from "../DividerTRS";
 
 export default function Topics() {
   return (
     <section>
+      <DividerTRS />
       <h2 >What you can learn</h2>
       <p>We'll cover a wide variety of topics, including:</p>
       <div className='ulWrapper'>

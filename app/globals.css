@@ -71,6 +71,29 @@ a {
   text-decoration: none;
 }
 
+section {
+  position: relative;
+}
+
+.dark .divider {
+  fill: rgba(255, 255, 255, 0.669);
+  stroke: rgba(255, 255, 255, 0.669);
+}
+
+.divider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  fill: rgb(0, 0, 0);
+  stroke: rgb(0, 0, 0);
+  position: absolute;
+  top: -64px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 h1,
 h2,
 h3,

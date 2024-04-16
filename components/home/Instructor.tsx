@@ -1,9 +1,13 @@
 import React from "react";
+import Image from "next/image";
+import styles from "./instructor.module.css";
+import DividerXLR from "../DividerXLR";
 
 export default function Instructor() {
   return (
-    <section>
-      <h2 >Meet your instructor</h2>
+    <section className={styles.instructor}>
+      <DividerXLR />
+      <h2>Meet your instructor</h2>
       <p>
         I'm Alex Root-Roatch. I'm the owner of Sound Roots Productions, a
         production company that provides a full-service production to staff to
@@ -16,14 +20,14 @@ export default function Instructor() {
       </p>
       <div className='ulWrapper'>
         <ul>
-          <li >Twenty One Pilots</li>
-          <li >OneRepublic</li>
-          <li >Judah and the Lion</li>
+          <li>Twenty One Pilots</li>
+          <li>OneRepublic</li>
+          <li>Judah and the Lion</li>
         </ul>
         <ul>
-          <li >Journey</li>
-          <li >Dierks Bentley</li>
-          <li >...and many more!</li>
+          <li>Journey</li>
+          <li>Dierks Bentley</li>
+          <li>...and many more!</li>
         </ul>
       </div>
       <p>
@@ -33,13 +37,13 @@ export default function Instructor() {
       <div className='ulWrapper'>
         <ul>
           <li>Ashley McBryde</li>
-          <li >Kacey Musgraves</li>
-          <li >The Brummies</li>
+          <li>Kacey Musgraves</li>
+          <li>The Brummies</li>
         </ul>
         <ul>
-          <li >LA Guns</li>
-          <li >Tom Keifer</li>
-          <li >Lucie Silvas</li>
+          <li>LA Guns</li>
+          <li>Tom Keifer</li>
+          <li>Lucie Silvas</li>
         </ul>
       </div>
       <p>
