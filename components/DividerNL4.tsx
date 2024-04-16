@@ -15,7 +15,7 @@ export default function DividerTRS() {
           <path d='m409.55 546.96c33.094 30.223 40.172 53.555 40.172 53.555s-9.1875 27.363-40.172 53.566c-10.02 8.4727-9.3984-115.7 0-107.12z' />
         </g>
       </svg>
-      <svg height='18' width='900' xmlns='http://www.w3.org/2000/svg'>
+      <svg height='19' width='900' xmlns='http://www.w3.org/2000/svg'>
         <line x1='0' y1='10' x2='900' y2='10' style={{ strokeWidth: "4" }} />
       </svg>
       <svg
