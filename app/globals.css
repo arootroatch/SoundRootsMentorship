@@ -3,30 +3,21 @@
   --body-font: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   --nav-background: radial-gradient(#3501e1ee, #240066e9 80%);
-  --foreground-rgb: 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
   --section-background: #0066db1b;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
 }
 
 .dark {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
+  --divider-color: #ffffffab;
 }
 
 .light {
   --foreground-rgb: 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --divider-color: rgba(0, 0, 0, 0.826);
 }
 
 @font-face {
@@ -75,19 +66,14 @@ section {
   position: relative;
 }
 
-.dark .divider {
-  fill: rgba(255, 255, 255, 0.669);
-  stroke: rgba(255, 255, 255, 0.669);
-}
-
 .divider {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100vw;
   max-width: 1100px;
-  fill: rgb(0, 0, 0);
-  stroke: rgb(0, 0, 0);
+  fill: var(--divider-color);
+  stroke: var(--divider-color);
   position: absolute;
   top: -62px;
   left: 50%;
