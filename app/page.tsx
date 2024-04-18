@@ -18,7 +18,7 @@ export default function Home() {
       <Instructor />
       <Topics />
       <Contact />
-      <PostScroller title={"Start learning now"} category={recent} />
+      <PostScroller title={"Start learning now"} category={recent} allPostsButton={true}/>
     </main>
   );
 }

@@ -36,6 +36,7 @@ export interface PostcardProps {
 export interface PostScrollerProps {
   title: string;
   category: Posts[];
+  allPostsButton?: boolean;
 }
 
 export interface SearchBarParams {

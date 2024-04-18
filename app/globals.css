@@ -141,33 +141,36 @@ section:nth-of-type(2n) {
   max-width: 300px;
   width: 50%;
 }
-.dark .btn {
+
+.btn {
   letter-spacing: 5px;
-  background-color: black;
   border-radius: 5px;
   padding: 5px 10px;
   text-align: center;
-  box-shadow: 0px 0px 5px 3px #0300b1;
   font-size: 100%;
-  color: rgb(199, 199, 199);
   cursor: pointer;
   transition: 0.2s;
+  font-family: "OPTIAgency-Gothic";
+}
+
+.dark .btn {
+  background-color: black;
+  box-shadow: 0px 0px 5px 3px #0300b1;
+  color: rgb(199, 199, 199);
 }
 
 .light .btn {
-  letter-spacing: 5px;
-  background-color: rgb(0, 28, 121);
-  border-radius: 5px;
-  padding: 5px 10px;
-  text-align: center;
-  box-shadow: 0px 0px 3px 3px #0300b1;
-  font-size: 100%;
+  background-color: #334783;
+  box-shadow: 0px 0px 3px 3px #334783;
   color: rgb(255, 255, 255);
-  cursor: pointer;
-  transition: 0.2s;
 }
 
-.btn:hover {
+.dark .btn:hover {
   box-shadow: 0px 0px 3px 5px #2824ff;
+  color: white;
+}
+
+.light .btn:hover {
+  box-shadow: 0px 0px 3px 5px #334783;
   color: white;
 }

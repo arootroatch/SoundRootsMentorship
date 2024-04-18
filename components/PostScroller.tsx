@@ -1,8 +1,9 @@
 import Postcard from "./Postcard";
 import styles from "@/components/postScroller.module.css";
 import { PostScrollerProps } from "@/lib/interfaces";
+import Link from "next/link";
 
-export default function PostScroller({ title, category }: PostScrollerProps) {
+export default function PostScroller({ title, category, allPostsButton }: PostScrollerProps) {
   return (
     <div className={styles.wrapper}>
       <div>
@@ -21,6 +22,7 @@ export default function PostScroller({ title, category }: PostScrollerProps) {
           />
         ))}
       </div>
+      {allPostsButton && <Link href={'/learn'} className={`${styles.btn} btn`}>Browse All Posts</Link>}
     </div>
   );
 }

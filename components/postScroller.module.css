@@ -21,3 +21,12 @@
   overflow-y: hidden;
   padding-bottom: 3rem;
 }
+
+.btn {
+  display: block;
+  margin: 1rem auto 3rem auto;
+  width: fit-content;
+  font-size: 1.5rem;
+  /* border-style: solid ; */
+  border: 1px solid rgba(255, 255, 255, 0.599);
+}
