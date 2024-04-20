@@ -82,7 +82,7 @@ export default function Navbar({ posts }: { posts: Posts[] }) {
                 </Link>
               </li>
               <li className={styles.navLink}>
-                <Link href='' onClick={closeNav}>
+                <Link href='/#contact' onClick={closeNav}>
                   Contact
                 </Link>
               </li>

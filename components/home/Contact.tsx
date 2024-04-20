@@ -34,7 +34,7 @@ export default function Contact() {
   };
 
   return (
-    <section className={styles.contact}>
+    <section className={styles.contact} id="contact">
       <DividerNL4 />
       <h2 >
         Start your live audio career today
