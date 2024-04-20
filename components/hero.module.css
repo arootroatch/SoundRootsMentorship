@@ -33,3 +33,7 @@
   font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif;
   margin-bottom: 2rem;
 }
+
+.desc:last-of-type {
+  margin-bottom: 0;
+}
