@@ -22,8 +22,7 @@ export default function Contact() {
       return;
     }
 
-    await postToDbAndEmail(formData)
-    .then((res) => {
+    await postToDbAndEmail(formData).then((res) => {
       setPending(false);
       if (res.statusCode === 200) {
         alert("Thank you for your submission!");
@@ -34,11 +33,9 @@ export default function Contact() {
   };
 
   return (
-    <section className={styles.contact} id="contact">
+    <section className={styles.contact} id='contact'>
       <DividerNL4 />
-      <h2 >
-        Start your live audio career today
-      </h2>
+      <h2>Start your live audio career today</h2>
       <form
         onSubmit={handleSubmit}
         name='mentorship-contact-form'
@@ -101,7 +98,16 @@ export default function Contact() {
         </div>
         <div>
           <button id='submit' type='submit' className='btn'>
-            {pending ? `Loading...` : `Submit`}
+            {pending ? (
+              <div className={styles.spinner}>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            ) : (
+              `Submit`
+            )}
           </button>
         </div>
       </form>

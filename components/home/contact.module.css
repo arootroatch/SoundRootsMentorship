@@ -15,6 +15,7 @@
   line-height: 1.5rem;
   font-family: 'OPTIAgency-Gothic';
   margin: 0 auto;
+  color: white;
 }
 
 
@@ -24,14 +25,18 @@
   line-height: 2.5rem;
   letter-spacing: 0.1rem;
   padding-left: 10px;
+  background-color: #ffffff32;
+  color: white;
 }
 
 .formControl:focus,
 .form textarea:focus {
-  background-color: #001b6d;
+  background-color: #00388778;
 }
 
 .form textarea {
+  color: white;
+  background-color: #ffffff32;
   width: 100%;
   height: 150px;
   font-size: 1rem;
@@ -42,5 +47,47 @@
   margin-bottom: 1.5rem;
   line-height: 1.3rem;
 }
+
+
+.spinner,
+.spinner div {
+  box-sizing: border-box;
+}
+.spinner {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 20px;
+}
+.spinner div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-left: 30px;
+  border: 2px solid #eae8e8;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #d3d2d2 transparent transparent transparent;
+}
+.spinner div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.spinner div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.spinner div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 
