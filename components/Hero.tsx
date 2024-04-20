@@ -23,6 +23,11 @@ export default function Hero(props: HeroProps) {
               Written by: {props.author} | {props.date ? props.date : null}
             </p>
           )}
+          {props.updated && (
+            <p className={styles.desc}>
+              Last updated: {props.updated}
+            </p>
+          )}
         </div>
       </div>
     </div>

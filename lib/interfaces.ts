@@ -5,6 +5,7 @@ export interface HeroProps {
   desc?: string;
   date?: string;
   author?: string;
+  updated?: string;
 }
 export interface Frontmatter {
   layout: string;

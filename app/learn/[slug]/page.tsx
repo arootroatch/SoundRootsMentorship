@@ -10,7 +10,6 @@ import PostScroller from "@/components/PostScroller";
 import getPosts from "@/lib/getPosts";
 import getMostRecentPosts from "@/lib/getMostRecentPosts";
 
-
 export default async function PostPage({
   params,
 }: {
@@ -22,7 +21,6 @@ export default async function PostPage({
     options: { parseFrontmatter: true },
   });
 
-
   const date = new Date(frontmatter.date);
   const formattedDate = date.toLocaleDateString("en-US", {
     weekday: "long",
@@ -30,6 +28,16 @@ export default async function PostPage({
     month: "long",
     day: "numeric",
   });
+  const updated = new Date(frontmatter.updated);
+  const formattedUpdate = updated.toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
+  const isUpdated = formattedUpdate !== formattedDate;
+
 
   const posts = await getPosts();
   const recent = getMostRecentPosts(posts, 5);
@@ -52,11 +60,12 @@ export default async function PostPage({
             desc={frontmatter.description}
             date={formattedDate}
             author={frontmatter.author}
+            updated={isUpdated ? formattedUpdate : undefined}
           />
         </header>
         <div className={styles.container}>
           <div className={styles.main}>{content}</div>
-         <PostSidebar pageURL={pageURL}/>
+          <PostSidebar pageURL={pageURL} />
         </div>
       </article>
       <PostScroller title='Explore more articles' category={recent} />
