@@ -43,3 +43,12 @@ export interface PostScrollerProps {
 export interface SearchBarParams {
   posts: Posts[];
 }
+
+declare global {
+  namespace NodeJS {
+    export interface ProcessEnv {
+      NEXT_PUBLIC_HCAPTCHA_SITE_KEY: string;
+      HCAPTCHA_SECRET: string;
+    }
+  }
+}

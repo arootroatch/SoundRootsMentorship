@@ -1,19 +1,28 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./contact.module.css";
 import postToDbAndEmail from "@/actions/postToDbAndEmail";
 import { useState } from "react";
 import DividerNL4 from "../DividerNL4";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 export default function Contact() {
   const [pending, setPending] = useState(false);
+  const [token, setToken] = useState<string | null>(null);
+  const captchaRef = useRef<HCaptcha>(null);
   // @ts-ignore
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setPending(true);
-
+    if (!token) {
+      alert(`Please complete the captcha`);
+      return;
+    }
+    
     const myForm = event.target;
     const formData = new FormData(myForm);
+    
+    formData.append("token", token);
+    setPending(true);
 
     if (formData.get("bot-field")) {
       alert(
@@ -24,6 +33,7 @@ export default function Contact() {
 
     await postToDbAndEmail(formData).then((res) => {
       setPending(false);
+      captchaRef.current?.resetCaptcha();
       if (res.statusCode === 200) {
         alert("Thank you for your submission!");
       } else {
@@ -96,6 +106,11 @@ export default function Contact() {
             maxLength={500}
           ></textarea>
         </div>
+        <HCaptcha
+          sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY}
+          onVerify={(token) => setToken(token)}
+          ref={captchaRef}
+        />
         <div>
           <button id='submit' type='submit' className='btn'>
             {pending ? (
