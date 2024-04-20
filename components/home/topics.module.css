@@ -1,0 +1,15 @@
+.ul li {
+  list-style-type: none;
+  display: inline;
+  font-family: "OPTIAgency-Gothic";
+  letter-spacing: 0.2rem;
+  font-size: 1.4rem;
+  margin: 0 3rem;
+}
+
+.logo {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  position: relative;
+  top: 1.5rem;
+}
