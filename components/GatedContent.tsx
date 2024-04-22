@@ -6,7 +6,6 @@ import React, {
   ReactElement,
   useContext,
   useEffect,
-  useState,
 } from "react";
 import styles from "@/components/gated.module.css";
 
@@ -23,7 +22,7 @@ export default function GatedContent({
     <div className={`${styles.main}  ${!user && styles.preview}`} id='main'>
       {!user && (
         <div className={styles.gatedContent}>
-          <h3>You need to be logged in to read this article</h3>
+          <h3>This article is for students of the mentorship program  only</h3>
           <span>
             Please <a onClick={() => login()}>login</a> or{" "}
             <a href='/#contact'>request access</a>

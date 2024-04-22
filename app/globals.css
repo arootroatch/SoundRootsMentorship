@@ -11,6 +11,11 @@
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
   --divider-color: #ffffffab;
+  --button-background: black;
+  --button-shadow: 0px 0px 5px 3px #0300b1;
+  --button-shadow-hover: 0px 0px 3px 5px #2824ff;
+  --button-text: rgb(199, 199, 199);
+  --button-text-hover: rgb(255, 255, 255);
 }
 
 .light {
@@ -18,6 +23,11 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --divider-color: rgba(0, 0, 0, 0.826);
+  --button-background: #334783;
+  --button-shadow: 0px 0px 3px 3px #334783;
+  --button-shadow-hover: 0px 0px 3px 5px #334783;
+  --button-text: rgb(255, 255, 255);
+  --button-text-hover: rgb(255, 255, 255);
 }
 
 @font-face {
@@ -151,26 +161,13 @@ section:nth-of-type(2n) {
   cursor: pointer;
   transition: 0.2s;
   font-family: "OPTIAgency-Gothic";
+  background-color: var(--button-background);
+  box-shadow: var(--button-shadow);
 }
 
-.dark .btn {
-  background-color: black;
-  box-shadow: 0px 0px 5px 3px #0300b1;
-  color: rgb(199, 199, 199);
+
+.btn:hover {
+  box-shadow: var(--button-shadow-hover);
+  color: var(var(--button-text-hover));
 }
 
-.light .btn {
-  background-color: #334783;
-  box-shadow: 0px 0px 3px 3px #334783;
-  color: rgb(255, 255, 255);
-}
-
-.dark .btn:hover {
-  box-shadow: 0px 0px 3px 5px #2824ff;
-  color: white;
-}
-
-.light .btn:hover {
-  box-shadow: 0px 0px 3px 5px #334783;
-  color: white;
-}
