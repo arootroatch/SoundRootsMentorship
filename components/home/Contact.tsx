@@ -111,6 +111,7 @@ export default function Contact() {
           onVerify={(token) => setToken(token)}
           ref={captchaRef}
         />
+        <br />
         <div>
           <button id='submit' type='submit' className='btn'>
             {pending ? (

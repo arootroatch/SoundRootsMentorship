@@ -29,8 +29,8 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
 
     netlifyIdentity.on("login", (user) => {
       setUser(user);
-      console.log("login", user);
       netlifyIdentity.close();
+      location.reload();
     });
 
     netlifyIdentity.on("logout", () => {

@@ -43,4 +43,5 @@ collections:
               "Troubleshooting",
             ],
         }
+      - { label: "Gated", name: "gated", widget: "boolean" }
       - { label: "Body", name: "body", widget: "markdown" }

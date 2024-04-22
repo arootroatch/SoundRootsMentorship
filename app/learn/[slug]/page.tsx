@@ -9,6 +9,7 @@ import PostSidebar from "@/components/PostSidebar";
 import PostScroller from "@/components/PostScroller";
 import getPosts from "@/lib/getPosts";
 import getMostRecentPosts from "@/lib/getMostRecentPosts";
+import GatedContent from "@/components/GatedContent";
 
 export default async function PostPage({
   params,
@@ -38,6 +39,7 @@ export default async function PostPage({
 
   const isUpdated = formattedUpdate !== formattedDate;
 
+  const gated = frontmatter.gated;
 
   const posts = await getPosts();
   const recent = getMostRecentPosts(posts, 5);
@@ -64,7 +66,12 @@ export default async function PostPage({
           />
         </header>
         <div className={styles.container}>
-          <div className={styles.main}>{content}</div>
+          {gated ? (
+            <GatedContent content={content} />
+          ) : (
+            <div className={styles.main}>{content}</div>
+          )}
+
           <PostSidebar pageURL={pageURL} />
         </div>
       </article>

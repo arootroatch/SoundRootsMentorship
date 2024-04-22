@@ -7,6 +7,7 @@ date: 2024-02-21T06:51:56.966Z
 updated: 2024-02-21T06:51:56.966Z
 thumbnail: /img/GRAPHIC-EQ.jpeg
 category: Signal Processing
+gated: false
 ---
 
 

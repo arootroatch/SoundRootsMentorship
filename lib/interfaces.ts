@@ -16,6 +16,7 @@ export interface Frontmatter {
   updated: string;
   thumbnail: string;
   category: string;
+  gated: boolean;
 }
 
 export interface Posts {
