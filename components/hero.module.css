@@ -37,3 +37,17 @@
 .desc:last-of-type {
   margin-bottom: 0;
 }
+
+@media screen and (max-width: 768px) {
+  .titleWrapper {
+    padding: 2rem;
+  }
+  
+}
+
+@media screen and (max-width: 450px) {
+  .titleWrapper {
+    padding: 1rem;
+  }
+  
+}

@@ -10,7 +10,7 @@
   width: 100vw;
   position: absolute;
   left: 0;
-  top: 500px;
+  top: 600px;
 }
 
 .gatedContent {
@@ -66,16 +66,11 @@
 
 @media screen and (max-width: 768px) {
   .gated {
-    background: linear-gradient(
-      #ffffff00,
-      rgb(var(--background-end-rgb)) 80%,
-      rgb(var(--background-end-rgb)) 90%,
-      #ffffff00
-    );
     height: 1000px;
+    top: 800px;
   }
   .gatedContent {
-    top: 1450px;
+    top: 1350px;
   }
   .preview {
     height: 1000px;
@@ -85,10 +80,10 @@
 
 @media screen and (max-width: 450px) {
  .gatedContent {
-    top: 1550px;
+    top: 1350px;
   }
   .gated {
-    top: 1000px;
+    top: 800px;
 
     background: linear-gradient(
       #ffffff00,
@@ -100,7 +95,10 @@
 }
 @media screen and (max-width: 375px) {
  .gatedContent {
-    top: 1600px;
+    top: 1350px;
     padding: 1rem;
+  }
+  .gated{
+    top: 850px;
   }
 }
