@@ -75,7 +75,7 @@ export default async function PostPage({
           <PostSidebar pageURL={pageURL} />
         </div>
       </article>
-      <PostScroller title='Explore more articles' category={recent} />
+      <PostScroller title='Explore more articles' category={recent} allPostsButton/>
     </div>
   );
 }
