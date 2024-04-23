@@ -163,6 +163,7 @@ section:nth-of-type(2n) {
   font-family: "OPTIAgency-Gothic";
   background-color: var(--button-background);
   box-shadow: var(--button-shadow);
+  color: var(--button-text);
 }
 
 
