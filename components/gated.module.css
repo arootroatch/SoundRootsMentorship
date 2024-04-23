@@ -1,9 +1,11 @@
-.gated{
+.gated {
   z-index: 1;
   background: linear-gradient(
-      #ffffff00,
-      rgb(var(--background-end-rgb)) 50%, rgb(var(--background-end-rgb)) 90%, #ffffff00
-    );
+    #ffffff00,
+    rgb(var(--background-end-rgb)) 50%,
+    rgb(var(--background-end-rgb)) 90%,
+    #ffffff00
+  );
   height: 100%;
   width: 100vw;
   position: absolute;
@@ -45,7 +47,7 @@
   overflow-x: visible;
 }
 
-.preview{
+.preview {
   height: 700px;
 }
 
@@ -62,3 +64,43 @@
   scroll-margin-top: 4rem;
 }
 
+@media screen and (max-width: 768px) {
+  .gated {
+    background: linear-gradient(
+      #ffffff00,
+      rgb(var(--background-end-rgb)) 80%,
+      rgb(var(--background-end-rgb)) 90%,
+      #ffffff00
+    );
+    height: 1000px;
+  }
+  .gatedContent {
+    top: 1450px;
+  }
+  .preview {
+    height: 1000px;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+ .gatedContent {
+    top: 1550px;
+  }
+  .gated {
+    top: 1000px;
+
+    background: linear-gradient(
+      #ffffff00,
+      rgb(var(--background-end-rgb)) 50%,
+      rgb(var(--background-end-rgb)) 90%,
+      #ffffff00
+    );
+  }
+}
+@media screen and (max-width: 375px) {
+ .gatedContent {
+    top: 1600px;
+    padding: 1rem;
+  }
+}

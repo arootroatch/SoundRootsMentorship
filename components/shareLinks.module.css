@@ -11,3 +11,9 @@
   cursor: pointer;
   transform: scale(110%);
 }
+
+@media screen and (max-width: 768px) {
+  .share {
+    max-width: 250px;
+  }
+}
