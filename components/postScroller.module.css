@@ -3,6 +3,8 @@
   border-top: 1px solid rgb(0, 0, 0);
   margin: 0 auto;
   max-width: 1400px;
+  width: 100%;
+  overflow: scroll;
 }
 
 :global(.dark) .wrapper {
@@ -16,7 +18,7 @@
   font-size: 2rem;
 }
 .categoryWrapper {
-  width: 100vw;
+  /* width: 100vw; */
   max-width: 1400px;
   white-space: nowrap;
   overflow-x: scroll;
