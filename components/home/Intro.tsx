@@ -18,14 +18,24 @@ export default function Intro() {
           quality={10}
           priority
         ></Image>
-        <p className={styles.p}>
+        <div className={styles.textWrapper}>
+          <p className={styles.p}>One on one live audio training</p>
+          <p className={styles.p}>Custom tailored curriculum</p>
+        </div>
+        <div className={styles.textWrapper}>
+          <p className={styles.p}>The perfect balance of practical skills and book smarts</p>
+        </div>
+        <div className={styles.textWrapper}>
+          <p className={styles.p}>Real gear in real venues</p>
+        </div>
+        {/* <p className={styles.p}>
           Get real-world, hands-on, one-on-one live audio training, designed
           specifically for you. My program focuses on your individual skill
           level to get you gig-ready and hireable as quickly as possible &mdash;
           without skimping on the fundamentals. We work with real gear in real
-          venues &mdash; not in textbooks in classrooms. Think of it like guitar
+          venues &mdash; not with textbooks in classrooms. <br /> <br />Think of it like guitar
           lessons, but the mixing console is your instrument.
-        </p>
+        </p> */}
       </div>
     </section>
   );

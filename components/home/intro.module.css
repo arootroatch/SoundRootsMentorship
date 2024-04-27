@@ -63,17 +63,25 @@
   text-align: center;
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
+  margin-bottom: 3rem;
 }
 
 .p {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  position: relative;
+   font-size: 2rem;
+  line-height: 2.5rem;
+  /* position: relative; */
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
-  padding: 1rem;
+  padding: 1rem 2rem;
   text-align: center;
   text-shadow: 4px 4px 0.5rem #0055a9;
-  margin-top: 1.5rem;
-  color: white;
+  /* margin-top: 1.5rem; */
+  color: rgba(255, 255, 255, 0.815);
+  font-family: "OPTIAgency-Gothic";
+  letter-spacing: 0.2rem;
+}
+
+.textWrapper {
+  display: flex;
+  justify-content: space-between;
 }
