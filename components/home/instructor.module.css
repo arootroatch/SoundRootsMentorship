@@ -1,1 +1,72 @@
+.flexWrapper {
+  display: flex;
+  max-width: 900px;
+  width: 100vw;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.p {
+  width: 130%;
+}
+
+.textWrapper:nth-of-type(2) {
+  text-align: center;
+  margin-left: 3rem;
+}
+
+.textWrapper:nth-of-type(2) p {
+  margin: 3.5rem 0;
+}
+
+.textWrapper ul li {
+  list-style: none;
+  display: inline;
+  font-family: "OPTIAgency-Gothic";
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+  margin-left: 5rem;
+}
+
+.leftParagraph {
+  margin-right: 3rem;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.imageWrapper div {
+  z-index: 2;
+  box-shadow: 0 0 15px 25px rgb(232, 235, 235) inset;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.blurredImage {
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.portrait {
+  filter: drop-shadow(5px -1px 2px #9dbfe2e5)
+    drop-shadow(-5px -1px 2px #9dbfe2e5);
+  margin-top: -5rem;
+  margin-right: -11rem;
+}
+
+.marquee {
+  max-width: 500px;
+}
+
+:global(.dark) .portrait {
+    filter: drop-shadow(5px -1px 2px #cecece) drop-shadow(-5px -1px 2px #cecece);
+}
+
+:global(.dark) .imageWrapper div {
+  box-shadow: 0 0 15px 25px rgb(0, 0, 0) inset;
+}

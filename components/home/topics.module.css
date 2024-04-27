@@ -13,3 +13,10 @@
   position: relative;
   top: 1.5rem;
 }
+
+.marquee {
+  height: 110px;
+  overflow: hidden;
+  max-width: 1600px;
+  margin: 0 auto;
+}

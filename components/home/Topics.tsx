@@ -20,10 +20,10 @@ export default function Topics() {
       <DividerTRS />
       <h2>Some of the topics we'll cover</h2>
       <Marquee
-        style={{  height: "110px", overflow: "hidden"}}
         pauseOnHover
         pauseOnClick
         speed={55}
+        className={styles.marquee}
       >
         <ul className={styles.ul}>
           <li>Amplifiers</li>
@@ -45,7 +45,12 @@ export default function Topics() {
           </li>
         </ul>
       </Marquee>
-      <Marquee pauseOnHover pauseOnClick  speed={45} style={{height: "110px", overflow: "hidden"}}>
+      <Marquee
+        pauseOnHover
+        pauseOnClick
+        speed={45}
+        className={styles.marquee}
+      >
         <ul className={styles.ul}>
           <li>Soft skills for audio engineers</li>
           <li>Loudspeakers</li>
@@ -68,10 +73,10 @@ export default function Topics() {
         </ul>
       </Marquee>
       <Marquee
-        style={{  height: "110px", overflow: "hidden" }}
         pauseOnHover
         pauseOnClick
         speed={70}
+        className={styles.marquee}
       >
         <ul className={styles.ul}>
           <li>Music Theory for audio engineers</li>
