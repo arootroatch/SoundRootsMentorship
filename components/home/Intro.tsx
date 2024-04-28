@@ -18,19 +18,8 @@ export default function Intro() {
           quality={10}
           priority
         ></Image>
-        <div className={styles.textWrapper}>
-          <p className={styles.p}>One on one live audio training</p>
-          <p className={styles.p}>Custom tailored curriculum</p>
-        </div>
-        <div className={styles.textWrapper}>
-          <p className={styles.p}>The perfect balance of practical skills and book smarts</p>
-        </div>
-        <div className={styles.textWrapper}>
-          <p className={styles.p}>Real gear in real venues</p>
-        </div>
-        <div className={styles.textWrapper}>
-          <p className={styles.p}>Like taking guitar lessons &mdash; but the mixing console is your instrument</p>
-        </div>
+        <p className={styles.p}>Hands-on, personalized private instruction. Like guitar lessons, but the mixing console is your instrument.</p>
+        <Image src='/img/SoundRoots_WhiteLogoTransparent.png' width={400} height={280} alt='SoundRoots Logo'></Image>
         {/* <p className={styles.p}>
           Get real-world, hands-on, one-on-one live audio training, designed
           specifically for you. My program focuses on your individual skill
