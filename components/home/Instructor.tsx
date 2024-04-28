@@ -102,10 +102,10 @@ export default function Instructor() {
         <div className={styles.imageWrapper}>
           <div> </div>
           <Image
-            src={"/img/LiveOnTheGreen.jpeg"}
+            src={"/img/IMG_8339.jpeg"}
             alt={"Alex mixing FOH at Live On The Green Festival"}
-            width={350}
-            height={350}
+            width={400}
+            height={340}
             className={styles.blurredImage}
           ></Image>
         </div>

@@ -28,6 +28,9 @@ export default function Intro() {
         <div className={styles.textWrapper}>
           <p className={styles.p}>Real gear in real venues</p>
         </div>
+        <div className={styles.textWrapper}>
+          <p className={styles.p}>Like taking guitar lessons &mdash; but the mixing console is your instrument</p>
+        </div>
         {/* <p className={styles.p}>
           Get real-world, hands-on, one-on-one live audio training, designed
           specifically for you. My program focuses on your individual skill
