@@ -18,7 +18,6 @@
   font-size: 2rem;
 }
 .categoryWrapper {
-  /* width: 100vw; */
   max-width: 1400px;
   white-space: nowrap;
   overflow-x: scroll;
@@ -31,5 +30,4 @@
   margin: 1rem auto 3rem auto;
   width: fit-content;
   font-size: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.599);
 }
