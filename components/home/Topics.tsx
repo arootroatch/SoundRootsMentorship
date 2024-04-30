@@ -41,6 +41,7 @@ export default function Topics() {
               width={100}
               height={70}
               className={styles.logo}
+              quality={5}
             />
           </li>
         </ul>
@@ -68,6 +69,7 @@ export default function Topics() {
               width={100}
               height={70}
               className={styles.logo}
+              quality={5}
             />
           </li>
         </ul>
@@ -96,6 +98,7 @@ export default function Topics() {
               width={100}
               height={70}
               className={styles.logo}
+              quality={5}
             />
           </li>
         </ul>
