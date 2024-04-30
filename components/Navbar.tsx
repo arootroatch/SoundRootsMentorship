@@ -13,8 +13,8 @@ import { Posts } from "@/lib/interfaces";
 import ThemeButton from "./ThemeButton";
 
 export default function Navbar({ posts }: { posts: Posts[] }) {
-  const [open, setOpen] = useState(true);
-  const [openNestedNav, setOpenNestedNav] = useState(true);
+  const [open, setOpen] = useState(false);
+  const [openNestedNav, setOpenNestedNav] = useState(false);
 
   const { user, login, logout, authReady } = useContext(AuthContext);
 
