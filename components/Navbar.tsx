@@ -13,8 +13,8 @@ import { Posts } from "@/lib/interfaces";
 import ThemeButton from "./ThemeButton";
 
 export default function Navbar({ posts }: { posts: Posts[] }) {
-  const [open, setOpen] = useState(false);
-  const [openNestedNav, setOpenNestedNav] = useState(false);
+  const [open, setOpen] = useState(true);
+  const [openNestedNav, setOpenNestedNav] = useState(true);
 
   const { user, login, logout, authReady } = useContext(AuthContext);
 
@@ -24,6 +24,7 @@ export default function Navbar({ posts }: { posts: Posts[] }) {
   }
   function toggleNestedNav() {
     setOpenNestedNav(!openNestedNav);
+    console.log('toggleNestedNav');
   }
   function closeNav() {
     setOpen ? setOpen(false) : null;

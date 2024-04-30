@@ -138,19 +138,20 @@
   z-index: -1;
 }
 
-.openNestedNav {
-  .nestedBackground {
-    height: 45px;
-    opacity: 1;
-  }
-  .nestedNav {
-    transform: translateY(0px);
-    opacity: 1;
-    z-index: 1;
-  }
-  .arrowUp {
-    display: block;
-  }
+.openNestedNav .nestedBackground {
+  height: 45px;
+  opacity: 1;
+}
+.openNestedNav .nestedNav {
+  transform: translateY(0px);
+  opacity: 1;
+  z-index: 1;
+}
+.openNestedNav .arrowUp {
+  display: block;
+}
+.openNestedNav .nestedLi {
+  display: block;
 }
 
 .arrowUp {
@@ -165,7 +166,7 @@
   display: none;
 }
 .nestedLi {
-  display: block;
+  display: none;
   white-space: nowrap;
   margin: 0.8rem;
   line-height: 1.3rem;
@@ -255,4 +256,3 @@
     top: 0.1rem;
   }
 }
-
