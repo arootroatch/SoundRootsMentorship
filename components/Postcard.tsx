@@ -19,6 +19,7 @@ export default function Postcard(props: PostcardProps) {
             src={props.image}
             fill
             className={styles.image}
+            quality={5}
           />
         </div>
         <div className={styles.info}>
