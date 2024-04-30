@@ -10,9 +10,9 @@
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
   --divider-color: #ffffffab;
-  --button-background: black;
-  --button-shadow: 0px 0px 5px 3px #0300b1;
-  --button-shadow-hover: 0px 0px 3px 5px #2824ff;
+  --button-background: -webkit-linear-gradient(45deg, #003e75 40%, #170062);
+  --button-shadow: 0px 0px 5px 3px #002e56;
+  --button-shadow-hover: 0px 0px 5px 5px #002e56;
   --button-text: rgb(199, 199, 199);
   --button-text-hover: rgb(255, 255, 255);
 }
@@ -22,9 +22,9 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --divider-color: rgba(0, 0, 0, 0.826);
-  --button-background: #334783;
-  --button-shadow: 0px 0px 3px 3px #334783;
-  --button-shadow-hover: 0px 0px 3px 5px #334783;
+  --button-background: -webkit-linear-gradient(45deg, #004f94 37%, #2700d6);
+  --button-shadow: 0px 0px 3px 3px #004f94;
+  --button-shadow-hover: 0px 0px 3px 5px #004f94;
   --button-text: rgb(255, 255, 255);
   --button-text-hover: rgb(255, 255, 255);
 }
@@ -165,13 +165,21 @@ section:nth-of-type(2n) {
   cursor: pointer;
   transition: 0.2s;
   font-family: "OPTIAgency-Gothic";
-  background-color: var(--button-background);
-  box-shadow: var(--button-shadow);
+  background: var(--button-background);
+  /* box-shadow: var(--button-shadow); */
   color: var(--button-text);
   border: 1px solid rgba(255, 255, 255, 0.599);
+  transition: 0.2s;
 }
 
 .btn:hover {
-  box-shadow: var(--button-shadow-hover);
+  /* box-shadow: var(--button-shadow-hover); */
   color: var(var(--button-text-hover));
+  transform: scale(105%);
 }
+
+.btn:active {
+  transform: scale(100%);
+}
+
+

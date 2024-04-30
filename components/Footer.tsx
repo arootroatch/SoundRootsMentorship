@@ -2,9 +2,6 @@ import React from "react";
 import styles from "./footer.module.css";
 import Link from "next/link";
 import { FaInstagram, FaSquareFacebook } from "react-icons/fa6";
-import { IoCloseOutline } from "react-icons/io5";
-import SearchBar from "./SearchBar";
-import ThemeButton from "./ThemeButton";
 
 export default function Footer() {
   return (
