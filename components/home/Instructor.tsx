@@ -34,6 +34,10 @@ export default function Instructor() {
             width={650}
             height={500}
             className={styles.portrait}
+            quality={50}
+            loading='lazy'
+            placeholder='blur'
+            blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAMAAAD3JJ6EAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAhGVYSWZNTQAqAAAACAAFARIAAwAAAAEAAQAAARoABQAAAAEAAABKARsABQAAAAEAAABSASgAAwAAAAEAAgAAh2kABAAAAAEAAABaAAAAAAAAAEgAAAABAAAASAAAAAEAA6ABAAMAAAABAAEAAKACAAQAAAABAAAACqADAAQAAAABAAAACAAAAACygoaWAAAACXBIWXMAAAsTAAALEwEAmpwYAAACMmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8ZXhpZjpQaXhlbFlEaW1lbnNpb24+NDMzPC9leGlmOlBpeGVsWURpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxYRGltZW5zaW9uPjU3NjwvZXhpZjpQaXhlbFhEaW1lbnNpb24+CiAgICAgICAgIDxleGlmOkNvbG9yU3BhY2U+MTwvZXhpZjpDb2xvclNwYWNlPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4K9jzbdwAAAHhQTFRFAAAAAAAA/wAA//8A/////4CA////VVVVqqqqAABAgEBAmWYzgIBVqoCAs4BmW0kk2LKbypp9c0w1q5WJq5GJiGxjkGZMf2VbrI19gWZVgVc6Zz4iYzsid1pGiV5DaEEpUhEAVSsTYDUbZUg9az4mek41g1U6noqDwBIzgQAAACB0Uk5TAAEBAQECAgMDBAQFBgYKDiE1b3N5i6WpsMPK2tvf5uuYMFHyAAAARElEQVQIHR3BBQKAIAAAsUNBsbu7//9D0Q1DguSnKQs0n4iqIcRQpN2UoQCf+r56XLCJ5/0cPQQ4tM+6JFgQkB/boBAvZ3YDJC/wXlkAAAAASUVORK5CYII='
           />
         </div>
       </div>
@@ -45,6 +49,10 @@ export default function Instructor() {
             width={350}
             height={350}
             className={styles.blurredImage}
+            loading='lazy'
+            quality={50}
+            placeholder='blur'
+            blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/2wBDAAYGBgYGBgoGBgoOCgoKDhIODg4OEhcSEhISEhccFxcXFxcXHBwcHBwcHBwiIiIiIiInJycnJywsLCwsLCwsLCz/2wBDAQcHBwsKCxMKChMuHxofLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi7/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABwMF/8QAIxAAAgEDAwQDAAAAAAAAAAAAAQIDAAQRBRIxBhMhQUKi0f/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAXEQADAQAAAAAAAAAAAAAAAAAAAQIR/9oADAMBAAIRAxEAPwDDvNCm70txrdrLsQF5Gt5ZVQOcs25FICk59Dn3irx9LaY8asLq4AIBwZpwR9qfNQijKyAqDuRc+OfDc0bvZWZckwR8n4j8oYxyngzk/9k='
           ></Image>
           <div></div>
         </div>
@@ -64,7 +72,12 @@ export default function Instructor() {
             I've been blessed to personally have run sound for many great
             artists, including:
           </p>
-          <Marquee className={styles.marquee} pauseOnClick pauseOnHover speed={40}> 
+          <Marquee
+            className={styles.marquee}
+            pauseOnClick
+            pauseOnHover
+            speed={40}
+          >
             <ul>
               <li>Ashley McBryde</li>
               <li>Kacey Musgraves</li>
@@ -102,11 +115,15 @@ export default function Instructor() {
         <div className={styles.imageWrapper}>
           <div> </div>
           <Image
-            src={"/img/IMG_8339.jpeg"}
-            alt={"Alex mixing FOH at Live On The Green Festival"}
+            src={"/img/MidasPro2.jpeg"}
+            alt={"Alex mixing FOH at Marathon Music Works"}
             width={400}
             height={340}
             className={styles.blurredImage}
+            loading='lazy'
+            placeholder='blur'
+            quality={50}
+            blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/2wBDAAICAgICAgMCAgMFAwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQICAgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAj/xAAjEAACAQIGAgMAAAAAAAAAAAABAgMEEgAFBgcTMQghERQi/8QAFQEBAQAAAAAAAAAAAAAAAAAABAX/xAAgEQABAwQCAwAAAAAAAAAAAAABAgMhAAQRMQUSMkFx/9oADAMBAAIRAxEAPwCYcn1Jt9o/byrzEZhFS5qaiRYUl41lKWqV+QS7SxoSLvwCCfV1wGJ1i8nNUxxJHNp+gqZFUBpfutFyED23GWBS7u09dYYYucuTcXLly75LUrOIEKIgDAGvVMeHVKGxoAfZAO6//9k='
           ></Image>
         </div>
       </div>
