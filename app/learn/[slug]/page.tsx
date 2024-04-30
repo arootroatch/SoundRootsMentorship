@@ -66,16 +66,22 @@ export default async function PostPage({
           />
         </header>
         <div className={styles.container}>
-          {gated ? (
-            <GatedContent content={content} />
-          ) : (
-            <div className={styles.main}>{content}</div>
-          )}
+          <div className={styles.content}>
+            {gated ? (
+              <GatedContent content={content} />
+            ) : (
+              <div className={styles.main}>{content}</div>
+            )}
 
-          <PostSidebar pageURL={pageURL} />
+            <PostSidebar pageURL={pageURL} />
+          </div>
         </div>
       </article>
-      <PostScroller title='Explore more articles' category={recent} allPostsButton/>
+      <PostScroller
+        title='Explore more articles'
+        category={recent}
+        allPostsButton
+      />
     </div>
   );
 }

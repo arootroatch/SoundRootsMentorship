@@ -2,34 +2,37 @@
   z-index: 1;
   background: linear-gradient(
     #ffffff00,
-    rgb(var(--background-end-rgb)) 50%,
+    rgb(var(--background-end-rgb)) 60%,
     rgb(var(--background-end-rgb)) 90%,
     #ffffff00
   );
-  height: 700px;
+  height: 110%;
   width: 100vw;
   position: absolute;
   left: 0;
-  top: 600px;
+  top: 0;
 }
 
-.gatedContent {
+.gatedText {
   margin: 0 auto;
-  text-align: center;
-  width: 100vw;
   position: absolute;
-  top: 970px;
-  left: 0;
-  z-index: 3;
-  background: transparent;
+  bottom: 17%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+
+
 }
 
-.gatedContent a {
+ 
+.gatedText span a {
   text-decoration: underline;
   cursor: pointer;
 }
 
-.gatedContent span {
+.gatedText span {
   font-family: "OPTIAgency-Gothic";
   letter-spacing: 0.2rem;
   font-size: 1.5rem;
@@ -62,43 +65,4 @@
 
 .main h2 {
   scroll-margin-top: 4rem;
-}
-
-@media screen and (max-width: 768px) {
-  .gated {
-    height: 1000px;
-    top: 800px;
-  }
-  .gatedContent {
-    top: 1350px;
-  }
-  .preview {
-    height: 1000px;
-  }
-}
-
-
-@media screen and (max-width: 450px) {
- .gatedContent {
-    top: 1350px;
-  }
-  .gated {
-    top: 800px;
-
-    background: linear-gradient(
-      #ffffff00,
-      rgb(var(--background-end-rgb)) 50%,
-      rgb(var(--background-end-rgb)) 90%,
-      #ffffff00
-    );
-  }
-}
-@media screen and (max-width: 375px) {
- .gatedContent {
-    top: 1350px;
-    padding: 1rem;
-  }
-  .gated{
-    top: 850px;
-  }
 }
