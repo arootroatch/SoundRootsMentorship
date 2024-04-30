@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./intro.module.css";
+import Link from "next/link";
 
 export default function Intro() {
   return (
@@ -19,7 +20,7 @@ export default function Intro() {
           priority
         ></Image>
         <p className={styles.p}>Hands-on, personalized private instruction. Like guitar lessons, but the mixing console is your instrument.</p>
-        <Image src='/img/SoundRoots_WhiteLogoTransparent.png' width={400} height={280} alt='SoundRoots Logo'></Image>
+        <Image src='/img/SoundRoots_WhiteLogoTransparent.png' width={450} height={300} alt='SoundRoots Logo' className={styles.logo}></Image>
         {/* <p className={styles.p}>
           Get real-world, hands-on, one-on-one live audio training, designed
           specifically for you. My program focuses on your individual skill
@@ -28,6 +29,7 @@ export default function Intro() {
           venues &mdash; not with textbooks in classrooms. <br /> <br />Think of it like guitar
           lessons, but the mixing console is your instrument.
         </p> */}
+        <Link href={"www.soundrootsproductions.com"} className={`btn ${styles.btn}`}>Get in Touch</Link>
       </div>
     </section>
   );
