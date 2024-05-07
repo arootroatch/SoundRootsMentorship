@@ -27,3 +27,9 @@
   transform: scale(102%);
   cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+  .leftColumn {
+    width: 70%;
+  }
+}

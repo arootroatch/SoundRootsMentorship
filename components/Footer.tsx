@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
-        <div>
+        <div className={styles.leftColumn}>
           <p>Designed and developed by Alex Root-Roatch, Copyright © 2024</p>
           <p>All Rights Reserved</p>
         </div>
