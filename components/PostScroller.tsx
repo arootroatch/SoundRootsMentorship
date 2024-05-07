@@ -17,8 +17,8 @@ export default function PostScroller({ title, category, allPostsButton }: PostSc
             image={post.data.thumbnail}
             description={post.data.description}
             date={post.data.date}
-            as={`learn/${post.filePath.replace(/\.mdx?$/, "")}`}
-            href={`learn/[slug]`}
+            as={`/learn/${post.filePath.replace(/\.mdx?$/, "")}`}
+            href={`/learn/[slug]`}
           />
         ))}
       </div>
