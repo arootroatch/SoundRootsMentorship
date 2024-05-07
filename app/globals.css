@@ -76,9 +76,6 @@ a {
   text-decoration: none;
 }
 
-section {
-  position: relative;
-}
 
 .divider {
   display: flex;
@@ -137,7 +134,8 @@ li {
 }
 
 section {
-  padding: 7rem 0;
+  position: relative;
+  padding: 7rem 1rem;
   width: 100vw;
 }
 

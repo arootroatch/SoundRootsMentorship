@@ -5,7 +5,6 @@
   margin: 3rem auto;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .p {
@@ -65,9 +64,48 @@
 }
 
 :global(.dark) .portrait {
-    filter: drop-shadow(5px -1px 2px #cecece) drop-shadow(-5px -1px 2px #cecece);
+  filter: drop-shadow(5px -1px 2px #cecece) drop-shadow(-5px -1px 2px #cecece);
 }
 
 :global(.dark) .imageWrapper div {
   box-shadow: 0 0 15px 25px rgb(0, 0, 0) inset;
+}
+
+@media screen and (max-width: 929px) {
+  .marquee {
+    max-width: 400px;
+  }
+  .textWrapper:nth-of-type(2) {
+    max-width: 400px;
+    margin-left: 0rem;
+    margin-right: 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flexWrapper {
+    flex-direction: column-reverse;
+    width: auto;
+  }
+  .flexWrapper:last-of-type {
+    flex-direction: column;
+  }
+  .portrait {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .marquee {
+    max-width: 100vw;
+  }
+  .textWrapper:nth-of-type(2) {
+    max-width: 100vw;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .p {
+    width: auto;
+  }
+  .leftParagraph {
+    margin-right: 0;
+  }
 }
