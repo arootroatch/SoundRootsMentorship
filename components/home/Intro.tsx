@@ -43,7 +43,7 @@ export default function Intro() {
           lessons, but the mixing console is your instrument.
         </p> */}
         <Link href={"#contact"} className={`btn ${styles.btn}`}>
-          Get in Touch
+          Get Started Now!
         </Link>
       </div>
     </section>

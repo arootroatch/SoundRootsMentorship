@@ -2,6 +2,7 @@
   padding: 5rem 0 10rem 0;
   background-color: rgb(0, 0, 0);
   position: relative;
+  z-index: -20;
 }
 
 .introWrapper {
@@ -13,8 +14,6 @@
   position: relative;
   width: fit-content;
   margin: 0 auto;
-   -webkit-backdrop-filter: blur(7px);
-  backdrop-filter: blur(7px);
 }
 
 .lightBlue {
@@ -62,8 +61,6 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  -webkit-backdrop-filter: blur(7px);
-  backdrop-filter: blur(7px);
   margin-bottom: 1rem;
 }
 
@@ -71,10 +68,9 @@
   margin-top: 0;
    font-size: 1.5rem;
   line-height: 2rem;
-  -webkit-backdrop-filter: blur(7px);
-  backdrop-filter: blur(7px);
   text-align: center;
   color: rgba(255, 255, 255, 0.815);
+  padding: 3rem;
 }
 
 .textWrapper {
@@ -89,7 +85,28 @@
 }
 
 .logo {
-  backdrop-filter: blur(1px);
-  margin: 2rem 0;
   max-width: 450px;
+  padding: 1rem;
+  margin-top: -2rem;
+
+}
+
+.p, .logo {
+   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.602) 30%, #00000000 70%);
+   background-position-x: 70%; 
+   border-radius: 50%;
+   
+}
+
+@media screen and (max-width: 600px) {
+  .p {
+    width: 120%;
+    left: -10%;
+    position: relative;
+  }
+}
+@media screen and (max-width: 400px) {
+  .introWrapper {
+    padding: 0;
+  }
 }
