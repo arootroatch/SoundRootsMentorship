@@ -7,7 +7,7 @@ date: 2024-02-01T07:51:56.966Z
 updated: 2024-03-01T07:51:56.966Z
 thumbnail: /img/GRAPHIC-EQ.jpeg
 category: Effects
-gated: true
+gated: false
 ---
 
 ## Heading 1
