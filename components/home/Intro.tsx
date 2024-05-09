@@ -34,14 +34,6 @@ export default function Intro() {
           className={styles.logo}
           layout="responsive"
         ></Image>
-        {/* <p className={styles.p}>
-          Get real-world, hands-on, one-on-one live audio training, designed
-          specifically for you. My program focuses on your individual skill
-          level to get you gig-ready and hireable as quickly as possible &mdash;
-          without skimping on the fundamentals. We work with real gear in real
-          venues &mdash; not with textbooks in classrooms. <br /> <br />Think of it like guitar
-          lessons, but the mixing console is your instrument.
-        </p> */}
         <Link href={"#contact"} className={`btn ${styles.btn}`}>
           Get Started Now!
         </Link>
